@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>㈜팀프레시</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css" />    
+    <link rel="stylesheet" href="../css/pop.css" />    
+  </head>
+<body>
+<div class="wrap">
+  <!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#lnb">주메뉴 바로가기</a>
+</div>
+<hr />
+<!-- 바로가기 메뉴__e -->
+<div class="header">
+  <h1><a href="" class="f_blind">㈜팀프레시</a></h1>
+  <div class="fr gnb">
+    <ul class="gnb_list">
+      <li><button type="button">배송지역검색</button></li>
+      <li><button type="button">전체화면</button></li>
+      <li><b>홍길동</b>님</li>
+      <li><button type="button">로그아웃</button></li>     
+    </ul>
+  </div>  
+</div>
+
+
+  <div class="cont">
+    <div id="lnb" class="lnb">
+  <!-- 현재 사용자가 보고있는 페이지 메뉴를 감싼 li에 class='on'을 추가해주세요. -->
+  <ul class="nav lnb_list" role="navigat ion">
+    <li><a href="/html/Dashboard.html">Dashboard</a> </li>
+    <li><a href="/html/order1.html">주문</a>
+      <ul class="sub">
+        <li><a href="">지표별 통계조회</a></li>
+      </ul>
+    </li>
+    <li class="on"><a href="/html/tally1.html">검수</a>
+      <ul class="sub">
+        <li><a href="">서브</a></li>
+      </ul>
+    </li>
+    <li><a href="/html/allocate1.html">배차</a>
+      <ul class="sub">
+        <li><a href="">서브</a></li>
+      </ul>
+    </li>
+    <li><a href="/html/tcc1.html">TCC</a>
+      <ul class="sub">
+        <li><a href="">서브</a></li>
+      </ul>
+    </li>
+    <li><a href="/html/calc1.html">정산</a>
+      <ul class="sub">
+        <li><a href="">서브</a></li>
+      </ul>
+    </li>
+    <li><a href="/html/account1.html">계정관리</a>
+      <ul class="sub">
+        <li><a href="">서브</a></li>
+      </ul>
+    </li>
+    <li><a href="/html/region1.html">권역관리</a>
+      <ul class="sub">
+        <li><a href="">서브</a></li>
+      </ul>
+    </li>
+    <li><a href="/html/notice1.html">공지사항 &amp; PUSH</a></li>
+    <li><a href="/html/stats1.html">통계</a></li>      
+  </ul>
+</div>
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>고객센터</h1>
+      </div>
+      <div class="content_body">
+        <ul class="tab_list">
+          <li><a href="#tab01">고객사</a></li>
+          <li><a href="#tab02">매니저</a></li>
+        </ul>
+        <div class="tab_conts">
+          <div id="tab01" class="tab_cont">
+            <div class="search">
+
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_head">
+                <caption>고객사 목록 제목</caption>
+                <thead>
+                  <tr>
+                    <th id="th1-1">No.</th>
+                    <th id="th1-2">카테고리</th>
+                    <th id="th1-3">제목</th>
+                    <th id="th1-4">ID</th>
+                    <th id="th1-5">작성자</th>
+                    <th id="th1-6">작성일시</th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="scroll-y">
+                <table class="tbl_default tbl_head">
+                  <caption>고객사 목록 내용</caption>
+                    <tr>
+                      <td headers="th1-1">1</td>
+                      <td headers="th1-2">AAA</td>
+                      <td headers="th1-3">문의합니다.</td>
+                      <td headers="th1-4">TIMF015</td>
+                      <td headers="th1-5">홍길동</td>
+                      <td headers="th1-6">2019-10-25 18:34</td>
+                    </tr>
+                    <tr>
+                      <td headers="th1-1">1</td>
+                      <td headers="th1-2">AAA</td>
+                      <td headers="th1-3">문의합니다.</td>
+                      <td headers="th1-4">TIMF015</td>
+                      <td headers="th1-5">홍길동</td>
+                      <td headers="th1-6">2019-10-25 18:34</td>
+                    </tr>
+                </table>
+              </div>              
+            </div>
+            <div class="tbl_areaB">
+              <div class="paginate">
+    <a href="#" class="pre" title="이전">〈</a>
+    <span>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <strong>6</strong>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">9</a>
+    </span>
+    <a href="#" class="next" title="다음">〉</a>
+</div>
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>

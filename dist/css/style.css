@@ -1,11 +1,40 @@
-/* layout */
-.wrap{height:100%;}
 /* login */
 .login{position:relative;height:100%;min-height:400px;background:url(../img/bg_login.jpg) 0 0 no-repeat;background-size:cover;}
 .login h1{width:189px;height:39px;background:url(../img/logo_w.png) 0 0 no-repeat;margin-bottom:49px;}
 .login_box{position:absolute;left:50%;top:50%;width:350px;margin:-175px 0 0 -175px;}
 .login_box input,
 .btn_login{width:100%;height:60px;border-radius:30px;color:#fff;margin-top:25px;font-size:20px;}
-.login_box input{background:url(../img/ico_loginIpt.png) 27px 19px no-repeat,rgba(255,255,255,.25);border:none;padding-left:78px;}
 .login_box input[type="password"]{background-position-y:-44px;}
+.login_box input{background:url(../img/ico_loginIpt.png) 27px 19px no-repeat,rgba(255,255,255,.25);border:none;padding-left:78px;}
+.login_box input::-webkit-input-placeholder,
+.login_box input::-moz-input-placeholder,
+.login_box input::-ms-input-placeholder,
+.login_box input::placeholder{color:#fff;}
 .btn_login{background-color:#ec6941;}
+
+/* layout */
+.wrap{height:100%;text-align:left;}
+
+/* header */
+.header{height:70px;padding:0 47px;border-bottom:1px solid #ccc;box-shadow:0 0 10px #e1e1e2;}
+.header h1{width:142px;height:30px;background:url(../img/logo_b.png) 0 0 no-repeat;margin:20px 0 0 7px;}
+.header h1 a{width:100%;height:100%;}
+.gnb_list li{float:left;font-size:0.875em;margin-left:35px;line-height:70px;}
+
+/* lnb */
+.lnb{float:left;width:250px;background-color:#02204a;}
+.lnb_list{margin-top:42px;}
+.lnb_list a{color:#fff;font-family:'notokrL';}
+.lnb_list > li > a{line-height:60px;padding-left:39px;}
+.sub{display:none;}
+
+/* content */
+.content{float:right;width:calc(100% - 250px);padding:42px 47px;box-sizing:border-box;}
+.content_tit h1{font-family:'notokrM';font-size:30px;color:#02204a;}
+
+/* ui */
+/* table */
+.tbl_default{border-top:1px solid #d2d9e4;}
+.scroll-y .tbl_default{border-top-width:0;}
+.tbl_default th{padding:14px 5px;background-color:#e5e8ef;}
+.tbl_default td{padding:9px 5px;border-bottom:1px solid #d3d9e4;}
