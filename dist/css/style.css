@@ -1,0 +1,11 @@
+/* layout */
+.wrap{height:100%;}
+/* login */
+.login{position:relative;height:100%;min-height:400px;background:url(../img/bg_login.jpg) 0 0 no-repeat;background-size:cover;}
+.login h1{width:189px;height:39px;background:url(../img/logo_w.png) 0 0 no-repeat;margin-bottom:49px;}
+.login_box{position:absolute;left:50%;top:50%;width:350px;margin:-175px 0 0 -175px;}
+.login_box input,
+.btn_login{width:100%;height:60px;border-radius:30px;color:#fff;margin-top:25px;font-size:20px;}
+.login_box input{background:url(../img/ico_loginIpt.png) 27px 19px no-repeat,rgba(255,255,255,.25);border:none;padding-left:78px;}
+.login_box input[type="password"]{background-position-y:-44px;}
+.btn_login{background-color:#ec6941;}
