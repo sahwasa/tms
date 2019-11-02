@@ -10,3 +10,4 @@
 7. region : 권역관리
 8. notice : 공지사항 & PUSH
 9. stats : 통계
+10. customer : 고객센터

@@ -123,7 +123,7 @@ input, textarea {border:1px solid #a9a9a9;color:#333;vertical-align:middle;backg
 #accessibility a:focus,#accessibility a:active{width:100%;height:auto;padding:5px 0;background:#09f;}
 
 /* btn */
-.btn{border-width:1px;border-style:solid;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:2px;padding:0 6px 1px;font-family:'notokrR';background-color:#fff;}
+.btn{border-width:2px;border-style:solid;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:5px;padding:0 6px 1px;font-family:'notokrR';background-color:#fff;}
 .btn_white{color:#333;border-color:#999;}
 .btn_red{border-color:#f8574d;background-color:#e45148;}
 .btn_green{border-color:#519488;background-color:#61ac9f;}
@@ -132,6 +132,8 @@ input, textarea {border:1px solid #a9a9a9;color:#333;vertical-align:middle;backg
 .btn_hanblue{background-color:#377acd;color:#fff;border:none;}
 .btn_grayblue{background-color:#6090b6;border-color:#476a85; }
 .btn_blueline{color:#1c67b2;border-color:#1c67b2;}
+.btn_grayline{color:#606060;border-color:#606060;}
+.btn_greenline{color:#5cb85c;border-color:#5cb85c;}
 .btn_gray{background-color:#7f7d7e;border-color:#686868;}
 .ico_btn{background:transparent;border:none;font-size:0;overflow:hidden;}
 .ico_btn::before{display:inline-block;content:"";background-image:url(../img/btn_ico.png);width:17px;height:18px;line-height:0;margin-top:4px;}
