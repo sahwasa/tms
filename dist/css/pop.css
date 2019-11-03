@@ -1,4 +1,4 @@
-.pop_wrap{position:absolute;left:50%;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.2);text-align:left;overflow:hidden;}
+.pop_wrap{position:absolute;left:50%;top:70px;background-color:#fff;box-shadow:0 0 10px rgba(0,0,0,.2);text-align:left;overflow:hidden;}
 .pop_tit{position:relative;height:57px;border-bottom:1px solid #d3d9e4;padding:6px 15px 0;box-sizing:border-box;}
 .pop_tit h1{font-size:1.5em;}
 .pop_tit [role="btn_close"]{position:absolute;right:15px;top:50%;font-size:0;color:transparent;overflow:hidden;margin-top:-8px;}
@@ -21,15 +21,16 @@
 .fullIpt textarea,
 .fullIpt select{width:100%;}
 
+.box_lightgrayLine{border:1px solid #d3d9e4;padding:10px;}
 .box_grayLine{border:1px solid #999;padding:10px;}
 .pop_body .box_grayLine{height:207px;margin-top:27px;}
 .pop_body .freeNote li{padding-top:10px;}
 .pop_body .freeNote li:first-child{padding-top:0;}
 
 .pop_dtlView,
-.pop_orderEntry{width:898px;margin-left:-449px;top:70px;}
+.pop_orderEntry{width:898px;margin-left:-449px;}
 .pop_cancel,
-.pop_printInvoice{width:400px;margin-left:-200px;top:70px;}
+.pop_printInvoice{width:400px;margin-left:-200px;}
 .pop_printInvoice .pop_body{padding:10px 0;}
 .pop_printInvoice .radio_list{border-top:1px solid #d3d9e4;padding:0 15px;}
 .pop_printInvoice .radio_list li{padding:5px 0;}
@@ -39,3 +40,22 @@
 .tbl_state td{border:1px solid #d3d9e4;font-size:0.875em;padding:4px 12px;}
 .tbl_state th{border-right:none;background-color:#6f778b;color:#fff;width:68px;}
 .tbl_state td{text-align:left;}
+
+.pop_handle{width:848px;margin-left:-424px;}
+.pop_handle .use_grid li{padding-top:5px;}
+.pop_handle .use_grid{margin-top:-5px;}
+.pop_handle .tbl_wrap{margin-top:20px;}
+.tbl_tally th,
+.tbl_tally td{border:1px solid #606060;}
+.tbl_tally th{padding:13px 5px;font-family:'notokrM';}
+.tbl_tally td{padding:10px 5px;}
+.tbl_tally th:nth-child(odd),
+.tbl_tally td:nth-child(1),
+.tbl_tally td:nth-child(3),
+.tbl_tally td:nth-child(6),
+.tbl_tally td:nth-child(8){border-right-color:#d2d9e4;}
+.tbl_tally td:nth-child(6),
+.tbl_tally td:nth-child(9){border-right-color:transparent;}
+
+.pop_prompt{width:450px;margin-left:-225px;}
+.pop_prompt p{text-align:center;font-size:1.5em;padding:40px 0 50px;}

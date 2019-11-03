@@ -131,6 +131,8 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .btn_pink{background-color:#e38895;}
 .btn_hanblue{background-color:#377acd;color:#fff;border:none;}
 .btn_grayblue{background-color:#6090b6;border-color:#476a85; }
+.btn_deepblueline{color:#6f778b;border-color:#6f778b;}
+.btn_deepblueline:hover{color:#fff;background-color:#6f778b;}
 .btn_blueline{color:#1c67b2;border-color:#1c67b2;}
 .btn_blueline:hover{color:#fff;background-color:#1c67b2;}
 .btn_grayline{color:#606060;border-color:#606060;}
