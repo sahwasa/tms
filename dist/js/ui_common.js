@@ -13,7 +13,7 @@
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
   modal.draggable({
-    handle: ".pop_header",
+    handle: ".pop_tit",
     containment: "body",
     scroll : false
    });
@@ -50,7 +50,7 @@
   $.datepicker.setDefaults({
     buttonImageOnly: true,
     showOn: "both",
-    buttonImage: "../img/btn_calendar.gif",
+    buttonImage: "../img/btn_calendar.png",
     changeMonth: true,
     changeYear: true,
     numberOfMonths: 1,

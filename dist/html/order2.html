@@ -78,22 +78,22 @@
     <li><a href="/html/customer.html">고객센터</a></li>      
   </ul>
 </div>
-    <div class="content order" id="content">
+    <div class="content order return" id="content">
       <div class="content_tit">
         <h1>주문</h1>
       </div>
       <div class="content_body">
         <div class="tabList_area">
           <ul class="tab_list">
-            <li><a href="#tab01">주문리스트 업로드</a></li>
-            <li><a href="#tab02">주문리스트</a></li>
-            <li><a href="#tab03">주문취소리스트</a></li>
+            <li><a href="#tab01">반품리스트 업로드</a></li>
+            <li><a href="#tab02">반품리스트</a></li>
+            <li><a href="#tab03">반품취소리스트</a></li>
           </ul>
         </div>
         <div class="tab_conts">
           <div id="tab01" class="tab_cont section">
             <div class="tit">
-              <h2>주문리스트 업로드</h2>
+              <h2>반품리스트 업로드</h2>
             </div>
             <div class="body">
               <!-- file_attach.js 참고 -->
@@ -101,7 +101,7 @@
                 <input type="hidden" name="type" value="attach">              
                 <div id="file-drop" class="drop_zone">
                   <div class="drop_info">
-                    주문리스트 엑셀파일을 드래그하여 옮겨주세요.
+                    반품리스트 엑셀파일을 드래그하여 옮겨주세요.
                     <div class="fileBtn_area">
                       또는
                       <div class="file_attach">파일찾기
@@ -115,12 +115,12 @@
                 <span class="fl">
                   <button type="button" class="btn btn_grayline">업로드</button>
                   <button type="button" class="btn btn_grayline">예약업로드</button>
-                  <button type="button" class="btn btn_grayline">주문입력</button>
-                  <button type="button" class="btn btn_grayline">관리자주문입력</button>
+                  <button type="button" class="btn btn_grayline">반품입력</button>
+                  <button type="button" class="btn btn_grayline">관리자반품입력</button>
                 </span>
                 <span class="fr">
-                  <button type="button" class="btn btn_greenline">주문입력</button>
-                  <button type="button" class="btn btn_greenline">주문입력</button>
+                  <button type="button" class="btn btn_greenline">메뉴얼 다운로드</button>
+                  <button type="button" class="btn btn_greenline">반품리스트 양식 다운로드</button>
                 </span>
               </div>
               <div class="file_list">
@@ -130,8 +130,8 @@
                 </ul>
               </div>
               <div class="attach_result">
-                <p class="normal">주문접수 <b>총 <span>0</span>건이 정상업로드</b> 되었습니다.</p>
-                <p class="error">주문접수  <b>총 <span>0</span>건이 오류</b>가 있습니다.</p>
+                <p class="normal">반품접수 <b>총 <span>0</span>건이 정상업로드</b> 되었습니다.</p>
+                <p class="error">반품접수  <b>총 <span>0</span>건이 오류</b>가 있습니다.</p>
               </div>
             </div>           
           </div>     
@@ -141,7 +141,7 @@
               <button type="button" class="btn btn_greenline">금일 전체 다운로드</button>
               <button type="button" class="btn btn_greenline">검색 결과 다운로드</button>
               <button type="button" class="btn btn_grayline">송장출력</button>
-              <button type="button" class="btn btn_grayline">주문취소</button>
+              <button type="button" class="btn btn_redline">반품취소</button>
             </div>
             <div class="search">
               <dl class="dl_search">
@@ -336,147 +336,6 @@
     </div>
   </div>  
 </div>
-<!-- 상세보기팝업 -->
-<div class="overlay" id="pop_dtlView">
-  <div class="pop_wrap pop_dtlView" dataforma="modal">
-    <div class="pop_tit">
-      <h1>주문정보</h1>
-      <a href="javascript:();" role="btn_close">닫기</a>
-    </div>
-    <div class="pop_body">
-      <ul class="use_grid divide4 fullIpt">
-        <li><label for="">거래처명</label><input type="text" readonly /></li>
-        <li><label for="">발송자명</label><input type="text" readonly /></li>
-        <li><label for="">실수령자명</label><input type="text" readonly /></li>
-        <li><label for="">수령자 연락처</label><input type="text" /></li>
-        <li class="w-75"><label for="">우편번호</label><input type="text" readonly /></li>
-        <li class="w1-7"><label for="">기본주소</label><input type="text" readonly /></li>
-        <li class="w1-7"><label for="">상세주소</label><input type="text" readonly /></li>
-        <li class="w4"><label for="">공동현관비밀번호</label><input type="text" /></li>
-        <li class="w4"><label for="">고객요청사항</label><input type="text" /></li>
-        <li class="w4"><label for="">상품정보</label><textarea name="" id="" cols="30" rows="3"></textarea></li>
-        <li><label for="">상품수량</label><input type="text" readonly /></li>
-        <li><label for="">가방회수</label><select name="" id=""><option value="">O</option><option value="">X</option></select></li>
-        <li><label for="">개별문자 발송(즉시)</label><select name="" id=""><option value="">O</option><option value="">X</option></select></li>
-        <li><label for="">고객사 주문번호</label><input type="text" /></li>
-      </ul>
-      <div class="box_grayLine scroll-y">
-        <ul class="fullIpt freeNote">
-          <li><label for="">자유기입1</label><input type="text" /></li>
-          <li><label for="">자유기입2</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-        </ul>
-      </div>
-    </div>
-    <div class="pop_footer">
-      <button type="button" class="btn btn_blueline">저장</button>
-    </div>   
-  </div>
-</div>
-<!-- 상세보기팝업__e -->
-<!-- 관리자 주문 입력 팝업 -->
-<div class="overlay" id="pop_orderEntry">
-  <div class="pop_wrap pop_orderEntry" dataforma="modal">
-    <div class="pop_tit">
-      <h1>관리자 주문 입력</h1>
-      <a href="javascript:();" role="btn_close">닫기</a>
-    </div>
-    <div class="pop_body">
-      <ul class="use_grid divide4 fullIpt">
-        <li><label for="">거래처명</label><input type="text" readonly /></li>
-        <li><label for="">발송자명</label><input type="text" readonly /></li>
-        <li><label for="">실수령자명</label><input type="text" readonly /></li>
-        <li><label for="">수령자 연락처</label><input type="text" /></li>
-        <li class="w-75"><label for="">우편번호</label><input type="text" readonly /></li>
-        <li class="w1-7"><label for="">기본주소</label><input type="text" readonly /></li>
-        <li class="w1-7"><label for="">상세주소</label><input type="text" readonly /></li>
-        <li class="w4"><label for="">공동현관비밀번호</label><input type="text" /></li>
-        <li class="w4"><label for="">고객요청사항</label><input type="text" /></li>
-        <li class="w4"><label for="">상품정보</label><textarea name="" id="" cols="30" rows="3"></textarea></li>
-        <li><label for="">상품수량</label><input type="text" readonly /></li>
-        <li><label for="">가방회수</label><select name="" id=""><option value="">O</option><option value="">X</option></select></li>
-        <li><label for="">개별문자 발송(즉시)</label><select name="" id=""><option value="">O</option><option value="">X</option></select></li>
-        <li><label for="">고객사 주문번호</label><input type="text" /></li>
-        <li class="w1-5"><label for="">고객사</label><select name="" id=""><option value="">1</option></select></li>
-        <li class="w-75"><label for="">조</label><select name="" id=""><option value="">1</option></select></li>
-        <li class="w-75"><label for="">권역그룹</label><select name="" id=""><option value="">1</option></select></li>
-        <li><label for="">권역</label><select name="" id=""><option value="">1</option></select></li>
-      </ul>
-      <div class="box_grayLine scroll-y">
-        <ul class="fullIpt freeNote">
-          <li><label for="">자유기입1</label><input type="text" /></li>
-          <li><label for="">자유기입2</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-          <li><label for="">자유기입3</label><input type="text" /></li>
-        </ul>
-      </div>
-    </div>
-    <div class="pop_footer">
-      <button type="button" class="btn btn_blueline">저장</button>
-    </div>   
-  </div>
-</div>
-<!-- 관리자 주문 입력 팝업__e -->
-<!-- 송장출력 팝업 -->
-<div class="overlay" id="pop_printInvoice">
-  <div class="pop_wrap pop_printInvoice" dataforma="modal">
-    <div class="pop_tit">
-      <h1>송장출력</h1>
-      <a href="javascript:();" role="btn_close">닫기</a>
-    </div>
-    <div class="pop_body">      
-      <ul class="radio_list">
-        <li><label for=""><input type="radio" name="" id="" />전체 송장 프린트</label></li>
-        <li><label for=""><input type="radio" name="" id="" />선택 송장 프린트</label></li>
-      </ul>
-      <ul class="radio_list">
-        <li><label for=""><input type="radio" name="" id="" />수령자명 정상 표시</label></li>
-        <li><label for=""><input type="radio" name="" id="" />수령자명 마스킹 처리</label></li>
-      </ul>
-      <ul class="radio_list">
-        <li><label for=""><input type="radio" name="" id="" />10＊10cm 기본송장(BOX당 1장)</label></li>
-        <li><label for=""><input type="radio" name="" id="" />10*10cm 기본 + 상품정보 송장(BOX당 2장)</label></li>
-        <li><label for=""><input type="radio" name="" id="" />20*10cm 기본 + 상품정보 송장(BOX당 1장)</label></li>
-      </ul>
-    </div>
-    <div class="pop_footer">
-      <button type="button" class="btn btn_redline">취소</button>
-      <button type="button" class="btn btn_blueline">저장</button>
-    </div>   
-  </div>
-</div>
-<!-- 송장출력 팝업__e -->
-<!-- 주문취소 팝업 -->
-<div class="overlay" id="pop_cancel">
-  <div class="pop_wrap pop_cancel" dataforma="modal">
-    <div class="pop_tit">
-      <h1>주문취소</h1>
-      <a href="javascript:();" role="btn_close">닫기</a>
-    </div>
-    <div class="pop_body">      
-      <table class="tbl_state">
-        <tr>
-          <th scope="row">현재상태</th>
-          <td>접수완료</td>
-        </tr>
-        <tr>
-          <th scope="row">변경상태</th>
-          <td>접수완료</td>
-        </tr>
-      </table>
-    </div>
-    <div class="pop_footer">
-      <button type="button" class="btn btn_redline">취소</button>
-      <button type="button" class="btn btn_blueline">저장</button>
-    </div>   
-  </div>
-</div>
-<!-- 주문취소 팝업__e -->
 </body>
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
