@@ -1,0 +1,247 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content order" id="content">
+      <div class="content_tit">
+        <h1>주문</h1>
+      </div>
+      <div class="content_body">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">주문리스트 업로드</a></li>
+            <li><a href="#tab02">주문리스트</a></li>
+            <li><a href="#tab03">주문취소리스트</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div id="tab01" class="tab_cont section">
+            <div class="tit">
+              <h2>주문리스트 업로드</h2>
+            </div>
+            <div class="body">
+              <!-- file_attach.js 참고 -->
+              <div class="attach">
+                <input type="hidden" name="type" value="attach">              
+                <div id="file-drop" class="drop_zone">
+                  <div class="drop_info">
+                    주문리스트 엑셀파일을 드래그하여 옮겨주세요.
+                    <div class="fileBtn_area">
+                      또는
+                      <div class="file_attach">파일찾기
+                        <input id="attachFiles" type="file" name="file" title="파일첨부하기" class="btn_file" multiple="">
+                      </div>
+                    </div>
+                  </div>                    
+                </div>
+              </div>
+              <div class="order_btnArea">
+                <span class="fl">
+                  <button type="button" class="btn btn_grayline">업로드</button>
+                  <button type="button" class="btn btn_grayline">예약업로드</button>
+                  <button type="button" class="btn btn_grayline">주문입력</button>
+                  <button type="button" class="btn btn_grayline">관리자주문입력</button>
+                </span>
+                <span class="fr">
+                  <button type="button" class="btn btn_greenline">주문입력</button>
+                  <button type="button" class="btn btn_greenline">주문입력</button>
+                </span>
+              </div>
+              <div class="file_list">
+                <!-- file_attach.js addFileList펑션 참고 -->
+                <ul id="fileList">
+                  <li id="fileTr_0">filename.xls<span class="file_size">8.42KB</span><a href="#" onclick="deleteFile(0); return false;" class="axi_only axi_del" title="삭제">삭제</a></li>
+                </ul>
+              </div>
+              <div class="attach_result">
+                <p class="normal">주문접수 <b>총 <span>0</span>건이 정상업로드</b> 되었습니다.</p>
+                <p class="error">주문접수  <b>총 <span>0</span>건이 오류</b>가 있습니다.</p>
+              </div>
+            </div>           
+          </div>     
+         
+          <div id="tab02" class="tab_cont section">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_greenline">금일 전체 다운로드</button>
+              <button type="button" class="btn btn_greenline">검색 결과 다운로드</button>
+              <button type="button" class="btn btn_grayline">송장출력</button>
+              <button type="button" class="btn btn_grayline">주문취소</button>
+            </div>
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">날자선택</label></dt>
+                <dd>
+                    <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+                </dd>
+                <dt><label for="">조건별 검색</label></dt>
+                <dd class="search_condition">
+                  <select name="" id=""><option value="">검색조건</option></select>
+                  <input type="text" placeholder="검색어" />
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default">
+                <caption>주문리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col"><input type="checkbox" name="" id="" title="전체선택" /></th>
+                    <th scope="col">No.</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">주문번호</th>
+                    <th scope="col">접수회차</th>
+                    <th scope="col">송장출력</th>
+                    <th scope="col">거래처명</th>
+                    <th scope="col">실수령자</th>
+                    <th scope="col">주소(기본)</th>
+                    <th scope="col">주소(상세)</th>
+                    <th scope="col">권역</th>
+                    <th scope="col">상품수량</th>
+                    <th scope="col">고객사주문번호</th>
+                    <th scope="col">상세보기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="on">
+                    <td><input type="checkbox" name="" id="" title="줄선택" /></td>
+                    <td>1</td>
+                    <td>접수완료</td>
+                    <td>201907222-240264</td>
+                    <td>18</td>
+                    <td>출력완료</td>
+                    <td>집반찬연구소</td>
+                    <td>홍길동</td>
+                    <td>서울시 송파구</td>
+                    <td>e편한세상 10</td>
+                    <td>10A1</td>
+                    <td>1</td>
+                    <td>1190917</td>
+                    <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" title="줄선택" /></td>
+                    <td>1</td>
+                    <td>접수완료</td>
+                    <td>201907222-240264</td>
+                    <td>18</td>
+                    <td>출력완료</td>
+                    <td>집반찬연구소</td>
+                    <td>홍길동</td>
+                    <td>서울시 송파구</td>
+                    <td>e편한세상 10</td>
+                    <td>10A1</td>
+                    <td>1</td>
+                    <td>1190917</td>
+                    <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+          <div id="tab03" class="tab_cont section">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_greenline">금일 전체 다운로드</button>
+              <button type="button" class="btn btn_greenline">검색 결과 다운로드</button>
+              <button type="button" class="btn btn_grayline">주문접수</button>
+            </div>
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">조건별 검색</label></dt>
+                <dd class="search_condition">
+                  <select name="" id=""><option value="">검색조건</option></select>
+                  <input type="text" placeholder="검색어" />
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default">
+                <caption>주문리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col"><input type="checkbox" name="" id="" title="전체선택" /></th>
+                    <th scope="col">No.</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">주문번호</th>
+                    <th scope="col">접수회차</th>
+                    <th scope="col">송장출력</th>
+                    <th scope="col">거래처명</th>
+                    <th scope="col">실수령자</th>
+                    <th scope="col">주소(기본)</th>
+                    <th scope="col">주소(상세)</th>
+                    <th scope="col">권역</th>
+                    <th scope="col">상품수량</th>
+                    <th scope="col">고객사주문번호</th>
+                    <th scope="col">상세보기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="on">
+                    <td><input type="checkbox" name="" id="" title="줄선택" /></td>
+                    <td>1</td>
+                    <td>접수완료</td>
+                    <td>201907222-240264</td>
+                    <td>18</td>
+                    <td>출력완료</td>
+                    <td>집반찬연구소</td>
+                    <td>홍길동</td>
+                    <td>서울시 송파구</td>
+                    <td>e편한세상 10</td>
+                    <td>10A1</td>
+                    <td>1</td>
+                    <td>1190917</td>
+                    <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" title="줄선택" /></td>
+                    <td>1</td>
+                    <td>접수완료</td>
+                    <td>201907222-240264</td>
+                    <td>18</td>
+                    <td>출력완료</td>
+                    <td>집반찬연구소</td>
+                    <td>홍길동</td>
+                    <td>서울시 송파구</td>
+                    <td>e편한세상 10</td>
+                    <td>10A1</td>
+                    <td>1</td>
+                    <td>1190917</td>
+                    <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+@@include('../inc/popup/order1_dtlView.html')
+@@include('../inc/popup/order1_orderEntry.html')
+@@include('../inc/popup/order1_printInvoice.html')
+@@include('../inc/popup/order1_cancel.html')
+</body>
+</html>
+@@include('../inc/script.html')
+<script src="../js/file_attach.js"></script>
+<script>
+  fileDropEvt();
+</script>

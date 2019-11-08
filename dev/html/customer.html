@@ -1,0 +1,70 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>고객센터</h1>
+      </div>
+      <div class="content_body">
+        <ul class="tab_list">
+          <li><a href="#tab01">고객사</a></li>
+          <li><a href="#tab02">매니저</a></li>
+        </ul>
+        <div class="tab_conts">
+          <div id="tab01" class="tab_cont">
+            <div class="search">
+
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_head">
+                <caption>고객사 목록 제목</caption>
+                <thead>
+                  <tr>
+                    <th id="th1-1">No.</th>
+                    <th id="th1-2">카테고리</th>
+                    <th id="th1-3">제목</th>
+                    <th id="th1-4">ID</th>
+                    <th id="th1-5">작성자</th>
+                    <th id="th1-6">작성일시</th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="scroll-y">
+                <table class="tbl_default tbl_head">
+                  <caption>고객사 목록 내용</caption>
+                    <tr>
+                      <td headers="th1-1">1</td>
+                      <td headers="th1-2">AAA</td>
+                      <td headers="th1-3">문의합니다.</td>
+                      <td headers="th1-4">TIMF015</td>
+                      <td headers="th1-5">홍길동</td>
+                      <td headers="th1-6">2019-10-25 18:34</td>
+                    </tr>
+                    <tr>
+                      <td headers="th1-1">1</td>
+                      <td headers="th1-2">AAA</td>
+                      <td headers="th1-3">문의합니다.</td>
+                      <td headers="th1-4">TIMF015</td>
+                      <td headers="th1-5">홍길동</td>
+                      <td headers="th1-6">2019-10-25 18:34</td>
+                    </tr>
+                </table>
+              </div>              
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>

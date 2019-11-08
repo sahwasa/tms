@@ -1,0 +1,82 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>검수이력</h1>
+      </div>
+      <div class="content_body">
+        <div class="search">
+          <dl class="dl_search">
+            <dt><label for="">날자선택</label></dt>
+            <dd>
+                <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+            </dd>
+            <dt><label for="">조건별 검색</label></dt>
+            <dd class="search_condition">
+              <select name="" id=""><option value="">검색조건</option></select>
+              <input type="text" placeholder="검색어" />
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+              <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+            </dd>
+          </dl>
+        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default tbl_head">
+            <caption>검수처리 리스트</caption>
+            <thead>
+              <tr>
+                <th scope="col">거래처명</th>
+                <th scope="col">실수령자명</th>
+                <th scope="col">주문번호</th>
+                <th scope="col">바코드번호</th>
+                <th scope="col">접수&sol;입고권역</th>
+                <th scope="col">배차권역</th>
+                <th scope="col">상품발견매니저</th>
+                <th scope="col">상차검수권역</th>
+                <th scope="col">하차검수권역</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="on">
+                <td>헬로네이처</td>
+                <td>홍길동</td>
+                <td>20190822-00100001</td>
+                <td>-</td>
+                <td>10A1<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>10A1<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>10A1<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>분실<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>분실<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+              </tr>                  
+              <tr>
+                <td>헬로네이처</td>
+                <td>홍길동</td>
+                <td>20190822-00100001</td>
+                <td>-</td>
+                <td>10A1<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>10A1<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>10A1<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>분실<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+                <td>분실<button type="button" class="btn_tbl tbl_memo">메모</button> </td>
+              </tr>                  
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl_areaB">
+          @@include('../inc/paginate.html')
+          <span class="fr">
+            총 9페이지/86개 중 (101~200)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+</body>
+</html>
+@@include('../inc/script.html')
