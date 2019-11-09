@@ -1,0 +1,143 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>배차</h1>
+        <span class="btn_area">
+          <button type="button" class="btn btn_grayline">전체초기화</button>
+          <button type="button" class="btn btn_grayline">조별초기화</button>
+          <button type="button" class="btn btn_greenline">배차시작</button>
+        </span>
+      </div>
+      <div class="content_body allocate">
+        <div class="search">
+          <ul class="ul_search">
+            <li><label for="">조</label><select name="" id=""><option value=""></option></select></li>
+            <li><label for="">권역그룹</label><select name="" id=""><option value=""></option></select></li>
+            <li><label for="">권역</label><select name="" id=""><option value=""></option></select></li>            
+            <li>
+              <div class="tag_wrap">
+                <span class="tag">10A1 <button type="button" class="axi_only axi_del">삭제</button></span>
+              </div>
+            </li>
+            <li>
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+              <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+            </li>
+          </ul>
+        </div>
+        <div class="section">
+          <div class="fl order">
+            <h2>0point (0주문)</h2>
+            <div class="tbl_wrap">
+              <table class="tbl_stripe">
+                <thead>
+                  <tr>
+                    <th scope="col">A조</th>
+                    <th scope="col">기준</th>
+                    <th scope="col">집</th>
+                    <th scope="col">배송</th>
+                    <th scope="col">반품</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10A1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>10A1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>10A1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="tbl_stripe">
+                <thead>
+                  <tr>
+                    <th scope="col">A조</th>
+                    <th scope="col">기준</th>
+                    <th scope="col">집</th>
+                    <th scope="col">배송</th>
+                    <th scope="col">반품</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10A1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>10A1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>10A1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="fl gis">
+            <div class="gis_wrap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.699308010419!2d127.13296691564693!3d37.515009534834334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caf8dd21135df%3A0x33cfce009e5c0b62!2z7Jis66a87ZS97ISg7IiY6riw7J6Q7LSM7JWE7YyM7Yq4!5e0!3m2!1sko!2skr!4v1573276795051!5m2!1sko!2skr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="fr region">
+            <h2>권역이동</h2>            
+            <ul class="moveRegion">
+              <li><label for="">조</label><select name="" id=""><option value="">선택</option></select></li>
+              <li><label for="">권역그룹</label><select name="" id=""><option value="">선택</option></select></li>
+              <li><label for="">권역</label><select name="" id=""><option value="">선택</option></select></li>
+            </ul>
+            <div class="regionList_wrap">
+              <div class="summary">
+                0집 0건 0박스
+              </div>
+              <ul class="list_region">
+                <li>
+                  <span class="label">&lt;총 1건&gt;</span>
+                  <p>1. 경기도 성남시 분당구 판교로25번길 105동 4호</p>
+                </li>
+                <li>
+                  <span class="label">&lt;총 2건&gt;</span>
+                  <p>1. 경기도 성남시 분당구 판교로25번길 105동 4호</p>
+                  <p>2. 경기도 성남시 분당구 판교로25번길 6 2층</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')

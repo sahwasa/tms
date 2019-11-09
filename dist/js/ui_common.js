@@ -1,14 +1,5 @@
 (function init($){
   // navigator
-  var lnb = $('.nav'),
-      header = $('.header'),
-      openSubH = 323,
-      closeSubH = 102,
-      timer,
-      delay = 200;
-  lnb.on({
-    
-  })
 
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
@@ -84,6 +75,7 @@
   tab_cont.hide();
   tab_cont.first().show();
   tab_btn.first().addClass('on');
+
   $('.tab_list').on('click','a', function(e){
     e.preventDefault();
     var getId = $(this).prop('href').split('#')[1];
@@ -91,8 +83,6 @@
     tab_btn.removeClass('on');
     $(this).parent('li').addClass('on');
     $('#'+getId).show();
-    jqgridInit();
-    echartInit();
   });  
 
   // slectlist evt
@@ -165,22 +155,3 @@
     }
   })
 })(jQuery);
-function jqgridInit(){
-  $('.jq-grid').each(function(){
-    var grids=$(this);
-    $(this).setGridWidth($(this).parents('.tbl_wrap').width() - 2);
-  });
-}
-function echartInit(){
-  setTimeout(function(){
-    $('.echarts').each(function(){
-      if ($(this).parents('.tab_cont').css('display') == 'none') return
-      var id= $(this).attr('_echarts_instance_');
-      window.echarts.getInstanceById(id).resize();
-    });
-  },100);
-}
-$(window).on('resize', function() {
-  echartInit();  
-  jqgridInit();
-});

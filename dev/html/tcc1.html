@@ -1,0 +1,87 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>배송현황</h1>
+      </div>
+      <div class="content_body">
+        <div class="search">
+          <dl class="dl_search">
+            <dt><label for="">기간선택</label></dt>
+            <dd>
+              <input type="text" name="report_period" class="date from" dataformat="from" readonly /> ~
+              <input type="text" name="report_period" class="date to" dataformat="to" readonly />
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+            </dd>
+            <dd class="count"><span class="label">배송완료</span> <b>114&sol;114</b>
+          </dl>
+        </div>
+        <div class="tbl_wrap tbl_sendCheck">
+          <table class="tbl_default">
+            <caption>배송현황/caption>
+            <thead>
+              <tr>
+                <th col="scope">No.</th>
+                <th col="scope">센터</th>
+                <th col="scope">매니저명</th>
+                <th col="scope">연락처</th>
+                <th col="scope">총 주문건</th>
+                <th col="scope">잔여배송건</th>
+                <th col="scope">대응배송건</th>
+                <th col="scope">미배송건</th>
+                <th col="scope">소량배송건</th>
+                <th col="scope">미출고건</th>
+                <th col="scope">회수완료</th>
+                <th col="scope">미회수</th>
+                <th col="scope">지연배송건</th>
+                <th col="scope">배송시작일</th>
+                <th col="scope">배송마감일</th>
+                <th col="scope">배송마감 여부</th>
+                <th col="scope">상차</th>
+                <th col="scope">타코미터</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="t_green">완료</span></td>
+                <td><button type="button" class="btn_tbl tbl_photo">사진</button></td>
+                <td>
+                  <button type="button" class="btn_tbl tbl_photo">사진</button>
+                  <button type="button" class="btn_tbl tbl_photo">사진</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl_areaB">
+          @@include('../inc/paginate.html')
+          <span class="fr">
+            총 9페이지/86개 중 (101~200)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')

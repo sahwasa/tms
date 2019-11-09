@@ -6,6 +6,7 @@
 .pop_body{padding:10px 15px;max-height:730px;overflow-y:auto;}
 .pop_footer{padding:10px 15px;text-align:right;}
 
+.dl_list dt{margin-top:10px;}
 .use_grid{display:flex;flex-wrap:wrap;margin:-15px -10px 0;overflow:hidden;}
 .use_grid li{flex:0 1 auto;padding:15px 10px 0;}
 .divide4 li{width:25%;}
@@ -59,3 +60,10 @@
 
 .pop_prompt{width:450px;margin-left:-225px;}
 .pop_prompt p{text-align:center;font-size:1.5em;padding:40px 0 50px;}
+
+.pop_sortVal{width:628px;margin-left:-316px;}
+
+.attach_s .drop_zone{border-color:#d2d9e4;min-height:70px;max-height:150px;overflow-y:auto;}
+.attach_s .drop_zone .drop_info{margin-top:22px;}
+.attach_s li{margin-top:5px;}
+.attach_s .axi_del{margin-left:5px;vertical-align:middle;}

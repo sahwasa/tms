@@ -90,21 +90,19 @@ function addFileList(fIndex, fName, fSize, fExt){
   // html += "<i class='ico_ext ext_" + fExt + "'></i>";  
   html += "</li>";
   viewList.append(html);
-  // infoView();
+  console.log();
+  if (viewList.parents('div').hasClass('attach_s')) infoView();
 }
 function deleteFile(fIndex){
+  var viewList = $('#fileList');
   totalfSize -= fSizeList[fIndex];// 전체 파일 사이즈 수정
   delete fList[fIndex];// 파일 배열에서 삭제
   delete fSizeList[fIndex];// 파일 사이즈 배열 삭제
-  $("#fileTr_" + fIndex).remove();// 업로드 파일 테이블 목록에서 삭제
-  // infoView();
+  $("#fileTr_" + fIndex).remove();// 업로드 파일 테이블 목록에서 삭제  
+  if (viewList.parents('div').hasClass('attach_s')) infoView();
 }
 function infoView(){
   var fileList = $('#fileList li').length;
   var info = $('.drop_info');
-  if(fileList == 0){
-    info.show();
-  }else{
-    info.hide();
-  }
+  (fileList == 0) ? info.show() : info.hide();
 }

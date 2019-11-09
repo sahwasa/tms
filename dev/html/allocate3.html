@@ -1,0 +1,163 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>매니저</h1>
+      </div>
+      <div class="content_body">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">매니저 배정</a></li>
+            <li><a href="#tab02">매니저 근태</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div class="tab_cont section" id="tab01">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_blueline">저장</button>
+            </div>
+            <div class="search">
+              <ul class="ul_search">
+                <li><label for="">조</label><select name="" id=""><option value=""></option></select></li>
+                <li><label for="">권역그룹</label><select name="" id=""><option value=""></option></select></li>
+                <li><label for="">권역</label><select name="" id=""><option value=""></option></select></li>            
+                <li>
+                  <div class="tag_wrap">
+                    <span class="tag">10A1 <button type="button" class="axi_only axi_del">삭제</button></span>
+                  </div>
+                </li>
+                <li>
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                </li>
+              </ul>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_head">
+                <caption>매니저배정 리스트</caption>
+                <thead>
+                  <tr>
+                    <th width="50" id="col1">No.</th>
+                    <th width="100" id="col2">조</th>
+                    <th width="100" id="col3">권역그룹</th>
+                    <th width="80" id="col4">권역</th>
+                    <th width="60" id="col5">배송건</th>
+                    <th width="60" id="col6">반품건</th>
+                    <th width="100" id="col7">매니저명</th>
+                    <th width="150" id="col8">매니저연락처</th>
+                    <th id="col9">지입사</th>
+                    <th width="100" id="col10">변경</th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="scroll-y">
+                <table class="tbl_default tbl_body">
+                  <caption>주문리스트</caption>
+                  <tbody>
+                    <tr>
+                      <td width="50" headers="col1">-</td>
+                      <td width="100" headers="col2">-</td>
+                      <td width="100" headers="col3">-</td>
+                      <td width="80" headers="col4">-</td>
+                      <td width="60" headers="col5">-</td>
+                      <td width="60" headers="col6">-</td>
+                      <td width="100" headers="col7">-</td>
+                      <td width="150" headers="col8">-</td>
+                      <td headers="col9">-</td>                      
+                      <td width="83" headers="col10"><button type="button" class="btn btn_grayline">변경</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab_cont section" id="tab02">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_blueline">확인</button>
+            </div>
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">기간선택</label></dt>
+                <dd>
+                  <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
+                  <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
+                  <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+                </dd>
+                <dt><label for="">조건별 검색</label></dt>
+                <dd class="search_condition">
+                  <select name="" id=""><option value="">검색조건</option></select>
+                  <input type="text" placeholder="검색어">
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_add">추가</button>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default">
+                <caption>주문리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">접수회차</th>
+                    <th scope="col">송장출력</th>
+                    <th scope="col">거래처명</th>
+                    <th scope="col">실수령자</th>
+                    <th scope="col">주소(기본)</th>
+                    <th scope="col">주소(상세)</th>
+                    <th scope="col">권역</th>
+                    <th scope="col">상품수량</th>
+                    <th scope="col">고객사주문번호</th>
+                    <th scope="col">상세보기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="on">
+                    <td>1</td>
+                    <td>접수완료</td>
+                    <td>18</td>
+                    <td>출력완료</td>
+                    <td>집반찬연구소</td>
+                    <td>홍길동</td>
+                    <td>서울시 송파구</td>
+                    <td>e편한세상 10</td>
+                    <td>10A1</td>
+                    <td>1</td>
+                    <td>1190917</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>접수완료</td>
+                    <td>18</td>
+                    <td>출력완료</td>
+                    <td>집반찬연구소</td>
+                    <td>홍길동</td>
+                    <td>서울시 송파구</td>
+                    <td>e편한세상 10</td>
+                    <td>10A1</td>
+                    <td>1</td>
+                    <td>1190917</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')

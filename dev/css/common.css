@@ -87,6 +87,10 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 /* div{display:inline-block;box-sizing:border-box;width:100%;}
 .init_div div{display:block;box-sizing:content-box;width:auto;} */
 
+.clearfix{*zoom:1;}
+.clearfix::before,
+.clearfix::after{display:block;,content:"";line-height:0;}
+.clearfix::after{clear:both;}
 .scroll{overflow-y:scroll;background-color:#f5f5f5;}
 .full{display:inline-block;width:100%!important;min-width:auto;}
 
@@ -106,6 +110,9 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 
 .fl{float:left !important;}
 .fr{float:right !important;}
+
+.t_green{color:#239e40 !important;}
+.t_blue{color:#0f4fc4 !important;}
 
 /* normal font */
 .blind{font-size:0;line-height:0;position:absolute;left:0;top:0;text-indent:-9999px;visibility:hidden;overflow:hidden;}
@@ -146,6 +153,7 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .ico_btn::before{display:inline-block;content:"";background-image:url(../img/btn_ico.png);background-repeat:no-repeat;width:20px;height:24px;line-height:0;margin-top:4px;}
 .ico_search::before{background-position:0 0;}
 .ico_refresh::before{background-position:0 -41px;}
+.ico_add::before{background-position:0 -81px;}
 
 .axi_only{font-size:0;background:transparent;border:none;}
 .axib::before{margin-right:5px;}

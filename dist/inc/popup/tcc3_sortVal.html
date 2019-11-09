@@ -1,0 +1,50 @@
+<!-- 분류값 결정 팝업 -->
+<div class="overlay" id="pop_sortVal">
+  <div class="pop_wrap pop_sortVal" dataformat="modal">
+    <div class="pop_tit">
+      <h1>분류값 결정</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">      
+      <dl class="dl_list fullIpt">
+        <dt><label for="">대분류</label></dt>
+        <dd><select name="" id=""><option value=""></option></select></dd>
+        <dt><label for="">중분류</label></dt>
+        <dd><select name="" id=""><option value=""></option></select></dd>
+        <dt><label for="">상세분류</label></dt>
+        <dd><select name="" id=""><option value=""></option></select></dd>
+        <dt><label for="">특이사항</label></dt>
+        <dd><textarea name="" id="" cols="30" rows="3"></textarea></dd>
+        <dt><label for="">사진 첨부파일</label></dt>
+        <dd>
+          <!-- file_attach.js 참고 -->
+          <div class="attach attach_s">
+            <input type="hidden" name="type" value="attach">              
+            <div id="file-drop" class="drop_zone">
+              <div class="drop_info">
+                사진파일을 드래그하여 옮겨주세요.
+                <div class="fileBtn_area">
+                  또는
+                  <div class="file_attach">파일찾기
+                    <input id="attachFiles" type="file" name="file" title="파일첨부하기" class="btn_file" multiple="">
+                  </div>
+                </div>
+              </div>
+              <!-- file_attach.js addFileList펑션 참고 -->
+              <ul id="fileList">                
+              </ul>                  
+            </div>
+          </div>
+          <div class="file_list">
+            
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="pop_footer">
+      <button type="button" class="btn btn_redline">취소</button>
+      <button type="button" class="btn btn_blueline">저장</button>
+    </div>   
+  </div>
+</div>
+<!-- 분류값 결정 팝업__e -->
