@@ -13,7 +13,7 @@
 .btn_login{background-color:#ec6941;}
 
 /* layout */
-.wrap{min-width:1280px;height:100%;text-align:left;}
+.wrap{min-width:1280px;text-align:left;}
 .cont{position:relative;min-height:calc(100% - 73px);overflow: hidden;}
 
 /* header */
@@ -43,7 +43,7 @@
 .content_tit h1{font-family:'notokrM';font-size:1.875em;color:#02204a;}
 .content_tit .btn_area{position:absolute;right:0;top:50%;margin-top:-13px;}
 .content_tit .btn_area .btn{border-width:1px;}
-.section .tit h2{font-size:1.375em;color:#0d0d0d;}
+.section .tit h2{font-size:1.375em;color:#0d0d0d;letter-spacing:-.05em;}
 .section .tit h3{font-size:1.125em;color:#606060;margin-bottom:30px;}
 .section .tit h3::before{content:"";display:inline-block;width:0;height:20px;border-left:4px solid #999;vertical-align:middle;margin:-4px 10px 0 0;}
 
@@ -74,6 +74,7 @@
 
 .search .count{position: absolute;right:30px;top:25px;}
 .search .count b{color:#0d0d0d;font-size:1.5em;margin-left:20px;}
+.search .select_longW{min-width:672px;;}
 
 .tag_wrap{position:relative;min-width:300px;border:1px solid #d2d9e4;padding:3px;margin-left:30px;}
 .tag_wrap::before{position:absolute;left:-40px;top:3px;content:"\f197";font-family:'axicon';color:#239e40;font-size:26px;}
@@ -92,6 +93,14 @@ table .btn{border-width:1px;}
 .tbl_default td{padding:6px 5px;}
 
 .tbl_stripe tbody tr:nth-child(even){background-color:#e5e8ef;}
+.tbl_default_s th,
+.tbl_default_s td{padding:4px 5px;}
+
+.tbl_dtl th,
+.tbl_dtl td{border:1px solid #d3d9e4;font-size:0.875em;color:#606060;padding:5px;text-align:left;}
+.tbl_dtl .h_fix2 th,
+.tbl_dtl .h_fix2 td{height:51px;}
+.tbl_dtl .h_fix2 td{vertical-align:top;}
 
 .btn_tbl{width:48px;height:22px;font-size:0;line-height:0;color:transparent;overflow:hidden;background-image:url(../img/btn_tbl_ico.png);background-repeat:no-repeat;vertical-align:middle;}
 .tbl_dtl{background-position:0 0;}
@@ -101,6 +110,9 @@ table .btn{border-width:1px;}
 .tbl_areaT{margin-bottom:20px;}
 .tbl_areaB{position:relative;text-align:center;margin-top:9px;}
 .tbl_areaB .fr{position:absolute;right:0;top:0;}
+
+/* list */
+.line_list li{border-bottom:1px solid #d2d9e4;}
 
 /* sub */
 /* .dashboard */
@@ -195,3 +207,92 @@ table .btn{border-width:1px;}
 .listPhoto li input{border:none;background:none;}
 
 .spcNote .btn_area{width:100%;margin-top:24px;text-align:right;padding:0 20px;box-sizing:border-box;}
+.ipt_img{background:none;border:none;padding:0;}
+
+/* calc */
+.charge_dtl .tbl_leftArea .tbl_default,
+.pick_dtl .tbl_leftArea .tbl_default,
+.pick_dtl .tbl_rightArea .tbl_default{table-layout:auto;}
+
+.charge_dtl .tbl_leftArea{width:380px;}
+.charge_dtl .tbl_cenArea{width:calc(100% - 470px);overflow-x:scroll;}
+.charge_dtl .tbl_cenArea th,
+.charge_dtl .tbl_cenArea td{width:68px;}
+.charge_dtl .tbl_cenArea th:first-child,
+.charge_dtl .tbl_cenArea td:first-child{border-left-width:0;}
+.charge_dtl .tbl_cenArea th:last-child,
+.charge_dtl .tbl_cenArea td:last-child{border-right-width:0;}
+.charge_dtl .tbl_rightArea{width:90px;}
+.charge_dtl .h_fix2{height:73px;}
+.b_gray{background-color:#eee !important;}
+
+.pick_dtl .tbl_leftArea{width:370px;}
+.pick_dtl .tbl_cenArea{width:calc(100% - 832px);overflow-x:scroll;}
+.pick_dtl .tbl_cenArea th,
+.pick_dtl .tbl_cenArea td{width:68px;}
+.pick_dtl .tbl_cenArea th:first-child,
+.pick_dtl .tbl_cenArea td:first-child{border-left-width:0;}
+.pick_dtl .tbl_cenArea th:last-child,
+.pick_dtl .tbl_cenArea td:last-child{border-right-width:0;}
+.pick_dtl .tbl_rightArea{width:462px;}
+.pick_dtl .sub_th th{padding:4px 0;}
+.pick_dtl input.w_fix75{width:75px;}
+.pick_dtl input.w_fix95{width:75px;}
+
+.pdf_wrap{border:1px solid #d2d9e4;padding:20px;height:400px;overflow-y:auto;}
+
+/* account */
+.account1 .div_section{display:flex;overflow:hidden;}
+.account1 .div_section > .section{width:100%;}
+.account1 .div_section > .fl,
+.account1 .div_section > .fr{flex:0 1 auto;padding-left:3%;}
+
+.account1 .div_section > .fl{padding-left:0;}
+.account1 .tab01 .section02,
+.account1 .tab01 .section03{margin-top:45px;}
+.account1 .tab01 .fl{width:60%;}
+.account1 .tab01 .fr{width:37%;}
+.account1 .body{margin-top:15px;}
+.account1 .use_grid li{position:relative;}
+.account1 .use_grid label{display:block;width:100%;}
+.account1 .use_grid span{font-size:0.825em;}
+.account1 .use_grid .btn_wrap{position: absolute;right:10px;top:15px;}
+.account1 .use_grid .btn,
+.account1 .personInCharge .btn{border-width:1px;border-radius:0;font-size:0.825em;padding:0 3px;line-height:17px;margin-left:5px;;}
+.account1 .id_wrap input{width:150px;}
+.account1 .use_grid .id_wrap .btn_wrap{right:auto;left:109px;}
+.account1 .axi_search{position:absolute;right:20px;bottom:8px;}
+.account1 .axi_search::before{color:#999;font-size:16px;}
+.account1 .tab01 .section03 .box_lightgrayLine{padding-top:0;}
+.personInCharge{display:flex;overflow:hidden;margin-top:10px;}
+.personInCharge li{position:relative;flex:0 1 auto;width:15%;padding-right:2%;}
+.personInCharge li:last-child{width:55%;padding-right:0;}
+.personInCharge li:last-child input{width:85%;}
+.personInCharge label{display:block;width:100%;}
+.personInCharge .axi_only{vertical-align:middle;margin-left:10px;}
+.personInCharge .axi_only::before{color:#8f8f8f;font-size:22px;}
+
+.account1 .tab02 .section02,
+.account1 .tab02 .section03{margin-top:45px;}
+.account1 .pickupManager li{width:calc(100% / 6);}
+.pickupManager li:last-child input{width:100%;}
+.pickupManager .axi_only{right:10px;bottom:5px;}
+
+.account1 .tab03 > .fl{width:60%;}
+.account1 .tab03 > .fr{width:37%;}
+.account1 .tab03 .section02,
+.account1 .tab03 .section03{margin-top:45px;}
+.account1 .date_wrap input{width:calc(100% - 30px);}
+.account1 .pickupSvc li{width:15%;}
+.account1 .pickupSvc .pic_loc{width:35%;}
+.account1 .pic_loc input{width:calc(100% - 65px);}
+.account1 .pickupSvc .pic_charge input{width:calc(100% - 40px);}
+
+.account1 .tab04 > .fl{width:48%;}
+.account1 .tab04 > .fr{width:48%;}
+.account1 .tab04 .section02,
+.account1 .tab04 .section03{margin-top:45px;}
+.dl_shipInfo{overflow:hidden;margin-top:-15px;}
+.dl_shipInfo dt{float:left;width:215px;}
+.dl_shipInfo dt,
+.dl_shipInfo dd{padding-top:15px;}

@@ -3,11 +3,11 @@
 
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
-  modal.draggable({
-    handle: ".pop_tit",
-    containment: "body",
-    scroll : false
-   });
+  // modal.draggable({
+  //   handle: ".pop_tit",
+  //   containment: "body",
+  //   scroll : true
+  //  });
   modal.find("[role='btn_close']").on('click',function(e){
     e.preventDefault();
     $(this).parents('.overlay').hide();

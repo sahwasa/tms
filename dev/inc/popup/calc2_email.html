@@ -1,16 +1,18 @@
 <!-- 상태확인 팝업 -->
-<div class="overlay" id="pop_prompt">
-  <div class="pop_wrap pop_prompt" dataformat="modal">
+<div class="overlay" id="">
+  <div class="pop_wrap pop_prompt pop_email" dataformat="modal">
     <div class="pop_tit">
       <h1 class="blind">상태확인</h1>
       <a href="javascript:();" role="btn_close">닫기</a>
     </div>
     <div class="pop_body">
-      <p>검수 상태를 변경하시겠습니까?</p>      
+      <div class="ipt_wrap">
+        <label for="">수신 메일주소</label> <input type="text" name="" id="" />
+      </div>
     </div>
     <div class="pop_footer">
       <button type="button" role="btn_close" class="btn btn_redline">취소</button>
-      <button type="button" role="btn_close" class="btn btn_blueline">확인</button>
+      <button type="button" class="btn btn_greenline">전송</button>
     </div>
   </div>
 </div>

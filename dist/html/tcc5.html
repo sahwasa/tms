@@ -92,14 +92,7 @@
 </div>
     <div class="content" id="content">
       <div class="content_tit">
-        <h1>배송리포트</h1>
-        <span class="btn_area">
-          <button type="button" class="btn btn_greenline">금일다운로드</button>
-          <button type="button" class="btn btn_greenline">엑셀다운로드</button>
-          <button type="button" class="btn btn_grayline">분류값 결정</button>
-          <button type="button" class="btn btn_grayline">VOC인입</button>
-          <button type="button" class="btn btn_grayline">주문 권역 변경</button>
-        </span>
+        <h1>배송문자조회</h1>
       </div>
       <div class="content_body">
         <div class="search">
@@ -108,7 +101,8 @@
             <dd>
               <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
               <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
-              <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+              <input type="text" name="report_period" class="date from" dataformat="from" readonly /> ~
+              <input type="text" name="report_period" class="date to" dataformat="to" readonly />
             </dd>
             <dt><label for="">조건별 검색</label></dt>
             <dd class="search_condition">
@@ -117,67 +111,72 @@
               <button type="button" title="검색" class="ico_btn ico_search">검색</button>
               <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
             </dd>
-            <dt><label for="">배송상태</label></dt>
+            <dt><label for="">처리상태</label></dt>
             <dd class="search_condition">
               <select name="" id=""><option value="">검색조건</option></select>
-              <input type="text" placeholder="검색어" />
-              <button type="button" title="검색어 초기화" class="ico_btn ico_add">추가</button>
             </dd>
           </dl>
         </div>
         <div class="tbl_wrap">
           <table class="tbl_default">
-            <caption>배송내역</caption>
+            <caption>배송문자내역</caption>
             <thead>
               <tr>
-                <th scope="col"><input type="checkbox" name="" id="" title="전체선택"></th>
-                <th scope="col">No.</th>
-                <th scope="col">상태</th>
+                <th scope="col" width="30"><input type="checkbox" name="" id="" title="전체선택"></th>
+                <th scope="col" width="40">No.</th>
+                <th scope="col" width="40">유형</th>
+                <th scope="col">배송상태</th>
                 <th scope="col">주문번호</th>
-                <th scope="col">접수회차</th>
-                <th scope="col">송장출력</th>
                 <th scope="col">거래처명</th>
                 <th scope="col">실수령자</th>
-                <th scope="col">주소(기본)</th>
-                <th scope="col">주소(상세)</th>
-                <th scope="col">권역</th>
-                <th scope="col">상품수량</th>
-                <th scope="col">고객사주문번호</th>
-                <th scope="col">상세보기</th>
+                <th scope="col">수신자연락처</th>
+                <th scope="col">메시지</th>
+                <th scope="col">배송사진</th>
+                <th scope="col">발신번호</th>
+                <th scope="col">발신시간</th>
+                <th scope="col" width="60">처리상태</th>
               </tr>
             </thead>
             <tbody>
               <tr class="on">
                 <td><input type="checkbox" name="" id="" title="줄선택"></td>
                 <td>1</td>
-                <td>접수완료</td>
-                <td>201907222-240264</td>
+                <td>MMs</td>
+                <td>배송완료</td>
                 <td>18</td>
-                <td>출력완료</td>
-                <td>집반찬연구소</td>
-                <td>홍길동</td>
-                <td>서울시 송파구</td>
-                <td>e편한세상 10</td>
-                <td>10A1</td>
-                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                </td>
                 <td>1190917</td>
-                <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+                <td>1190917</td>
+                <td><button type="button" class="btn btn_blueline">성공</button></td>
               </tr>
               <tr>
                 <td><input type="checkbox" name="" id="" title="줄선택"></td>
                 <td>1</td>
-                <td>접수완료</td>
-                <td>201907222-240264</td>
+                <td>MMs</td>
+                <td>배송완료</td>
                 <td>18</td>
-                <td>출력완료</td>
-                <td>집반찬연구소</td>
-                <td>홍길동</td>
-                <td>서울시 송파구</td>
-                <td>e편한세상 10</td>
-                <td>10A1</td>
-                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                </td>
                 <td>1190917</td>
-                <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+                <td>1190917</td>
+                <td><button type="button" class="btn btn_redline">실패</button></td>
               </tr>
             </tbody>
           </table>
@@ -206,66 +205,9 @@
     </div>
   </div>  
 </div>
-<!-- 분류값 결정 팝업 -->
-<div class="overlay" id="pop_sortVal">
-  <div class="pop_wrap pop_sortVal" dataformat="modal">
-    <div class="pop_tit">
-      <h1>분류값 결정</h1>
-      <a href="javascript:();" role="btn_close">닫기</a>
-    </div>
-    <div class="pop_body">      
-      <dl class="dl_list fullIpt">
-        <dt><label for="">대분류</label></dt>
-        <dd><select name="" id=""><option value=""></option></select></dd>
-        <dt><label for="">중분류</label></dt>
-        <dd><select name="" id=""><option value=""></option></select></dd>
-        <dt><label for="">상세분류</label></dt>
-        <dd><select name="" id=""><option value=""></option></select></dd>
-        <dt><label for="">특이사항</label></dt>
-        <dd><textarea name="" id="" cols="30" rows="3"></textarea></dd>
-        <dt><label for="">사진 첨부파일</label></dt>
-        <dd>
-          <!-- file_attach.js 참고 -->
-          <div class="attach attach_s">
-            <input type="hidden" name="type" value="attach">              
-            <div id="file-drop" class="drop_zone">
-              <div class="drop_info">
-                사진파일을 드래그하여 옮겨주세요.
-                <div class="fileBtn_area">
-                  또는
-                  <div class="file_attach">파일찾기
-                    <input id="attachFiles" type="file" name="file" title="파일첨부하기" class="btn_file" multiple="">
-                  </div>
-                </div>
-              </div>
-              <!-- file_attach.js addFileList펑션 참고 -->
-              <ul id="fileList">                
-              </ul>                  
-            </div>
-          </div>
-          <div class="file_list">
-            
-          </div>
-        </dd>
-      </dl>
-    </div>
-    <div class="pop_footer">
-      <button type="button" class="btn btn_redline">취소</button>
-      <button type="button" class="btn btn_blueline">저장</button>
-    </div>   
-  </div>
-</div>
-<!-- 분류값 결정 팝업__e -->
 </body>
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script>
-
-<script src="../js/file_attach.js"></script>
-<script>
-  $(function(){
-    fileDropEvt();
-  })
-</script>

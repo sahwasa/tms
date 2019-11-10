@@ -1,0 +1,35 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>운송료 명세서</h1>
+        <span class="btn_area">
+          <button type="button" class="btn btn_greenline">PDF 다운로드</button>
+          <button type="button" class="btn btn_grayline">메일전송</button>
+        </span>
+      </div>
+      <div class="content_body">
+        <div class="search">
+          <ul class="ul_search">
+            <li>
+              <label for="">날자선택</label>
+              <input type="text" class="date" dataformat="datepic" />
+            </li>
+            <li><label for="">고객사</label><select name="" id=""><option value=""></option></select></li>
+          </ul>
+        </div>
+        <div class="pdf_wrap">
+          명세서 뷰영역
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+@@include('../inc/popup/calc2_email.html')
+</body>
+</html>
+@@include('../inc/script.html')

@@ -3,7 +3,7 @@
 .pop_tit h1{font-size:1.5em;}
 .pop_tit [role="btn_close"]{position:absolute;right:15px;top:50%;font-size:0;color:transparent;overflow:hidden;margin-top:-8px;}
 .pop_tit [role="btn_close"]::before{display:block;width:14px;height:14px;font-family:'axicon';content:"\e117";color:#606060;font-size:16px;}
-.pop_body{padding:10px 15px;max-height:730px;overflow-y:auto;}
+.pop_body{padding:10px 15px;max-height:530px;overflow-y:auto;}
 .pop_footer{padding:10px 15px;text-align:right;}
 
 .dl_list dt{margin-top:10px;}
@@ -59,7 +59,14 @@
 .tbl_tally td:nth-child(9){border-right-color:transparent;}
 
 .pop_prompt{width:450px;margin-left:-225px;}
+.pop_prompt .pop_tit{border-bottom-width:0;}
 .pop_prompt p{text-align:center;font-size:1.5em;padding:40px 0 50px;}
+
+.pop_tooltip{border:2px solid #999;height:200px;overflow-y:auto;;}
+.pop_tooltip .btn_areaT{padding:0 10px;text-align:right;}
+.pop_tooltip .pop_body{padding:10px;}
+.pop_tooltip .line_list li{font-size:0.875em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.pop_tooltip .line_list .code{width:55%;}
 
 .pop_sortVal{width:628px;margin-left:-316px;}
 
@@ -67,3 +74,49 @@
 .attach_s .drop_zone .drop_info{margin-top:22px;}
 .attach_s li{margin-top:5px;}
 .attach_s .axi_del{margin-left:5px;vertical-align:middle;}
+
+/* windowpop */
+.w_pop_wrap{text-align:left;}
+.w_pop_tit{border-bottom:1px solid #d2d9e4;padding:22px;}
+.w_pop_tit h1{font-size:1.5em;color:#0d0d0d;}
+.w_pop_tit h1 .btn{font-size:14px;border-radius:0;line-height:20px;padding:0 2px;vertical-align:top;margin:7px 0 0 10px;}
+.w_pop_tit h1 .btn_grayline{color:#606060;border-color:#888;border-width:1px;}
+.w_pop_body{overflow:hidden;padding:15px 22px 22px;}
+.w_pop_wrap .tit{margin-bottom:10px;}
+.w_pop_wrap .tit h2{font-size:1em;color:#0d0d0d;}
+
+.pop_dtlShipping .tab_cont > .section{overflow:hidden;}
+.pop_dtlShipping .tab01 .top{margin-bottom:40px;}
+.pop_dtlShipping .tab01 .top .fl{width:30%;}
+.pop_dtlShipping .tab01 .top .fr{width:65%;}
+.pop_dtlShipping .tab01 .bot .fl{width:45%;}
+.pop_dtlShipping .tab01 .bot .fr{width:53%;}
+.pop_dtlShipping .list_pInfo,
+.pop_dtlShipping .list_barcode{height:173px;overflow-y:scroll;padding:5px;}
+.pop_dtlShipping .list_pInfo{height:110px;}
+.pop_dtlShipping .tab02 .section{margin-top:40px;}
+.pop_dtlShipping .tab03 .tbl_dtl th,
+.pop_dtlShipping .tab03 .tbl_dtl td{text-align:center;}
+
+.pop_dtlVoc .section01{width:26%;margin-right:2%;}
+.pop_dtlVoc .section02{width:26%;}
+.pop_dtlVoc .section03{width:44%;}
+.pop_dtlVoc .section01 .section{margin-top:66px;}
+.pop_dtlVoc .section02 .section{margin-top:29px;}
+.pop_dtlVoc .section03 .section{margin-top:15px;}
+.pop_dtlVoc .section01 .section:first-of-type,
+.pop_dtlVoc .section02 .section:first-of-type,
+.pop_dtlVoc .section03 .section:first-of-type{margin-top:0;}
+.pop_dtlVoc .section03 .fl,
+.pop_dtlVoc .section03 .fr{width:48%;}
+
+.pop_dtlPickup{width:580px;margin-left:-290px;}
+.pop_dtlPickup .tbl_dtl th,
+.pop_dtlPickup .tbl_dtl td{text-align:center;}
+.pop_dtlPickup .tbl_dtl input[type="text"]{width:100%;}
+
+.pop_dtlShip{width:280px;}
+.pop_email{width:460px;margin-left:-230px;}
+.pop_email .ipt_wrap{overflow:hidden;}
+.pop_email .ipt_wrap label{float:left;width:30%;}
+.pop_email .ipt_wrap input{float:right;width:70%;}

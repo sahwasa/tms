@@ -1,0 +1,375 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>운송료정산</h1>
+      </div>
+      <div class="content_body">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">전체</a></li>
+            <li><a href="#tab02">상세</a></li>
+            <li><a href="#tab03">픽업</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div class="tab_cont" id="tab01">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_greenline">금일 엑셀 다운로드</button>
+              <button type="button" class="btn btn_yellowline">임시발행</button>
+              <button type="button" class="btn btn_blueline">확정발행</button>
+            </div>
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">날짜선택</label></dt>
+                <dd>
+                  <input type="text" name="report_period" class="date " dataformat="datepic" readonly />
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default">
+                <caption>운송료 전체</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" width="40">No.</th>
+                    <th scope="col" width="40">유형</th>
+                    <th scope="col">배송상태</th>
+                    <th scope="col">주문번호</th>
+                    <th scope="col">거래처명</th>
+                    <th scope="col">실수령자</th>
+                    <th scope="col">수신자연락처</th>
+                    <th scope="col">메시지</th>
+                    <th scope="col">발신번호</th>
+                    <th scope="col">발신시간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="on">
+                    <td>1</td>
+                    <td>MMs</td>
+                    <td>배송완료</td>
+                    <td>18</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1190917</td>
+                    <td>1190917</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div> 
+          <div class="tab_cont" id="tab02">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_redline">수정</button>
+              <button type="button" class="btn btn_blueline">저장</button>
+            </div>
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">날짜선택</label></dt>
+                <dd>
+                  <input type="text" name="report_period" class="date " dataformat="datepic" readonly />
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap charge_dtl">
+              <div class="fl tbl_leftArea">
+                <table class="tbl_default">
+                  <caption>분류</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="4">2019년 8월</th>
+                    </tr>
+                    <tr>
+                      <th scope="col" width="50">Code</th>
+                      <th scope="col">법인명</th>
+                      <th scope="col">브랜드명</th>
+                      <th scope="col">분류</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="5">001</td>
+                      <td rowspan="5">와이케이팩토리</td>
+                      <td rowspan="5">와이케이팩토리</td>
+                      <td>총주문건</td>
+                    </tr>
+                    <tr>
+                      <td>미배송</td>
+                    </tr>
+                    <tr>
+                      <td>오배송</td>
+                    </tr>
+                    <tr>
+                      <td>미출고</td>
+                    </tr>
+                    <tr>
+                      <td>정상배송</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fl tbl_cenArea">
+                <table class="tbl_default">
+                  <caption>분류</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col" class="b_gray">토</th>
+                      <th scope="col" class="t_red">일</th>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col" class="b_gray">토</th>
+                      <th scope="col" class="t_red">일</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">1</th>
+                      <th scope="col">2</th>
+                      <th scope="col">3</th>
+                      <th scope="col">4</th>
+                      <th scope="col">5</th>
+                      <th scope="col" class="b_gray">6</th>
+                      <th scope="col" class="t_red">7</th>
+                      <th scope="col">8</th>
+                      <th scope="col">9</th>
+                      <th scope="col">10</th>
+                      <th scope="col">11</th>
+                      <th scope="col">12</th>
+                      <th scope="col" class="b_gray">13</th>
+                      <th scope="col" class="t_red">14</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fl tbl_rightArea">
+                <table class="tbl_default">
+                  <caption>합계</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" class="h_fix2">합계</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>200</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab_cont" id="tab03">
+            <div class="btn_listT">
+              <button type="button" class="btn btn_redline">수정</button>
+              <button type="button" class="btn btn_blueline">저장</button>
+            </div>
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">날짜선택</label></dt>
+                <dd>
+                  <input type="text" name="report_period" class="date " dataformat="datepic" readonly />
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap pick_dtl">
+              <div class="fl tbl_leftArea">
+                <table class="tbl_default">
+                  <caption>분류</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="4">2019년 8월</th>
+                    </tr>
+                    <tr class="sub_th">
+                      <th scope="col" width="50">Code</th>
+                      <th scope="col">법인명</th>
+                      <th scope="col">브랜드명</th>
+                      <th scope="col">센터</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>001</td>
+                      <td>와이케이팩토리</td>
+                      <td>와이케이팩토리</td>
+                      <td>수원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fl tbl_cenArea">
+                <table class="tbl_default">
+                  <caption>분류</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col" class="b_gray">토</th>
+                      <th scope="col" class="t_red">일</th>
+                      <th scope="col">월</th>
+                      <th scope="col">화</th>
+                      <th scope="col">수</th>
+                      <th scope="col">목</th>
+                      <th scope="col">금</th>
+                      <th scope="col" class="b_gray">토</th>
+                      <th scope="col" class="t_red">일</th>
+                    </tr>
+                    <tr class="sub_th">
+                      <th scope="col">1</th>
+                      <th scope="col">2</th>
+                      <th scope="col">3</th>
+                      <th scope="col">4</th>
+                      <th scope="col">5</th>
+                      <th scope="col" class="b_gray">6</th>
+                      <th scope="col" class="t_red">7</th>
+                      <th scope="col">8</th>
+                      <th scope="col">9</th>
+                      <th scope="col">10</th>
+                      <th scope="col">11</th>
+                      <th scope="col">12</th>
+                      <th scope="col" class="b_gray">13</th>
+                      <th scope="col" class="t_red">14</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td class="b_gray">-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fl tbl_rightArea">
+                <table class="tbl_default">
+                  <caption>분류</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="7">분류</th>
+                    </tr>
+                    <tr class="sub_th">
+                      <th scope="col" width="50">1톤</th>
+                      <th scope="col" width="50">2.5톤</th>
+                      <th scope="col" width="50">3.5톤</th>
+                      <th scope="col" width="50">5톤</th>
+                      <th scope="col">추가픽업비</th>
+                      <th scope="col">총 픽업횟수</th>
+                      <th scope="col">총 픽업비</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><input type="text" title="총 픽업비" readonly class="w_fix75" /></td>
+                      <td></td>
+                      <td><input type="text" title="총 픽업비" readonly class="w_fix95" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+@@include('../inc/popup/calc1_prompt.html')
+@@include('../inc/popup/calc1_dtlPickup.html')
+@@include('../inc/popup/calc1_dtlShip.html')
+</body>
+</html>
+@@include('../inc/script.html')

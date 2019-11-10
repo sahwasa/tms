@@ -1,0 +1,110 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>배송문자조회</h1>
+      </div>
+      <div class="content_body">
+        <div class="search">
+          <dl class="dl_search">
+            <dt><label for="">기간선택</label></dt>
+            <dd>
+              <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
+              <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
+              <input type="text" name="report_period" class="date from" dataformat="from" readonly /> ~
+              <input type="text" name="report_period" class="date to" dataformat="to" readonly />
+            </dd>
+            <dt><label for="">조건별 검색</label></dt>
+            <dd class="search_condition">
+              <select name="" id=""><option value="">검색조건</option></select>
+              <input type="text" placeholder="검색어" />
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+              <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+            </dd>
+            <dt><label for="">처리상태</label></dt>
+            <dd class="search_condition">
+              <select name="" id=""><option value="">검색조건</option></select>
+            </dd>
+          </dl>
+        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default">
+            <caption>배송문자내역</caption>
+            <thead>
+              <tr>
+                <th scope="col" width="30"><input type="checkbox" name="" id="" title="전체선택"></th>
+                <th scope="col" width="40">No.</th>
+                <th scope="col" width="40">유형</th>
+                <th scope="col">배송상태</th>
+                <th scope="col">주문번호</th>
+                <th scope="col">거래처명</th>
+                <th scope="col">실수령자</th>
+                <th scope="col">수신자연락처</th>
+                <th scope="col">메시지</th>
+                <th scope="col">배송사진</th>
+                <th scope="col">발신번호</th>
+                <th scope="col">발신시간</th>
+                <th scope="col" width="60">처리상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="on">
+                <td><input type="checkbox" name="" id="" title="줄선택"></td>
+                <td>1</td>
+                <td>MMs</td>
+                <td>배송완료</td>
+                <td>18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                </td>
+                <td>1190917</td>
+                <td>1190917</td>
+                <td><button type="button" class="btn btn_blueline">성공</button></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="" id="" title="줄선택"></td>
+                <td>1</td>
+                <td>MMs</td>
+                <td>배송완료</td>
+                <td>18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                </td>
+                <td>1190917</td>
+                <td>1190917</td>
+                <td><button type="button" class="btn btn_redline">실패</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl_areaB">
+          @@include('../inc/paginate.html')
+          <span class="fr">
+            총 9페이지/86개 중 (101~200)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')

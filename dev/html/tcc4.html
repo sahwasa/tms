@@ -1,0 +1,109 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>VOC</h1>
+        <span class="btn_area">
+          <button type="button" class="btn btn_greenline">엑셀다운로드</button>
+        </span>
+      </div>
+      <div class="content_body">
+        <div class="search">
+          <dl class="dl_search">
+            <dt><label for="">기간선택</label></dt>
+            <dd>
+              <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
+              <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
+              <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+            </dd>
+            <dt><label for="">조건별 검색</label></dt>
+            <dd class="search_condition">
+              <select name="" id=""><option value="">검색조건</option></select>
+              <input type="text" placeholder="검색어" />
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+              <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+            </dd>
+            <dt><label for="">VOC 배송상태</label></dt>
+            <dd class="search_condition">
+              <select name="" id="" class="select_longW"><option value="">선택</option></select>
+            </dd>
+            <dt><label for="">처리현황</label></dt>
+            <dd class="search_condition">
+              <select name="" id="" class="select_longW"><option value="">선택</option></select>
+            </dd>
+          </dl>
+        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default">
+            <caption>VOC</caption>
+            <thead>
+              <tr>
+                <th scope="col"><input type="checkbox" name="" id="" title="전체선택"></th>
+                <th scope="col">No.</th>
+                <th scope="col">상태</th>
+                <th scope="col">주문번호</th>
+                <th scope="col">접수회차</th>
+                <th scope="col">송장출력</th>
+                <th scope="col">거래처명</th>
+                <th scope="col">실수령자</th>
+                <th scope="col">주소(기본)</th>
+                <th scope="col">주소(상세)</th>
+                <th scope="col">권역</th>
+                <th scope="col">상품수량</th>
+                <th scope="col">고객사주문번호</th>
+                <th scope="col">상세보기</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="on">
+                <td><input type="checkbox" name="" id="" title="줄선택"></td>
+                <td>1</td>
+                <td>접수완료</td>
+                <td>201907222-240264</td>
+                <td>18</td>
+                <td>출력완료</td>
+                <td>집반찬연구소</td>
+                <td>홍길동</td>
+                <td>서울시 송파구</td>
+                <td>e편한세상 10</td>
+                <td>10A1</td>
+                <td>1</td>
+                <td>1190917</td>
+                <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="" id="" title="줄선택"></td>
+                <td>1</td>
+                <td>접수완료</td>
+                <td>201907222-240264</td>
+                <td>18</td>
+                <td>출력완료</td>
+                <td>집반찬연구소</td>
+                <td>홍길동</td>
+                <td>서울시 송파구</td>
+                <td>e편한세상 10</td>
+                <td>10A1</td>
+                <td>1</td>
+                <td>1190917</td>
+                <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tbl_areaB">
+          @@include('../inc/paginate.html')
+          <span class="fr">
+            총 9페이지/86개 중 (101~200)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')
