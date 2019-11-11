@@ -13,8 +13,8 @@
 .btn_login{background-color:#ec6941;}
 
 /* layout */
-.wrap{min-width:1280px;text-align:left;}
-.cont{position:relative;min-height:calc(100% - 73px);overflow: hidden;}
+.wrap{min-width:1280px;text-align:left;height:100%;}
+.cont{position:relative;min-height:920px;overflow: hidden;}
 
 /* header */
 .header{height:70px;padding:0 47px;border-bottom:1px solid #ccc;box-shadow:0 0 10px #e1e1e2;}
