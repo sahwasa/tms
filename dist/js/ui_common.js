@@ -1,5 +1,12 @@
 (function init($){
   // navigator
+  var nav = $('.nav > li > a')
+
+  nav.on('click',function(e){
+    e.preventDefault();
+    $('.nav > li').removeClass('on');
+    $(this).parent('li').addClass('on');
+  })
 
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
@@ -21,9 +28,11 @@
   })
 
   /* fileDeco */
+  var filePath = $('[role="filePath"]');
+  filePath.val('선택된 파일이 없음');
   $('[role="fileAdd"]').change(function(){
     var fileAdd = $(this);
-    fileAdd.parent('span').prev('[role="filePath"]').val(fileAdd.val());
+    fileAdd.parent('.file_attach').next('[role="filePath"]').val(fileAdd.val());
   });
 
   // accordion

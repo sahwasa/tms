@@ -1,6 +1,6 @@
 /* login */
 .login{position:relative;height:100%;min-height:400px;background:url(../img/bg_login.jpg) 0 0 no-repeat;background-size:cover;}
-.login h1{width:189px;height:39px;background:url(../img/logo_w.png) 0 0 no-repeat;margin-bottom:49px;}
+.login h1{width:100%;height:39px;background:url(../img/logo_w.png) 50% 0 no-repeat;margin-bottom:49px;background-size:contain;}
 .login_box{position:absolute;left:50%;top:50%;width:350px;margin:-175px 0 0 -175px;}
 .login_box input,
 .btn_login{width:100%;height:60px;border-radius:30px;color:#fff;margin-top:25px;font-size:20px;}
@@ -121,7 +121,7 @@ table .btn{border-width:1px;}
 .dashboard > .fr{width:48%;}
 .dashboard .section{margin-top:70px;}
 .dashboard .tbl_default th,
-.dashboard .tbl_default td{border:1px solid #d3d9e4;}
+.dashboard .tbl_default td{border:1px solid #d3d9e4;text-align:center;}
 .dashboard .tbl_dtl td,
 .dashboard .tbl_default th{font-size:1.25em;padding:2px 5px;}
 .dashboard .tbl_total td{font-size:2.25em;height:106px;}
@@ -254,15 +254,17 @@ table .btn{border-width:1px;}
 .account1 .tab01 .fr{width:37%;}
 .account1 .body{margin-top:15px;}
 .account1 .use_grid li{position:relative;}
-.account1 .use_grid label{display:block;width:100%;}
+.account1 .use_grid label{display:block;width:100%;letter-spacing:-.1em;}
 .account1 .use_grid span{font-size:0.825em;}
 .account1 .use_grid .btn_wrap{position: absolute;right:10px;top:15px;}
 .account1 .use_grid .btn,
 .account1 .personInCharge .btn{border-width:1px;border-radius:0;font-size:0.825em;padding:0 3px;line-height:17px;margin-left:5px;;}
 .account1 .id_wrap input{width:150px;}
-.account1 .use_grid .id_wrap .btn_wrap{right:auto;left:109px;}
+.account1 .use_grid .id_wrap .ipt_wrap{position:relative;font-size:inherit;}
+.account1 .use_grid .id_wrap .ipt_wrap .btn{position:absolute;right:0;top:-23px;}
 .account1 .axi_search{position:absolute;right:20px;bottom:8px;}
 .account1 .axi_search::before{color:#999;font-size:16px;}
+.account1 .tab01 .section02 .fr .box_lightgrayLine{height:218px;box-sizing:border-box;}
 .account1 .tab01 .section03 .box_lightgrayLine{padding-top:0;}
 .personInCharge{display:flex;overflow:hidden;margin-top:10px;}
 .personInCharge li{position:relative;flex:0 1 auto;width:15%;padding-right:2%;}
@@ -271,6 +273,10 @@ table .btn{border-width:1px;}
 .personInCharge label{display:block;width:100%;}
 .personInCharge .axi_only{vertical-align:middle;margin-left:10px;}
 .personInCharge .axi_only::before{color:#8f8f8f;font-size:22px;}
+.account_attach label{display:block;width:100%;margin:10px 0;}
+.account_attach .file_attach{margin:0 10px 0 0;}
+.account_attach input[role="filePath"]{width:calc(100% - 115px);}
+input[role="filePath"]{background:transparent;border:none;}
 
 .account1 .tab02 .section02,
 .account1 .tab02 .section03{margin-top:45px;}
@@ -287,6 +293,7 @@ table .btn{border-width:1px;}
 .account1 .pickupSvc .pic_loc{width:35%;}
 .account1 .pic_loc input{width:calc(100% - 65px);}
 .account1 .pickupSvc .pic_charge input{width:calc(100% - 40px);}
+.account1 .tab03 .section03 .fr .box_lightgrayLine{height:153px;padding-top:30px;box-sizing:border-box;}
 
 .account1 .tab04 > .fl{width:48%;}
 .account1 .tab04 > .fr{width:48%;}

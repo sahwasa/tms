@@ -36,7 +36,7 @@
     <div id="lnb" class="lnb">
   <!-- 현재 사용자가 보고있는 페이지 메뉴를 감싼 li에 class='on'을 추가해주세요. -->
   <ul class="nav lnb_list" role="navigat ion">
-    <li><a href="/html/Dashboard.html">Dashboard</a> </li>
+    <li><a href="/html/dashboard.html">Dashboard</a> </li>
     <li><a href="/html/order1.html">주문 &sol; 반품</a>
       <ul class="sub">
         <li><a href="/html/order1.html">주문</a></li>
@@ -56,7 +56,7 @@
         <li><a href="/html/allocate3.html">매니저</a></li>
       </ul>
     </li>
-    <li class="on"><a href="/html/tcc1.html">TCC</a>
+    <li><a href="/html/tcc1.html">TCC</a>
       <ul class="sub">
         <li><a href="/html/tcc1.html">배송현황</a></li>
         <li><a href="/html/tcc2.html">당직근무</a></li>
@@ -104,475 +104,564 @@
           </ul>
         </div>
         <div class="tab_conts account1">
-          
           <div class="tab_cont tab01" id="tab01">
-            <div class="div_section section01">
-              <div class="fl section">
-                <div class="tit">
-                  <h2>계정 정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="use_grid divide4">
-                    <li class="w2 id_wrap">
-                      <label for="">ID</label>
-                      <input type="text" />
-                      <span class="t_blue">사용 가능한 ID입니다.</span>
-                      <!-- <span class="t_red">이미 사용 중인 ID입니다.</span> -->
-                      <span class="btn_wrap">
-                        <button type="button" class="btn btn_grayline">중복확인</button>
-                      </span>
-                    </li>
-                    <li>
-                      <label for="">PW</label>
-                      <input type="password" class="full" />
-                      <span class="btn_wrap">
-                        <button type="button" class="btn btn_grayline">변경</button>
-                      </span>
-                    </li>
-                    <li>
-                      <label for="">PW 확인</label>
-                      <input type="password" class="full" />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="fr section">
-                <div class="tit">
-                  <h2>API 정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="use_grid divide4 fullIpt">
-                    <li class="w2">
-                      <label for="">접근키</label>
-                      <input type="text"/>
-                      <span class="btn_wrap">
-                        <button type="button" class="btn btn_grayline">변경</button>
-                        <button type="button" class="btn btn_grayline">복사</button>
-                      </span>
-                    </li>
-                    <li class="w2">
-                      <label for="">IP주소 관리</label>
-                      <input type="text"/>
-                      <span class="btn_wrap">
-                        <button type="button" class="btn btn_grayline">등록</button>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>            
-            <div class="div_section section02">
-              <div class="fl section">
-                <div class="tit">
-                  <h2>기업 정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="use_grid divide4 fullIpt">
-                    <li><label for="">법인명</label><input type="text" /></li>
-                    <li><label for="">브랜드명</label><input type="text" /></li>
-                    <li><label for="">대표자</label><input type="text" /></li>
-                    <li><label for="">사업자등록번호</label><input type="text" /></li>
-                    <li><label for="">고객사코드</label><input type="text" /></li>
-                    <li><label for="">고객센터 전화번호</label><input type="text" /></li>
-                    <li><label for="">고객센터 운영시간</label><input type="text" /></li>
-                    <li><label for="">고객사 담당관리자</label><input type="text" />
-                    <a href="" class="axi_only axi_search">검색</a>
-                    </li>
-                    <li><label for="">Timf 송장 사용여부</label><select name="" id=""><option value=""></option></select></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="fr section">
-                <div class="tit">
-                  <h2>첨부파일</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="account_attach">
-                    <li>
-                      <label for="">사업자등록증</label>
-                      <input type="text"/>
-                    </li>
-                    <li>
-                      <label for="">통장사본</label>
-                      <input type="text"/>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+  <div class="div_section section01">
+    <div class="fl section">
+      <div class="tit">
+        <h2>계정 정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="use_grid divide4 fullIpt">
+          <li class="w2 id_wrap">
+            <label for="">ID</label>
+            <span class="ipt_wrap">
+              <input type="text" />
+              <button type="button" class="btn btn_grayline">중복확인</button>
+            </span>
+            <span class="t_blue">사용 가능한 ID입니다.</span>
+            <!-- <span class="t_red">이미 사용 중인 ID입니다.</span> -->
+          </li>
+          <li>
+            <label for="">PW</label>
+            <input type="password" class="full" />
+            <span class="btn_wrap">
+              <button type="button" class="btn btn_grayline">변경</button>
+            </span>
+          </li>
+          <li>
+            <label for="">PW 확인</label>
+            <input type="password" class="full" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr section">
+      <div class="tit">
+        <h2>API 정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="use_grid divide4 fullIpt">
+          <li class="w2">
+            <label for="">접근키</label>
+            <input type="text"/>
+            <span class="btn_wrap">
+              <button type="button" class="btn btn_grayline">변경</button>
+              <button type="button" class="btn btn_grayline">복사</button>
+            </span>
+          </li>
+          <li class="w2">
+            <label for="">IP주소 관리</label>
+            <input type="text"/>
+            <span class="btn_wrap">
+              <button type="button" class="btn btn_grayline">등록</button>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>            
+  <div class="div_section section02">
+    <div class="fl section">
+      <div class="tit">
+        <h2>기업 정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="use_grid divide4 fullIpt">
+          <li><label for="">법인명</label><input type="text" /></li>
+          <li><label for="">브랜드명</label><input type="text" /></li>
+          <li><label for="">대표자</label><input type="text" /></li>
+          <li><label for="">사업자등록번호</label><input type="text" /></li>
+          <li><label for="">고객사코드</label><input type="text" /></li>
+          <li><label for="">고객센터 전화번호</label><input type="text" /></li>
+          <li><label for="">고객센터 운영시간</label><input type="text" /></li>
+          <li><label for="">고객사 담당관리자</label><input type="text" />
+          <a href="" class="axi_only axi_search">검색</a>
+          </li>
+          <li><label for="">Timf 송장 사용여부</label><select name="" id=""><option value=""></option></select></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr section">
+      <div class="tit">
+        <h2>첨부파일</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="account_attach">
+          <li>
+            <label for="">사업자등록증</label>
+            <div class="file_attach">파일찾기
+              <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd" >
             </div>
-            <div class="div_section section03">
-              <div class="section">
-                <div class="tit">
-                  <h2>담당자 정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="personInCharge fullIpt">
-                    <li><label for="">담당자 성명</label>
-                    <input type="text">
-                    </li>
-                    <li><label for="">담당자 연락처</label>
-                    <input type="text">
-                    </li>
-                    <li><label for="">담당자 E-mail</label>
-                    <input type="text">
-                    </li>
-                    <li><label for="">비고</label>
-                    <input type="text">
-                    <a href="" class="axi_only axi_cirAdd">추가</a>
-                    <a href="" class="axi_only axi_cirDel">제거</a>
-                    </li>
-                  </ul>
-                  <ul class="personInCharge fullIpt">
-                    <li><label for="">담당자 성명</label>
-                    <input type="text">
-                    </li>
-                    <li><label for="">담당자 연락처</label>
-                    <input type="text">
-                    </li>
-                    <li><label for="">담당자 E-mail</label>
-                    <input type="text">
-                    </li>
-                    <li><label for="">비고</label>
-                    <input type="text">
-                    <a href="" class="axi_only axi_cirAdd">추가</a>
-                    <a href="" class="axi_only axi_cirDel">제거</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <input type="text" name="" readonly role="filePath" />
+          </li>
+          <li>
+            <label for="">통장사본</label>
+            <div class="file_attach">파일찾기
+              <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd">
             </div>
-            
-          </div>
+            <input type="text" name="" readonly role="filePath" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div_section section03">
+    <div class="section">
+      <div class="tit">
+        <h2>담당자 정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="personInCharge fullIpt">
+          <li><label for="">담당자 성명</label>
+          <input type="text">
+          </li>
+          <li><label for="">담당자 연락처</label>
+          <input type="text">
+          </li>
+          <li><label for="">담당자 E-mail</label>
+          <input type="text">
+          </li>
+          <li><label for="">비고</label>
+          <input type="text">
+          <a href="" class="axi_only axi_cirAdd">추가</a>
+          <a href="" class="axi_only axi_cirDel">제거</a>
+          </li>
+        </ul>
+        <ul class="personInCharge fullIpt">
+          <li><label for="">담당자 성명</label>
+          <input type="text">
+          </li>
+          <li><label for="">담당자 연락처</label>
+          <input type="text">
+          </li>
+          <li><label for="">담당자 E-mail</label>
+          <input type="text">
+          </li>
+          <li><label for="">비고</label>
+          <input type="text">
+          <a href="" class="axi_only axi_cirAdd">추가</a>
+          <a href="" class="axi_only axi_cirDel">제거</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="tab_cont tab02" id="tab02">
-            <div class="section section01">
-              <div class="tit">
-                <h2>픽업요일</h2>
-              </div>
-              <div class="body">
-                <table class="tbl_default tbl_default_s">
-                  <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">월</th>
-                      <th scope="col">화</th>
-                      <th scope="col">수</th>
-                      <th scope="col">목</th>
-                      <th scope="col">금</th>
-                      <th scope="col">토</th>
-                      <th scope="col">일</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">픽업여부</th>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td><input type="checkbox" name="" id=""></td>
-                      <td><input type="checkbox" name="" id=""></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">픽업시간</th>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                      <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="section section02">
-              <div class="tit">
-                <h2>픽업요일</h2>
-              </div>
-              <div class="body box_lightgrayLine">
-                <textarea name="" id="" cols="30" rows="7" class="full"></textarea>
-              </div>
-            </div>
-            <div class="section section03">
-              <div class="tit">
-                <h2>픽업 매니저 정보</h2>
-              </div>
-              <div class="body box_lightgrayLine">
-                <ul class="personInCharge pickupManager fullIpt">
-                  <li><label for="">매니저명</label>
-                  <input type="text">
-                  </li>
-                  <li><label for="">매니저 연락처</label>
-                  <input type="text">
-                  </li>
-                  <li><label for="">매니저 코드</label>
-                  <input type="text">
-                  </li>
-                  <li><label for="">소속 지입사</label>
-                  <input type="text">
-                  </li>
-                  <li><label for="">지입사 연락처</label>
-                  <input type="text">
-                  </li>
-                  <li><label for="">픽업매니저 담당관리자</label>
-                  <input type="text">
-                  <a href="" class="axi_only axi_search">검색</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <div class="section section01">
+    <div class="tit">
+      <h2>픽업요일</h2>
+    </div>
+    <div class="body">
+      <table class="tbl_default tbl_default_s">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">월</th>
+            <th scope="col">화</th>
+            <th scope="col">수</th>
+            <th scope="col">목</th>
+            <th scope="col">금</th>
+            <th scope="col">토</th>
+            <th scope="col">일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">픽업여부</th>
+            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" name="" id=""></td>
+            <td><input type="checkbox" name="" id=""></td>
+          </tr>
+          <tr>
+            <th scope="row">픽업시간</th>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+            <td><select name="" id=""><option value=""></option></select> : <select name="" id=""><option value=""></option></select></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section section02">
+    <div class="tit">
+      <h2>픽업요일</h2>
+    </div>
+    <div class="body box_lightgrayLine">
+      <textarea name="" id="" cols="30" rows="7" class="full"></textarea>
+    </div>
+  </div>
+  <div class="section section03">
+    <div class="tit">
+      <h2>픽업 매니저 정보</h2>
+    </div>
+    <div class="body box_lightgrayLine">
+      <ul class="personInCharge pickupManager fullIpt">
+        <li><label for="">매니저명</label>
+        <input type="text">
+        </li>
+        <li><label for="">매니저 연락처</label>
+        <input type="text">
+        </li>
+        <li><label for="">매니저 코드</label>
+        <input type="text">
+        </li>
+        <li><label for="">소속 지입사</label>
+        <input type="text">
+        </li>
+        <li><label for="">지입사 연락처</label>
+        <input type="text">
+        </li>
+        <li><label for="">픽업매니저 담당관리자</label>
+        <input type="text">
+        <a href="" class="axi_only axi_search">검색</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
           <div class="tab_cont tab03" id="tab03">
-            <div class="btn_listT">
-              <button type="button" class="btn btn_blueline">저장</button>
+  <div class="btn_listT">
+    <button type="button" class="btn btn_blueline">저장</button>
+  </div>
+  <div class="div_section section01">
+    <div class="fl section">
+      <div class="tit">
+        <h2>계정 정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="use_grid divide4 fullIpt">
+          <li>
+            <label for="">서비스 운영 여부</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li class="date_wrap">
+            <label for="">서비스 시작일</label>
+            <input type="text" class="date" dataformat="datepic" />
+          </li>
+          <li>
+            <label for="">운송료 과금 방식</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li>
+            <label for="">계약 운송료</label>
+            <input type="text">
+          </li>
+          <li>
+            <label for="">제조원가(&percnt;)</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li>
+            <label for="">픽업 월대 비용</label>
+            <input type="text" />
+          </li>
+          <li>
+            <label for="">택배대행 여부</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li>
+            <label for="">택배대행 요금</label>
+            <input type="text">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr section">
+      <div class="tit">
+        <h2>부가서비스 계약 정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="use_grid divide4 fullIpt">
+          <li>
+            <label for="">문자발송 방식</label>
+            <select name="" id=""><option value="">선택</option></select>
+          </li>
+          <li class="w3">
+            <label for="">건당요금</label>
+            <input type="text"/>
+          </li>
+          <li>
+            <label for="">회수 후 처리방법</label>
+            <select name="" id=""><option value="">선택</option></select>
+          </li>
+          <li class="w3">
+            <label for="">건당요금</label>
+            <input type="text"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div_section section02">
+    <div class="section">
+      <div class="tit">
+        <h2>픽업서비스 계약정보</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="personInCharge pickupSvc fullIpt">
+          <li class="pic_loc"><label for="">픽업지</label>
+          <input type="text">
+          <button type="button" class="btn btn_grayline">지도검색</button>
+          </li>
+          <li><label for="">입고센터</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li><label for="">픽업비 과금 방식</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li><label for="">고정 차량 톤수</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li><label for="">고정 차량 대수</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li class="pic_charge"><label for="">픽업비</label>
+          <input type="text" />
+          <button type="button" class="btn btn_grayline">추가</button>
+          </li>
+        </ul>
+        <ul class="personInCharge pickupSvc fullIpt">
+          <li class="pic_loc"><label for="">픽업지</label>
+          <input type="text">
+          <button type="button" class="btn btn_grayline">지도검색</button>
+          </li>
+          <li><label for="">입고센터</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li><label for="">픽업비 과금 방식</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li><label for="">고정 차량 톤수</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li><label for="">고정 차량 대수</label>
+            <select name="" id=""><option value=""></option></select>
+          </li>
+          <li class="pic_charge"><label for="">픽업비</label>
+          <input type="text" />
+          <button type="button" class="btn btn_grayline">추가</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div_section section03">
+    <div class="fl section">
+      <div class="tit">
+        <h2>관리자 메모</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
+      </div>
+    </div>
+    <div class="fr section">
+      <div class="tit">
+        <h2>첨부파일</h2>
+      </div>
+      <div class="body box_lightgrayLine">
+        <ul class="account_attach">
+          <li>
+            <label for="">화물운송계약서</label>
+            <div class="file_attach">파일찾기
+              <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd" >
             </div>
-            <div class="div_section section01">
-              <div class="fl section">
-                <div class="tit">
-                  <h2>계정 정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="use_grid divide4 fullIpt">
-                    <li>
-                      <label for="">서비스 운영 여부</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li class="date_wrap">
-                      <label for="">서비스 시작일</label>
-                      <input type="text" class="date" dataformat="datepic" />
-                    </li>
-                    <li>
-                      <label for="">운송료 과금 방식</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li>
-                      <label for="">계약 운송료</label>
-                      <input type="text">
-                    </li>
-                    <li>
-                      <label for="">제조원가(&percnt;)</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li>
-                      <label for="">픽업 월대 비용</label>
-                      <input type="text" />
-                    </li>
-                    <li>
-                      <label for="">택배대행 여부</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li>
-                      <label for="">택배대행 요금</label>
-                      <input type="text">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="fr section">
-                <div class="tit">
-                  <h2>부가서비스 계약 정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="use_grid divide4 fullIpt">
-                    <li>
-                      <label for="">문자발송 방식</label>
-                      <select name="" id=""><option value="">선택</option></select>
-                    </li>
-                    <li class="w3">
-                      <label for="">건당요금</label>
-                      <input type="text"/>
-                    </li>
-                    <li>
-                      <label for="">회수 후 처리방법</label>
-                      <select name="" id=""><option value="">선택</option></select>
-                    </li>
-                    <li class="w3">
-                      <label for="">건당요금</label>
-                      <input type="text"/>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="div_section section02">
-              <div class="section">
-                <div class="tit">
-                  <h2>픽업서비스 계약정보</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <ul class="personInCharge pickupSvc fullIpt">
-                    <li class="pic_loc"><label for="">픽업지</label>
-                    <input type="text">
-                    <button type="button" class="btn btn_grayline">지도검색</button>
-                    </li>
-                    <li><label for="">입고센터</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li><label for="">픽업비 과금 방식</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li><label for="">고정 차량 톤수</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li><label for="">고정 차량 대수</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li class="pic_charge"><label for="">픽업비</label>
-                    <input type="text" />
-                    <button type="button" class="btn btn_grayline">추가</button>
-                    </li>
-                  </ul>
-                  <ul class="personInCharge pickupSvc fullIpt">
-                    <li class="pic_loc"><label for="">픽업지</label>
-                    <input type="text">
-                    <button type="button" class="btn btn_grayline">지도검색</button>
-                    </li>
-                    <li><label for="">입고센터</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li><label for="">픽업비 과금 방식</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li><label for="">고정 차량 톤수</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li><label for="">고정 차량 대수</label>
-                      <select name="" id=""><option value=""></option></select>
-                    </li>
-                    <li class="pic_charge"><label for="">픽업비</label>
-                    <input type="text" />
-                    <button type="button" class="btn btn_grayline">추가</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="div_section section03">
-              <div class="fl section">
-                <div class="tit">
-                  <h2>관리자 메모</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
-                </div>
-              </div>
-              <div class="fr section">
-                <div class="tit">
-                  <h2>첨부파일</h2>
-                </div>
-                <div class="body box_lightgrayLine">
-                  <textarea name="" id="" cols="30" rows="5" class="full"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
+            <input type="text" name="" readonly role="filePath" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="tab_cont tab04" id="tab04">
-              <div class="btn_listT">
-                <button type="button" class="btn btn_blueline">저장</button>
-              </div>
-              <div class="section">
-                <div class="tit">
-                  <h2>운송서비스 계약 정보</h2>
-                </div>
-                <div class="body">
-                  <dl class="dl_shipInfo">
-                    <dt>*1* : 고객센터 전화번호</dt>
-                    <dd>예시) 고객센터(*1*)로 연락주세요.</dd>
-                    <dt>*2* : 고객센터 운영시간</dt>
-                    <dd>예시) 고객상담 문의시간은 *2*입니다.</dd>
-                    <dt>*3* : 고객사(브랜드)명</dt>
-                    <dd>예시) *3*드림</dd>
-                    <dt>*4* : 배송 특이사항 내용</dt>
-                    <dd>예시) 부득이한 사유(*4*)로배송할 수 없었습니다. /기타 장소(*4*)에 대응배송 해드렸습니다.</dd>
-                  </dl>
-                  
-                </div>
-              </div>
-              <div class="div_section section02">
-                <div class="fl section">
-                  <div class="tit">
-                    <h2>정상배송</h2>
-                  </div>
-                  <div class="body">
-                    <table class="tbl_default tbl_default_s">
-                      <caption>정상배송</caption>
-                      <tr>
-                        <th scope="row" width="58">제목</th>
-                        <td class="alignL">-</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">내용</th>
-                        <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
-                      </tr>
-                    </table>  
-                  </div>
-                </div>
-                <div class="fr section">
-                  <div class="tit">
-                    <h2>대응배송</h2>
-                  </div>
-                  <div class="body">
-                    <table class="tbl_default tbl_default_s">
-                      <caption>대응배송</caption>
-                      <tr>
-                        <th scope="row" width="58">제목</th>
-                        <td class="alignL">-</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">내용</th>
-                        <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
-                      </tr>
-                    </table>  
-                  </div>
-                </div>
-              </div>
-              <div class="div_section section03">
-                <div class="fl section">
-                  <div class="tit">
-                    <h2>미배송</h2>
-                  </div>
-                  <div class="body">
-                    <table class="tbl_default tbl_default_s">
-                      <caption>미배송</caption>
-                      <tr>
-                        <th scope="row" width="58">제목</th>
-                        <td class="alignL">-</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">내용</th>
-                        <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
-                      </tr>
-                    </table>  
-                  </div>
-                </div>
-                <div class="fr section">
-                  <div class="tit">
-                    <h2>지연배송</h2>
-                  </div>
-                  <div class="body">
-                    <table class="tbl_default tbl_default_s">
-                      <caption>지연배송</caption>
-                      <tr>
-                        <th scope="row" width="58">제목</th>
-                        <td class="alignL">-</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">내용</th>
-                        <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
-                      </tr>
-                    </table>  
-                  </div>
-                </div>
-              </div>
-          </div>
-
+  <div class="btn_listT">
+    <button type="button" class="btn btn_blueline">저장</button>
+  </div>
+  <div class="section">
+    <div class="tit">
+      <h2>운송서비스 계약 정보</h2>
+    </div>
+    <div class="body">
+      <dl class="dl_shipInfo">
+        <dt>*1* : 고객센터 전화번호</dt>
+        <dd>예시) 고객센터(*1*)로 연락주세요.</dd>
+        <dt>*2* : 고객센터 운영시간</dt>
+        <dd>예시) 고객상담 문의시간은 *2*입니다.</dd>
+        <dt>*3* : 고객사(브랜드)명</dt>
+        <dd>예시) *3*드림</dd>
+        <dt>*4* : 배송 특이사항 내용</dt>
+        <dd>예시) 부득이한 사유(*4*)로배송할 수 없었습니다. /기타 장소(*4*)에 대응배송 해드렸습니다.</dd>
+      </dl>
+      
+    </div>
+  </div>
+  <div class="div_section section02">
+    <div class="fl section">
+      <div class="tit">
+        <h2>정상배송</h2>
+      </div>
+      <div class="body">
+        <table class="tbl_default tbl_default_s">
+          <caption>정상배송</caption>
+          <tr>
+            <th scope="row" width="58">제목</th>
+            <td class="alignL">-</td>
+          </tr>
+          <tr>
+            <th scope="row">내용</th>
+            <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
+          </tr>
+        </table>  
+      </div>
+    </div>
+    <div class="fr section">
+      <div class="tit">
+        <h2>대응배송</h2>
+      </div>
+      <div class="body">
+        <table class="tbl_default tbl_default_s">
+          <caption>대응배송</caption>
+          <tr>
+            <th scope="row" width="58">제목</th>
+            <td class="alignL">-</td>
+          </tr>
+          <tr>
+            <th scope="row">내용</th>
+            <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
+          </tr>
+        </table>  
+      </div>
+    </div>
+  </div>
+  <div class="div_section section03">
+    <div class="fl section">
+      <div class="tit">
+        <h2>미배송</h2>
+      </div>
+      <div class="body">
+        <table class="tbl_default tbl_default_s">
+          <caption>미배송</caption>
+          <tr>
+            <th scope="row" width="58">제목</th>
+            <td class="alignL">-</td>
+          </tr>
+          <tr>
+            <th scope="row">내용</th>
+            <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
+          </tr>
+        </table>  
+      </div>
+    </div>
+    <div class="fr section">
+      <div class="tit">
+        <h2>지연배송</h2>
+      </div>
+      <div class="body">
+        <table class="tbl_default tbl_default_s">
+          <caption>지연배송</caption>
+          <tr>
+            <th scope="row" width="58">제목</th>
+            <td class="alignL">-</td>
+          </tr>
+          <tr>
+            <th scope="row">내용</th>
+            <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
+          </tr>
+        </table>  
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </div>
   </div>  
 </div>
+<!-- 비밀번호 변경 팝업 -->
+<div class="overlay" id="pop_pwChange">
+  <div class="pop_wrap pop_pwChange" dataformat="modal">
+    <div class="pop_tit">
+      <h1>비밀번호 변경</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">
+      <ul class="defalut_iptList fullIpt">
+        <li><label for="">새 비밀번호</label><input type="password" /></li>
+        <li><label for="">새 비밀번호 확인</label><input type="password" /></li>
+      </ul>
+    </div>
+    <div class="pop_footer">
+      <button type="button" class="btn btn_redline"  role="btn_close">취소</button>
+      <button type="button" class="btn btn_blueline">저장</button>
+    </div>   
+  </div>
+</div>
+<!-- 비밀번호 변경 팝업__e -->
+<!-- IP 주소 리스트 팝업 -->
+<div class="overlay" id="pop_ipAddr">
+  <div class="pop_wrap pop_ipAddr" dataformat="modal">
+    <div class="pop_tit">
+      <h1>IP 주소 리스트</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">
+      <ul class="use_grid divide10 fullIpt">
+        <li class="w3-5"><label for="">IP주소</label><input type="text" /></li>
+        <li class="w3-5"><label for="">설명</label><input type="text" /></li>
+        <li class="w1-5"><label for="">사용여부</label><select name="" id=""><option value=""></option></select></li>
+        <li class="w1-5 alignC"><span class="label">등록&sol;수정</span><a href="" class="axi_only axi_cirAdd">추가</a>
+          <a href="" class="axi_only axi_cirDel">제거</a></li>
+      </ul>
+    </div>
+    <div class="pop_footer">
+      <button type="button" class="btn btn_redline" role="btn_close">취소</button>
+      <button type="button" class="btn btn_blueline">저장</button>
+    </div>   
+  </div>
+</div>
+<!-- IP 주소 리스트 팝업__e -->
+<!-- 관리자 검색 팝업 -->
+<div class="overlay" id="pop_adminSearch">
+  <div class="pop_wrap pop_adminSearch" dataformat="modal">
+    <div class="pop_tit">
+      <h1>관리자 검색</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">
+      <div class="search_ipt">
+        <input type="text" /><a href="" class="axi_only axi_search">검색</a>
+      </div>
+      <div class="tbl_wrap">
+        <table class="tbl_dtl">
+          <caption>관리자 검색 목록</caption>
+          <thead>
+            <tr>
+              <th scope="col">이름</th>
+              <th scope="col">부서</th>
+              <th scope="col">선택</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>홍길동</td>
+              <td>팀프랩스</td>
+              <td><button type="button" class="btn btn_grayline">선택</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 관리자 검색 팝업__e -->
+
 </body>
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
