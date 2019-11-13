@@ -10,22 +10,28 @@
 
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
-  // modal.draggable({
-  //   handle: ".pop_tit",
-  //   containment: "body",
-  //   scroll : true
-  //  });
+  modal.draggable({
+    handle: ".pop_header",
+    containment: "parent",
+    scroll:false
+   });
   modal.find("[role='btn_close']").on('click',function(e){
     e.preventDefault();
     $(this).parents('.overlay').hide();
+    $('html').css('overflow','auto');
   });
-  var rolePopOpen =$("[role]");
+
+  var rolePopOpen =$("[openpop]");
   rolePopOpen.on('click',function(){
-    var popOverlay = $('#'+$(this).attr('role')),
+    var popOverlay = $('#'+$(this).attr('openpop')),
         objHtml = $('html');
-    (popOverlay.css('display') == 'none') ? objHtml.css('overflow','hidden')
-    : objHtml.css('overflow','auto');
-  })
+    if(popOverlay.css('display') == 'none'){
+      objHtml.css('overflow','hidden');
+      popOverlay.show();
+    }else{
+      objHtml.css('overflow','auto');
+    }
+  });
 
   /* fileDeco */
   var filePath = $('[role="filePath"]');
