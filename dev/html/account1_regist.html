@@ -1,0 +1,41 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>고객사 등록</h1>
+        <span class="btn_area">
+          <a href="account1.html" class="btn btn_grayline">목록</a>
+          <a href="account1.html" class="btn btn_blueline">저장</a>
+        </span>
+      </div>
+      <div class="content_body">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">기본</a></li>
+            <li><a href="#tab02">픽업정보</a></li>
+            <li><a href="#tab03">계약정보</a></li>
+            <li><a href="#tab04">문자정보</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts account account1">
+          @@include('../inc/account1/tab01.html')
+          @@include('../inc/account1/tab02.html')
+          @@include('../inc/account1/tab03.html')
+          @@include('../inc/account1/tab04.html')
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+@@include('../inc/popup/account1_pwChange.html')
+@@include('../inc/popup/account1_ipAddr.html')
+@@include('../inc/popup/account1_adminSearch.html')
+@@include('../inc/popup/account1_managerSearch.html')
+
+</body>
+</html>
+@@include('../inc/script.html')

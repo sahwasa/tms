@@ -1,0 +1,72 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>권역정보</h1>
+      </div>
+      <div class="content_body account3">
+        <div class="search">
+          <ul class="ul_search ul_search_condition">
+            <li><label for="">조</label><select name="" id=""><option value=""></option></select></li>
+            <li><label for="">권역그룹</label><select name="" id=""><option value=""></option></select></li>
+            <li><label for="">권역</label><select name="" id=""><option value=""></option></select></li>
+            <li class="search_condition"><label for="">조건별 검색</label><select name="" id=""><option value="">검색조건</option></select>
+              <input type="text" placeholder="검색어" />
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button><button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+            </li>
+          </ul>
+        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default tbl_head">
+            <caption>권역정보리스트</caption>
+            <thead>
+              <tr>
+                <th width="50" id="col1">No.</th>
+                <th width="70" id="col2">조</th>
+                <th width="70" id="col3">권역코드</th>
+                <th width="80" id="col4">신우편번호</th>
+                <th width="110" id="col5">시도</th>
+                <th width="150" id="col6">시군구</th>
+                <th width="240" id="col7">도로명</th>
+                <th width="120" id="col8">법정동명</th>
+                <th id="col9">법정동코드</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="scroll-y">
+            <table class="tbl_default tbl_body">
+              <caption>권역리스트</caption>
+              <tbody>
+                <tr>
+                  <td headers="col1" width="50">1</td>
+                  <td headers="col2" width="70">A</td>
+                  <td headers="col3" width="70">10A1</td>
+                  <td headers="col4" width="80">13557</td>
+                  <td headers="col5" width="110">경기도</td>
+                  <td headers="col6" width="150">성남시 분당구</td>
+                  <td headers="col7" width="240">정자일로 198번길</td>
+                  <td headers="col8" width="120">정자동</td>
+                  <td headers="col9">41135103</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tbl_areaB">
+            @@include('../inc/paginate.html')
+            <span class="fr">
+              총 9페이지/86개 중 (101~200)
+            </span>
+          </div>
+        </div>       
+      </div>
+    </div>
+  </div>  
+</div>
+
+</body>
+</html>
+@@include('../inc/script.html')

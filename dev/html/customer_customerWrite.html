@@ -1,0 +1,86 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>고객센터</h1>
+      </div>
+      <div class="content_body customer write">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">고객사</a></li>
+            <li><a href="#tab02">매니저</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div class="tab_cont section" id="tab01">
+            <div class="btn_listT">
+              <a href="customer_customer.html" class="btn btn_grayline">등록</a>
+            </div>
+            <ul class="defalut_iptList use_grid fullIpt divide4">
+              <li><label for="">카테고리</label>
+                <select name="" id=""><option value=""></option></select>
+              </li>
+              <li class="w4"><label for="">제목</label>
+                <input type="text" />
+              </li>
+            </ul>
+
+            <div class="section">
+              <div class="editor_wrap">
+                <!-- 에디터영역 -->
+                <img src="http://placehold.it/1200X300" width="100%" height="auto" alt="" />
+              </div>
+            </div>
+            <div class="section">
+              <div class="tit">
+                <h2>첨부파일</h2>
+              </div>
+              <div class="body box_lightgrayLine">
+                <ul class="customer_attach">
+                  <li>
+                    <div class="file_attach">파일찾기
+                      <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd" >
+                    </div>
+                    <input type="text" name="" readonly role="filePath" />
+                  </li>
+                  <li>
+                    <label for="">파일암호</label>
+                    <input type="password" />
+                  </li>
+                  <li>
+                    <div class="file_attach">파일찾기
+                      <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd" >
+                    </div>
+                    <input type="text" name="" readonly role="filePath" />
+                  </li>
+                  <li>
+                    <label for="">파일암호</label>
+                    <input type="password" />
+                  </li>
+                  <li>
+                    <div class="file_attach">파일찾기
+                      <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd" >
+                    </div>
+                    <input type="text" name="" readonly role="filePath" />
+                  </li>
+                  <li>
+                    <label for="">파일암호</label>
+                    <input type="password" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+@@include('../inc/popup/customer_prompt.html')
+</body>
+</html>
+@@include('../inc/script.html')

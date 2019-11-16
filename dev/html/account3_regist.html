@@ -1,0 +1,63 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>관리자 등록</h1>
+        <span class="btn_area">
+          <a href="account3.html" class="btn btn_grayline">목록</a>
+          <a href="account3.html" class="btn btn_blueline">저장</a>
+        </span>
+      </div>
+      <div class="content_body account account3">
+        <div class="section section01">
+          <div class="tit">
+            <h2>관리자 정보</h2>
+          </div>
+          <div class="body box_lightgrayLine">
+            <ul class="use_grid divide4 fullIpt">
+              <li class="w2 id_wrap">
+                <label for="">관리자ID</label>
+                <span class="ipt_wrap">
+                  <input type="text" />
+                  <button type="button" class="btn btn_grayline">중복확인</button>
+                </span>
+                <span class="t_blue">사용 가능한 ID입니다.</span>
+                <!-- <span class="t_red">이미 사용 중인 ID입니다.</span> -->
+              </li>
+              <li>
+                <label for="">관리자 PW</label>
+                <input type="password" class="full" />
+                <span class="btn_wrap">
+                  <button type="button" class="btn btn_grayline">변경</button>
+                </span>
+              </li>
+              <li>
+                <label for="">관리자 PW 확인</label>
+                <input type="password" class="full" />
+              </li>
+              <li>
+                <label for="">관리자명</label>
+                <input type="text" class="full" />
+              </li>
+              <li>
+                <label for="">부서 설정</label>
+                <select name="" id="" class="full"><option value=""></option></select>
+              </li>
+              <li>
+                <label for="">권한 레벨</label>
+                <select name="" id="" class="full"><option value=""></option></select>
+              </li>
+            </ul>
+          </div>
+        </div>            
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')

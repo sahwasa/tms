@@ -6,30 +6,54 @@
     @@include('../inc/lnb.html')
     <div class="content" id="content">
       <div class="content_tit">
-        <h1>고객사정보</h1>
+        <h1>고객사 정보</h1>
+        <span class="btn_area">
+          <button type="button" class="btn btn_greenline">엑셀다운로드</button>
+          <a href="account1_regist.html" class="btn btn_grayline">고객사 등록</a>
+        </span>
       </div>
-      <div class="content_body">
-        <div class="tabList_area">
-          <ul class="tab_list">
-            <li><a href="#tab01">기본</a></li>
-            <li><a href="#tab02">픽업정보</a></li>
-            <li><a href="#tab03">계약정보</a></li>
-            <li><a href="#tab04">문자정보</a></li>
-          </ul>
+      <div class="content_body account1">
+        <div class="search">
+          <dl class="dl_search">
+            <dt><label for="">조건별 검색</label></dt>
+            <dd class="search_condition">
+              <select name="" id=""><option value="">검색조건</option></select>
+              <input type="text" placeholder="검색어" />
+              <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+              <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+            </dd>
+          </dl>
         </div>
-        <div class="tab_conts account1">
-          @@include('../inc/account1/tab01.html')
-          @@include('../inc/account1/tab02.html')
-          @@include('../inc/account1/tab03.html')
-          @@include('../inc/account1/tab04.html')
-        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default tbl_head">
+            <caption>고객사 정보리스트</caption>
+            <thead>
+              <tr>
+                <th width="100" id="col1">Code</th>
+                <th width="250" id="col2">법인명</th>
+                <th width="250" id="col3">브랜드명</th>
+                <th id="col4">ID</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="scroll-y">
+            <table class="tbl_default tbl_body">
+              <caption>고객사리스트</caption>
+              <tbody>
+                <tr>
+                  <td width="100" headers="col1">-</td>
+                  <td width="250" headers="col2">-</td>
+                  <td width="250" headers="col3">-</td>
+                  <td headers="col4">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>       
       </div>
     </div>
   </div>  
 </div>
-@@include('../inc/popup/account1_pwChange.html')
-@@include('../inc/popup/account1_ipAddr.html')
-@@include('../inc/popup/account1_adminSearch.html')
 
 </body>
 </html>

@@ -134,6 +134,7 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 
 /* btn */
 .btn{border-width:2px;border-style:solid;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:5px;padding:2px 11px 4px;font-family:'notokrR';background-color:#fff;}
+.btn_s{padding:0 4px 1px;border-radius:0;font-size:0.875em;border-width:1px;}
 .btn_white{color:#333;border-color:#999;}
 .btn_red{border-color:#f8574d;background-color:#e45148;}
 .btn_green{border-color:#519488;background-color:#61ac9f;}
@@ -151,6 +152,8 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .btn_greenline:hover{color:#fff;background-color:#5cb85c;}
 .btn_redline{color:#fa4256;border-color:#fa4256;}
 .btn_redline:hover{color:#fff;background-color:#fa4256;}
+.btn_orangeline{color:#f46603;border-color:#f46603;}
+.btn_orangeline:hover{color:#fff;background-color:#f46603;}
 .btn_yellowline{color:#debd0e;border-color:#debd0e;}
 .btn_yellowline:hover{color:#fff;background-color:#debd0e;}
 .btn_gray{background-color:#7f7d7e;border-color:#686868;}
@@ -281,4 +284,50 @@ label input{margin-top:-3px;}
 .paginate .pre,
 .paginate .next{width:8px;height:22px;font-size:0;line-height:0;color:transparent;overflow:hidden;background:url(../img/btn_paginate.png) 0 0 no-repeat;margin:0 20px;}
 .paginate .next{background-position-y:-36px;}
+
+/* grid */
+.use_grid,
+.defalut_iptList{margin:-15px -10px 0;overflow:hidden;}
+.defalut_iptList li,
+.use_grid li{padding:15px 10px 0;}
+.dl_list dt{margin-top:10px;}
+.use_grid{display:flex;flex-wrap:wrap;}
+.use_grid li{flex:0 1 auto;}
+.divide4 li{width:25%;}
+.divide4 .w-5{width:12.5%;}
+.divide4 .w-75{width:18.75%;}
+.divide4 .w1-5{width:37.5%;}
+.divide4 .w1-7{width:40.625%;}
+.divide4 .w2{width:50%;}
+.divide4 .w3{width:75%;}
+.divide4 .w4{width:100%;}
+.divide10 li{width:10%;}
+.divide10 .w1-5{width:15%;}
+.divide10 .w2{width:20%;}
+.divide10 .w3{width:30%;}
+.divide10 .w3-5{width:35%;}
+.divide10 .w4{width:40%;}
+.divide10 .w5{width:50%;}
+.divide10 .w6{width:60%;}
+.divide10 .w7{width:70%;}
+.divide10 .w8{width:80%;}
+.divide10 .w9{width:90%;}
+.divide10 .w10{width:100%;}
+.divide12 li{width:calc(100% / 12);}
+.divide12 .w2{width:calc(100% / 12 * 2);}
+.divide12 .w3{width:25%;}
+.divide12 .w4{width:calc(100% / 12 * 4);}
+.divide12 .w5{width:calc(100% / 12 * 5);}
+.divide12 .w6{width:50%;}
+.divide12 .w7{width:calc(100% / 12 * 7);}
+.divide12 .w8{width:calc(100% / 12 * 8);}
+.divide12 .w9{width:75%;}
+.divide12 .w10{width:calc(100% / 12 * 10);}
+.divide12 .w11{width:calc(100% / 12 * 11);}
+.divide12 .w12{width:100%;}
+.fullIpt .label,
+.fullIpt label{display:block;margin-bottom:3px;}
+.fullIpt input,
+.fullIpt textarea,
+.fullIpt select{width:100%;}
 

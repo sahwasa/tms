@@ -11,7 +11,8 @@
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
   modal.draggable({
-    handle: ".pop_header",
+    // handle: ".pop_tit",
+    cursor: "move",
     containment: "parent",
     scroll:false
    });

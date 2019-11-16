@@ -1,0 +1,156 @@
+@@include('../inc/top.html')
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>고객센터</h1>
+      </div>
+      <div class="content_body customer">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">고객사</a></li>
+            <li><a href="#tab02">매니저</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div class="tab_cont section" id="tab01">
+            <div class="btn_listT">
+              <a href="customer_admin.html" class="btn btn_grayline">목록</a>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_customer">
+                <caption>고객사 문의내용</caption>
+                <tr>
+                  <th scope="row">카테고리</th>
+                  <td colspan="5" class="alignL"></td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td colspan="5" class="alignL">문의합니다.</td>
+                </tr>
+                <tr>
+                  <th width="89" scope="row">ID</th>
+                  <td class="alignL">TIMF015</td>
+                  <th width="89" scope="row">작성자</th>
+                  <td></td>
+                  <th width="89" scope="row">작성일시</th>
+                  <td width="200">2019-09-18 17:34</td>
+                </tr>
+              </table>
+            </div>
+            <div class="ipt_contArea">
+              <textarea name="" id="" cols="30" rows="10" class="full box_lightgrayLine">문의합니다.</textarea>
+            </div>
+            <div class="section">
+              <div class="tit">
+                <h2>첨부파일</h2>
+              </div>
+              <div class="body box_lightgrayLine">
+                <ul class="customer_attach">
+                  <li>
+                    <div class="file_attach">파일찾기
+                      <input type="file" name="file" title="파일첨부하기" class="btn_file" role="fileAdd" >
+                    </div>
+                    <input type="text" name="" readonly role="filePath" />
+                    <button type="button" class="btn btn_deepblueline btn_s">다운로드</button>
+                  </li>
+                  <li>
+                    <label for="">파일암호</label>
+                    <input type="password" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="section">
+              <div class="tit">
+                <h2>댓글</h2>
+              </div>
+              <div class="body reply_wrap">
+                <ul class="reply">
+                  <li>
+                    <div class="reply_info">
+                      <span class="writer">관리자</span>
+                      <span class="w_time">2019.10.28 16:02</span>
+                    </div>
+                    <p>답변드립니다.</p>
+                    <span class="reply_btnWrap">
+                      <button type="button" class="btn btn_orangeline">수정</button>
+                      <button type="button" class="btn btn_redline">삭제</button>
+                    </span>
+                  </li>
+                  <li>
+                    <div class="reply_info">
+                      <span class="writer">관리자</span>
+                      <span class="w_time">2019.10.28 16:02</span>
+                    </div>
+                    <p>답변드립니다.<br/>두줄일때</p>
+                    <span class="reply_btnWrap">
+                      <button type="button" class="btn btn_orangeline">수정</button>
+                      <button type="button" class="btn btn_redline">삭제</button>
+                    </span>
+                  </li>
+                  <li class="edit">
+                    <div class="reply_info">
+                      <span class="writer">관리자</span>
+                      <span class="w_time">2019.10.28 16:02</span>
+                    </div>
+                    <p><textarea name="" id="" cols="30" rows="2">수정중</textarea></p>
+                    <span class="reply_btnWrap">
+                      <button type="button" class="btn btn_blueline">저장</button>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="section">
+              <div class="tit">
+                <h2>댓글작성</h2>
+              </div>
+              <div class="body box_lightgrayLine reply reply_regist">
+                <textarea name="" id="" cols="30" rows="2"></textarea>
+                <span class="reply_btnWrap">
+                  <button type="button" class="btn btn_deepblueline">등록</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="tab_cont section" id="tab02">
+            <div class="btn_listT">
+              <a href="customer_admin.html" class="btn btn_grayline">목록</a>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_customer">
+                <caption>매니저 문의내용</caption>
+                <tr>
+                  <th scope="row">카테고리</th>
+                  <td colspan="5" class="alignL"></td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td colspan="5" class="alignL">사진 촬영 횟수가 너무 많아요</td>
+                </tr>
+                <tr>
+                  <th width="89" scope="row">ID</th>
+                  <td class="alignL">01012345678</td>
+                  <th width="89" scope="row">작성자</th>
+                  <td>AAA</td>
+                  <th width="89" scope="row">작성일시</th>
+                  <td width="200">2019-09-18 17:34</td>
+                </tr>
+              </table>
+            </div>
+            <div class="ipt_contArea">
+              <textarea name="" id="" cols="30" rows="20" class="full box_lightgrayLine">문의합니다.</textarea>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>  
+</div>
+
+</div>
+</html>
+@@include('../inc/script.html')

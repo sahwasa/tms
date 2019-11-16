@@ -24,7 +24,7 @@
   <div class="fr gnb">
     <ul class="gnb_list">
       <li><button type="button">배송지역검색</button></li>
-      <li><button type="button">전체화면</button></li>
+      <li><a href="/html/sitemap.html">전체화면</a></li>
       <li><b>홍길동</b>님</li>
       <li><button type="button">로그아웃</button></li>     
     </ul>
@@ -87,7 +87,12 @@
     </li>
     <li><a href="/html/notice1.html">공지사항 &amp; PUSH</a></li>
     <li><a href="/html/stats.html">통계</a></li>      
-    <li><a href="/html/customer.html">고객센터</a></li>      
+    <li><a href="/html/customer.html">고객센터</a>
+      <ul class="sub">
+        <li><a href="/html/customer_admin.html">고객센터(관리자)</a></li>
+        <li><a href="/html/customer_customer.html">고객센터(고객사)</a></li>
+      </ul>
+    </li>      
   </ul>
 </div>
     <div class="content" id="content">
@@ -104,9 +109,8 @@
           <ul class="ul_search">
             <li><label for="">조</label><select name="" id=""><option value=""></option></select></li>
             <li><label for="">권역그룹</label><select name="" id=""><option value=""></option></select></li>
-            <li><label for="">권역</label><select name="" id=""><option value=""></option></select></li>            
             <li>
-              <div class="tag_wrap">
+              <div class="tag_wrap bg_arrow">
                 <span class="tag">10A1 <button type="button" class="axi_only axi_del">삭제</button></span>
               </div>
             </li>

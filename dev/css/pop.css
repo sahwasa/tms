@@ -6,37 +6,6 @@
 .pop_body{padding:10px 15px;max-height:725px;overflow-y:auto;}
 .pop_footer{padding:10px 15px;text-align:right;}
 
-.use_grid,
-.defalut_iptList{margin:-15px -10px 0;overflow:hidden;}
-.defalut_iptList li,
-.use_grid li{padding:15px 10px 0;}
-.dl_list dt{margin-top:10px;}
-.use_grid{display:flex;flex-wrap:wrap;}
-.use_grid li{flex:0 1 auto;}
-.divide4 li{width:25%;}
-.divide4 .w-5{width:12.5%;}
-.divide4 .w-75{width:18.75%;}
-.divide4 .w1-5{width:37.5%;}
-.divide4 .w1-7{width:40.625%;}
-.divide4 .w2{width:50%;}
-.divide4 .w3{width:75%;}
-.divide4 .w4{width:100%;}
-.divide10 li{width:10%;}
-.divide10 .w1-5{width:15%;}
-.divide10 .w2{width:20%;}
-.divide10 .w3{width:30%;}
-.divide10 .w3-5{width:35%;}
-.divide10 .w4{width:40%;}
-.divide10 .w5{width:50%;}
-.divide10 .w6{width:60%;}
-.divide10 .w7{width:70%;}
-.divide10 .w8{width:80%;}
-.divide10 .w9{width:90%;}
-.fullIpt .label,
-.fullIpt label{display:block;margin-bottom:3px;}
-.fullIpt input,
-.fullIpt textarea,
-.fullIpt select{width:100%;}
 .pop_body .use_grid li .axi_only{vertical-align: middle;
   margin:0 5px;}
 .pop_body .use_grid li .axi_only::before{color:#8f8f8f;
@@ -108,10 +77,13 @@
 .pop_adminSearch .tbl_wrap{margin-top:20px;}
 .pop_adminSearch .tbl_dtl th,
 .pop_adminSearch .tbl_dtl td{text-align:center;}
+
 .search_ipt{position:relative;}
 .search_ipt input{width:calc(100% - 30px);}
 .search_ipt .axi_search{float:right;width:19px;height:20px;margin-top:3px;}
 .search_ipt .axi_search::before{font-size:18px;color:#888;}
+
+.pop_addRegion{width:520px;margin-left:-260px;}
 
 /* windowpop */
 .w_pop_wrap{text-align:left;}

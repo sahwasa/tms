@@ -1,0 +1,153 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>고객센터</h1>
+      </div>
+      <div class="content_body customer">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">고객사</a></li>
+            <li><a href="#tab02">매니저</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div class="tab_cont section" id="tab01">
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">조건별 검색</label></dt>
+                <dd class="search_condition">
+                  <select name="" id=""><option value="">검색조건</option></select>
+                  <input type="text" placeholder="검색어" />
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                </dd>
+                <dt><label for="">카테고리</label></dt>
+                <dd>
+                  <div class="tag_wrap">
+                    <span class="tag">10A1 <button type="button" class="axi_only axi_del">삭제</button></span>
+                  </div>
+                </dd>
+                <dt><label for="">처리상태</label></dt>
+                <dd>
+                  <div class="tag_wrap">
+                    <span class="tag">미확인 <button type="button" class="axi_only axi_del">삭제</button></span>
+                    <span class="tag">답변중 <button type="button" class="axi_only axi_del">삭제</button></span>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_customer">
+                <caption>고객사 문의리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" width="60">No.</th>
+                    <th scope="col" width="100">카테고리</th>
+                    <th scope="col">제목</th>
+                    <th scope="col" width="100">ID</th>
+                    <th scope="col" width="100">작성자</th>
+                    <th scope="col" width="130">작성일시</th>
+                    <th scope="col" width="90">처리상태</th>
+                  </tr>
+                </thead>              
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>AAA</td>
+                    <td><a href="customer_adminView.html">문의합니다.</a></td>
+                    <td>TIMF015</td>
+                    <td>AAA</td>
+                    <td>2019-10-25 20:30</td>
+                    <td>답변완료</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>AAA</td>
+                    <td>문의합니다.</td>
+                    <td>TIMF015</td>
+                    <td>AAA</td>
+                    <td>2019-10-25 20:30</td>
+                    <td>미확인</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="tbl_areaB">
+                @@include('../inc/paginate.html')
+                <span class="fr">
+                  총 9페이지/86개 중 (101~200)
+                </span>
+              </div>
+            </div>
+          </div> 
+          <div class="tab_cont section" id="tab02">
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">조건별 검색</label></dt>
+                <dd class="search_condition">
+                  <select name="" id=""><option value="">검색조건</option></select>
+                  <input type="text" placeholder="검색어" />
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                </dd>
+                <dt><label for="">카테고리</label></dt>
+                <dd>
+                  <div class="tag_wrap">
+                    <span class="tag">불만사항 <button type="button" class="axi_only axi_del">삭제</button></span>
+                    <span class="tag">오류접수 <button type="button" class="axi_only axi_del">삭제</button></span>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <table class="tbl_default tbl_customer">
+                <caption>매니저 문의리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" width="60">No.</th>
+                    <th scope="col" width="100">카테고리</th>
+                    <th scope="col">제목</th>
+                    <th scope="col" width="100">ID</th>
+                    <th scope="col" width="100">작성자</th>
+                    <th scope="col" width="130">작성일시</th>
+                  </tr>
+                </thead>              
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>AAA</td>
+                    <td><a href="customer_adminView.html">문의합니다.</a></td>
+                    <td>TIMF015</td>
+                    <td>AAA</td>
+                    <td>2019-10-25 20:30</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>AAA</td>
+                    <td>문의합니다.</td>
+                    <td>TIMF015</td>
+                    <td>AAA</td>
+                    <td>2019-10-25 20:30</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="tbl_areaB">
+                @@include('../inc/paginate.html')
+                <span class="fr">
+                  총 9페이지/86개 중 (101~200)
+                </span>
+              </div>
+            </div>
+          </div> 
+      </div>
+    </div>
+  </div>  
+</div>
+
+</body>
+</html>
+@@include('../inc/script.html')
