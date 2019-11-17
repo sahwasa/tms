@@ -1,0 +1,31 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content" id="content">
+      <div class="content_tit">
+        <h1>2019년 8월 22일 TS현황</h1>
+      </div>
+      <div class="content_body stats">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">주문</a></li>
+            <li><a href="#tab02">권역</a></li>
+            <li><a href="#tab03">배송</a></li>
+            <li><a href="#tab04">이슈</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <!-- @@include('../inc/stats/tab01.html') -->
+          <!-- @@include('../inc/stats/tab02.html') -->
+          @@include('../inc/stats/tab03.html')
+        </div>          
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
+@@include('../inc/script.html')

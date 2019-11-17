@@ -11,3 +11,6 @@
 8. notice : 공지사항 & PUSH
 9. stats : 통계
 10. customer : 고객센터
+
+## 참조
+0. 마크업에 openpop="팝업아이디"를 주면 해당 모달팝업을 show 하도록 해두었습니다.

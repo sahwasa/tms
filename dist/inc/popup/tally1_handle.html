@@ -15,7 +15,14 @@
         </ul>
       </div>
       <div class="tbl_wrap">
-        <table class="tbl_tally">
+        <!-- role="toggle" >> 토글이벤트사용
+            datavalue on, off를 토글합니다
+            datavalue on, off로 css 상태가 변합니다
+            속성에 disabled를 주면 토글이 되지 않습니다.
+            동적 생성을 염두하여 부모에  role="toggleEvtWrap" 속성을 줘야합니다.
+            여기서는 table 마크업에 주었습니다.
+            ui_common.js 에 $('[role="toggle"]').on('click') 이벤트 참조 -->
+        <table class="tbl_tally" role="toggleEvtWrap">
           <caption>검수처리 목록</caption>
           <thead>
             <tr>
@@ -29,31 +36,35 @@
               <th colspan="2">배송중</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody>            
             <tr>
               <td>1</td>
               <td>T19080100100331A</td>
-              <td><button type="button" class="btn btn_deepblueline">미입고</button></td>
-              <td><button type="button" class="btn btn_deepblueline">입고완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">상차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-              <td><button type="button" class="btn btn_deepblueline">하차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>T19080100100331A</td>
-              <td><button type="button" class="btn btn_deepblueline">미입고</button></td>
-              <td><button type="button" class="btn btn_deepblueline">입고완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">상차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-              <td><button type="button" class="btn btn_deepblueline">하차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-            </tr>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">미입고</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">입고완료</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">상차완료</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">분실</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">파손</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="off">하차완료</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="off">분실</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="off">파손</button>
+              </td>
+            </tr>            
           </tbody>
         </table>
       </div>

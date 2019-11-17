@@ -85,7 +85,7 @@
         <li><a href="/html/region3.html">배송불가주소</a></li>
       </ul>
     </li>
-    <li><a href="/html/notice1.html">공지사항 &amp; PUSH</a></li>
+    <li><a href="/html/notice.html">공지사항 &amp; PUSH</a></li>
     <li><a href="/html/stats.html">통계</a></li>      
     <li><a href="/html/customer.html">고객센터</a>
       <ul class="sub">
@@ -135,13 +135,13 @@
                     <th width="50" id="col1">No.</th>
                     <th width="100" id="col2">조</th>
                     <th width="100" id="col3">권역그룹</th>
-                    <th width="80" id="col4">권역</th>
-                    <th width="60" id="col5">배송건</th>
-                    <th width="60" id="col6">반품건</th>
+                    <th width="100" id="col4">권역</th>
+                    <th width="100" id="col5">배송건</th>
+                    <th width="100" id="col6">반품건</th>
                     <th width="100" id="col7">매니저명</th>
                     <th width="150" id="col8">매니저연락처</th>
-                    <th id="col9">지입사</th>
-                    <th width="100" id="col10">변경</th>
+                    <th width="100" id="col9">지입사</th>
+                    <th id="col10">변경</th>
                   </tr>
                 </thead>
               </table>
@@ -153,13 +153,13 @@
                       <td width="50" headers="col1">-</td>
                       <td width="100" headers="col2">-</td>
                       <td width="100" headers="col3">-</td>
-                      <td width="80" headers="col4">-</td>
-                      <td width="60" headers="col5">-</td>
-                      <td width="60" headers="col6">-</td>
+                      <td width="100" headers="col4">-</td>
+                      <td width="100" headers="col5">-</td>
+                      <td width="100" headers="col6">-</td>
                       <td width="100" headers="col7">-</td>
                       <td width="150" headers="col8">-</td>
-                      <td headers="col9">-</td>                      
-                      <td width="83" headers="col10"><button type="button" class="btn btn_grayline">변경</button></td>
+                      <td width="100" headers="col9">-</td>                      
+                      <td headers="col10"><button type="button" class="btn btn_grayline" openpop="pop_managerSearch">변경</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -220,6 +220,7 @@
                     <td>10A1</td>
                     <td>1</td>
                     <td>1190917</td>
+                    <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
                   </tr>
                   <tr>
                     <td>1</td>
@@ -233,6 +234,7 @@
                     <td>10A1</td>
                     <td>1</td>
                     <td>1190917</td>
+                    <td><button type="button" class="btn_tbl tbl_dtl">상세보기</button></td>
                   </tr>
                 </tbody>
               </table>
@@ -263,9 +265,46 @@
     </div>
   </div>  
 </div>
+<!-- 매니저 검색 팝업 -->
+<div class="overlay" id="pop_managerSearch">
+  <div class="pop_wrap pop_adminSearch" dataformat="modal">
+    <div class="pop_tit">
+      <h1>매니저 검색</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">
+      <div class="search_ipt">
+        <input type="text" /><a href="" class="axi_only axi_search">검색</a>
+      </div>
+      <div class="tbl_wrap">
+        <table class="tbl_dtl">
+          <caption>매니저 검색 목록</caption>
+          <thead>
+            <tr>
+              <th scope="col">매니저명</th>
+              <th scope="col">연락처</th>
+              <th scope="col">소속지입사</th>
+              <th scope="col">선택</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>홍길동</td>
+              <td>01012345678</td>
+              <td>팀프랩스</td>
+              <td><button type="button" class="btn btn_grayline btn_s">선택</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 매니저 검색 팝업__e -->
 </body>
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui-monthpicker/jquery.ui.monthpicker.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script>

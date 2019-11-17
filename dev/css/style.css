@@ -52,7 +52,7 @@
 /* tab */
 .tab_list{border-bottom:1px solid #d3d9e4;overflow:hidden;}
 .tab_list li{display:inline-block;}
-.tab_list a{position:relative;bottom:-1px;border-bottom:2px solid transparent;font-size:1.125em;color:#606060;padding:0 19px;}
+.tab_list a{position:relative;border-bottom:2px solid transparent;font-size:1.125em;color:#606060;padding:0 19px;}
 .tab_list .on a{color:#0d0d0d;font-family:'notokrM';border-color:#000;z-index: 50;}
 .tab_conts{margin-top:30px;overflow:hidden;}
 .tab_conts .btn_listT{position:absolute;top:40px;right:47px;}
@@ -87,8 +87,12 @@
 /* table */
 .tbl_default .on td{background-color:#fffec7;}
 .tbl_wrap .scroll-y{overflow-y:scroll;background:#fcfcfc;}
-.scroll-y .tbl_default{border-top-width:0;}
+.scroll-y .tbl_default,
+.scroll-y tr:first-child th,
+.scroll-y tr:first-child td{border-top-width:0;}
 table .btn{border-width:1px;}
+.tbl_headDbLine{border:2px solid #999;border-width:2px 0;}
+.tbl_headDbLine th{text-align:center;padding:3px 5px;font-size:1.125em;}
 
 .tbl_default{width:100%;table-layout:fixed;background-color:#fff;;}
 .tbl_default th,
@@ -97,6 +101,9 @@ table .btn{border-width:1px;}
 .tbl_default td{padding:6px 5px;}
 
 .tbl_stripe tbody tr:nth-child(even){background-color:#e5e8ef;}
+.tbl_stripe_odd tbody tr:nth-child(odd){background-color:#e5e8ef;}
+.tbl_totalRow th,
+.tbl_totalRow td{font-family:'notokrM'!important;padding:6px 5px;}
 .tbl_default_s th,
 .tbl_default_s td{padding:4px 5px;}
 
@@ -119,7 +126,7 @@ table .btn{border-width:1px;}
 .line_list li{border-bottom:1px solid #d2d9e4;}
 
 /* sub */
-/* .dashboard */
+/* dashboard */
 .dashboard{max-width:1300px;}
 .dashboard > .fl,
 .dashboard > .fr{width:48%;}
@@ -318,6 +325,32 @@ input[role="filePath"]{background:transparent;border:none;}
 
 .account3 .scroll-y{height:619px;}
 .account3 .section{max-width:930px;}
+
+/* stats */
+.stats .tab_conts{overflow:visible;}
+.stats .tab_list{display:flex;}
+.stats .tab_list li{flex:1;}
+.stats .tab_list li a{width:100%;text-align: center;}
+.stats .tab_list,
+.stats .list_wrap{width:565px;}
+.stats .stats_wrap{position:relative;top:-60px;left:0;width:calc(100% - 625px);}
+.stats .list_wrap .tbl_body th,
+.stats .list_wrap .tbl_body td{font-size:1.125em;font-family:'notokrL';padding:2px 5px;border-width:0;}
+.stats .list_wrap .tbl_body td{color:#606060;}
+.stats .list_wrap .scroll-y{height:600px;}
+.stats .stats_wrap .section{margin-bottom:70px;}
+.stats .section .tit{position:relative;text-align:center;}
+.stats .section .tit .selDate{position:absolute;left:0;top:0;}
+.stats .tbl_stats th,
+.stats .tbl_stats td{font-size:0.75em;padding:5px 0;letter-spacing:-0.1em;}
+.stats .tab03 .stats_wrap .fl{width:calc(100% - 320px);}
+.stats .tab03 .stats_wrap .fr.day_shipTime{width:278px;}
+.stats .tab03 .stats_wrap .section{overflow:hidden;}
+.stats .day_shipTime{padding:0;}
+.stats .day_shipTime .tit{padding:13px;}
+.stats .section .day_shipTime .selDate{position:static;margin-top:20px;}
+.stats .section .day_shipTime .scroll-y{height:840px;}
+.tbl_day_shipTime td{color:#606060;padding:3px 0;}
 
 /* customer */
 .customer .tag_wrap{min-width:768px;}

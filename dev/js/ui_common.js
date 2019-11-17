@@ -3,7 +3,7 @@
   var nav = $('.nav > li > a')
 
   nav.on('click',function(e){
-    e.preventDefault();
+    if($(this).parent('li').find('ul').hasClass('sub')) e.preventDefault();
     $('.nav > li').removeClass('on');
     $(this).parent('li').addClass('on');
   })
@@ -11,7 +11,7 @@
   /* layer_popup */
   var modal= $( "[dataformat='modal']" );
   modal.draggable({
-    // handle: ".pop_tit",
+    handle: ".pop_tit",
     cursor: "move",
     containment: "parent",
     scroll:false
@@ -66,8 +66,25 @@
   });
   $( "[dataformat='datepic']" ).datepicker({
       buttonText: "날짜를 선택해주세요."
-    });
-  var from = $( "[dataformat='from']" ).datepicker({
+  });
+
+  $("[dataformat='monthpic']").monthpicker({
+    changeYear:true,    
+    yearRange: 'c-100:c+10',
+    buttonImageOnly: true,
+    showOn: "both",
+    buttonImage: "../img/btn_calendar.png",
+    changeYear: true,
+    regional : ["ko"],
+    stepYears: 1,
+    dateFormat : "yy-mm",
+    buttonText: "연월을 선택해주세요.",
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    yearSuffix: '년'
+   });
+   
+   var from = $( "[dataformat='from']" ).datepicker({
     buttonText: "시작날짜를 선택해주세요.",
     onClose: function( selectedDate ) {
       var getName=$(this).attr('name');
@@ -160,7 +177,7 @@
       selDl.find('label').removeClass('on');
     }
   });
-  $('.btn_toggle').on('click',function(e){
+  $('[role="toggleEvtWrap"]').on('click', '[role="toggle"]',function(e){
     e.preventDefault();
     var cur = $(this).attr('datavalue');
     if($(this).attr('disabled') == 'disabled') return false;

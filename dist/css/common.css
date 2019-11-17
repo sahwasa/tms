@@ -84,8 +84,6 @@ p{text-align:justify;}
 button{display:inline-block;border:none;cursor:pointer;box-sizing:border-box;background:transparent;}
 .block,.block div{display:block;}
 input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,255,255,.9);}
-/* div{display:inline-block;box-sizing:border-box;width:100%;}
-.init_div div{display:block;box-sizing:content-box;width:auto;} */
 
 .clearfix{*zoom:1;}
 .clearfix::before,
@@ -192,11 +190,14 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .btn_toggle.pdf_psd[datavalue="on"]::after{content:"PDF";}
 .btn_toggle.pdf_psd[datavalue="off"]::after{content:"PSD";}
 
+.btn_tgl{color:#6f778b;border-color:#6f778b;}
+.btn_tgl[datavalue="on"]{color:#fff;background-color:#6f778b;}
+
 .file_text{float:left;width:380px;height:19px;}
 .file_wrap{display:inline-block;position:relative;width:60px;height:24px;margin-left:5px;cursor:pointer;line-height:22px;}
 .file_add{filter:alpha(opacity:0);opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:24px;padding:0;border:0;cursor:pointer;}
 
-.overlay{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:400;}
+.overlay{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:400;display:none;}
 .scroll-y{overflow-y:scroll;}
 
 /* input [ radio | checkbox ] */
@@ -248,7 +249,10 @@ label input{margin-top:-3px;}
 .ui-datepicker select.ui-datepicker-year{width:40%;margin-bottom:3px;padding:0;}
 .ui-datepicker select.ui-datepicker-year{width:42%;}
 .ui-datepicker select.ui-datepicker-month{margin-left:8px;}
-.ui-datepicker-trigger{cursor:pointer;margin-left:9px;}
+.ui-datepicker-trigger,
+.ui-monthpicker-trigger{cursor:pointer;margin-left:9px;}
+
+.ui-monthpicker select.ui-datepicker-year{width:75px;}
 
 .ui-helper-hidden-accessible,
 .ui-widget,

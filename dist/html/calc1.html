@@ -85,7 +85,7 @@
         <li><a href="/html/region3.html">배송불가주소</a></li>
       </ul>
     </li>
-    <li><a href="/html/notice1.html">공지사항 &amp; PUSH</a></li>
+    <li><a href="/html/notice.html">공지사항 &amp; PUSH</a></li>
     <li><a href="/html/stats.html">통계</a></li>      
     <li><a href="/html/customer.html">고객센터</a>
       <ul class="sub">
@@ -178,8 +178,8 @@
           </div> 
           <div class="tab_cont" id="tab02">
             <div class="btn_listT">
-              <button type="button" class="btn btn_redline">수정</button>
-              <button type="button" class="btn btn_blueline">저장</button>
+              <button type="button" class="btn btn_redline" openpop="pop_prompt">수정</button>
+              <button type="button" class="btn btn_blueline" openpop="pop_prompt">저장</button>
             </div>
             <div class="search">
               <dl class="dl_search">
@@ -212,13 +212,13 @@
                       <td>총주문건</td>
                     </tr>
                     <tr>
-                      <td>미배송</td>
+                      <td openpop="pop_dtlShip">미배송</td>
                     </tr>
                     <tr>
-                      <td>오배송</td>
+                      <td openpop="pop_dtlShip">오배송</td>
                     </tr>
                     <tr>
-                      <td>미출고</td>
+                      <td openpop="pop_dtlShip">미출고</td>
                     </tr>
                     <tr>
                       <td>정상배송</td>
@@ -348,8 +348,8 @@
           </div>
           <div class="tab_cont" id="tab03">
             <div class="btn_listT">
-              <button type="button" class="btn btn_redline">수정</button>
-              <button type="button" class="btn btn_blueline">저장</button>
+              <button type="button" class="btn btn_redline" openpop="pop_prompt">수정</button>
+              <button type="button" class="btn btn_blueline" openpop="pop_prompt">저장</button>
             </div>
             <div class="search">
               <dl class="dl_search">
@@ -429,7 +429,7 @@
                       <td>-</td>
                       <td>-</td>
                       <td class="b_gray">-</td>
-                      <td>-</td>
+                      <td><button class="t_red" openpop="pop_dtlPickup">추가변경</button></td>
                       <td>-</td>
                     </tr>
                   </tbody>
@@ -568,5 +568,6 @@
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui-monthpicker/jquery.ui.monthpicker.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script>

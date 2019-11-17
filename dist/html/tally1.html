@@ -85,7 +85,7 @@
         <li><a href="/html/region3.html">배송불가주소</a></li>
       </ul>
     </li>
-    <li><a href="/html/notice1.html">공지사항 &amp; PUSH</a></li>
+    <li><a href="/html/notice.html">공지사항 &amp; PUSH</a></li>
     <li><a href="/html/stats.html">통계</a></li>      
     <li><a href="/html/customer.html">고객센터</a>
       <ul class="sub">
@@ -99,7 +99,7 @@
       <div class="content_tit">
         <h1>검수처리</h1>
         <span class="btn_area">
-          <button type="button" class="btn btn_grayline">입고검수마감</button>
+          <button type="button" class="btn btn_grayline" openpop="pop_handle">입고검수마감</button>
         </span>
       </div>
       <div class="content_body">
@@ -131,6 +131,7 @@
               </tr>
             </thead>
             <tbody>
+              <!-- tr에 class on 속성을 주시면 선택 생상으로 표기됩니다. -->
               <tr class="on">
                 <td></td>
                 <td></td>
@@ -139,7 +140,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><button type="button" class="btn btn_grayline">바코드보 기</button></td>
+                <td><button type="button" class="btn btn_grayline">바코드보기</button></td>
               </tr>                  
               <tr>
                 <td></td>
@@ -149,7 +150,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><button type="button" class="btn btn_grayline">바코드보 기</button></td>
+                <td><button type="button" class="btn btn_grayline">바코드보기</button></td>
               </tr>                  
             </tbody>
           </table>
@@ -195,7 +196,14 @@
         </ul>
       </div>
       <div class="tbl_wrap">
-        <table class="tbl_tally">
+        <!-- role="toggle" >> 토글이벤트사용
+            datavalue on, off를 토글합니다
+            datavalue on, off로 css 상태가 변합니다
+            속성에 disabled를 주면 토글이 되지 않습니다.
+            동적 생성을 염두하여 부모에  role="toggleEvtWrap" 속성을 줘야합니다.
+            여기서는 table 마크업에 주었습니다.
+            ui_common.js 에 $('[role="toggle"]').on('click') 이벤트 참조 -->
+        <table class="tbl_tally" role="toggleEvtWrap">
           <caption>검수처리 목록</caption>
           <thead>
             <tr>
@@ -209,31 +217,35 @@
               <th colspan="2">배송중</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody>            
             <tr>
               <td>1</td>
               <td>T19080100100331A</td>
-              <td><button type="button" class="btn btn_deepblueline">미입고</button></td>
-              <td><button type="button" class="btn btn_deepblueline">입고완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">상차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-              <td><button type="button" class="btn btn_deepblueline">하차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>T19080100100331A</td>
-              <td><button type="button" class="btn btn_deepblueline">미입고</button></td>
-              <td><button type="button" class="btn btn_deepblueline">입고완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">상차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-              <td><button type="button" class="btn btn_deepblueline">하차완료</button></td>
-              <td><button type="button" class="btn btn_deepblueline">분실</button></td>
-              <td><button type="button" class="btn btn_deepblueline">파손</button></td>
-            </tr>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">미입고</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">입고완료</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">상차완료</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">분실</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="on">파손</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="off">하차완료</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="off">분실</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn_tgl" openpop="pop_prompt" role="toggle" datavalue="off">파손</button>
+              </td>
+            </tr>            
           </tbody>
         </table>
       </div>
@@ -262,5 +274,6 @@
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui-monthpicker/jquery.ui.monthpicker.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script>
