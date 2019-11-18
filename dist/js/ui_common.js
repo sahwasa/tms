@@ -74,7 +74,6 @@
     buttonImageOnly: true,
     showOn: "both",
     buttonImage: "../img/btn_calendar.png",
-    changeYear: true,
     regional : ["ko"],
     stepYears: 1,
     dateFormat : "yy-mm",
@@ -97,8 +96,7 @@
       var getName=$(this).attr('name');
       $("input[name='"+ getName +"'].from").datepicker( "option", "maxDate", selectedDate );
     }
-  });
-  
+  }); 
 
   $('.ui_checkbox input').checkboxradio({ icon: false ,direction: "vertical"});
 
@@ -177,6 +175,13 @@
       selDl.find('label').removeClass('on');
     }
   });
+  var customSelect = $(".custom_select select");    
+  customSelect.on({
+    change : function(){
+      var select_name = $(this).children("option:selected").text();
+      $(this).siblings("label").text(select_name);
+    }
+  })
   $('[role="toggleEvtWrap"]').on('click', '[role="toggle"]',function(e){
     e.preventDefault();
     var cur = $(this).attr('datavalue');

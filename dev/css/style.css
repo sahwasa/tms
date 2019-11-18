@@ -11,6 +11,9 @@
 .login_box input::-ms-input-placeholder,
 .login_box input::placeholder{color:#fff;}
 .btn_login{background-color:#ec6941;}
+.login_box input::-webkit-input-placeholder,
+.login_box input:focus::-webkit-input-placeholder{color:#fff;
+}
 
 /* layout */
 .wrap{min-width:1440px;text-align:left;height:100%;}
@@ -119,6 +122,7 @@ table .btn{border-width:1px;}
 .tbl_photo{background-position:0 -80px;width:19px;height:14px;margin:5px 3px 0;vertical-align:top;}
 
 .tbl_areaT{margin-bottom:20px;}
+.tbl_areaT_s{margin-bottom:5px;}
 .tbl_areaB{position:relative;text-align:center;margin-top:9px;}
 .tbl_areaB .fr{position:absolute;right:0;top:0;}
 
@@ -340,7 +344,7 @@ input[role="filePath"]{background:transparent;border:none;}
 .stats .list_wrap .scroll-y{height:600px;}
 .stats .stats_wrap .section{margin-bottom:70px;}
 .stats .section .tit{position:relative;text-align:center;}
-.stats .section .tit .selDate{position:absolute;left:0;top:0;}
+.stats .section .tit .selDate{position:absolute;left:0;top:0;display:inline-block;}
 .stats .tbl_stats th,
 .stats .tbl_stats td{font-size:0.75em;padding:5px 0;letter-spacing:-0.1em;}
 .stats .tab03 .stats_wrap .fl{width:calc(100% - 320px);}
@@ -351,6 +355,20 @@ input[role="filePath"]{background:transparent;border:none;}
 .stats .section .day_shipTime .selDate{position:static;margin-top:20px;}
 .stats .section .day_shipTime .scroll-y{height:840px;}
 .tbl_day_shipTime td{color:#606060;padding:3px 0;}
+.stats .tab04 .section{margin-top:70px;}
+.tbl_issue{overflow-x:scroll;}
+.tbl_issue table{width:auto;table-layout:fixed;}
+.tbl_issue thead th{border-bottom:2px solid #999;}
+.tbl_issue th,
+.tbl_issue td{min-width:90px;}
+.issue2 thead th{font-size:1.125em;color:#0d0d0d;}
+.issue2 tbody th{min-width:220px;}
+.i_up,
+.i_down{font-size:0;background:transparent;border:none;font-style:normal;margin-left:5px;}
+.i_up::before,
+.i_down::before{font-size:16px;font-family:'axicon';}
+.i_up::before{content:"\f199";color:#0f4fc4;}
+.i_down::before{content:"\f12f";color:#fa4256;}
 
 /* customer */
 .customer .tag_wrap{min-width:768px;}

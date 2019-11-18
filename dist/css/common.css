@@ -197,6 +197,15 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .file_wrap{display:inline-block;position:relative;width:60px;height:24px;margin-left:5px;cursor:pointer;line-height:22px;}
 .file_add{filter:alpha(opacity:0);opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:24px;padding:0;border:0;cursor:pointer;}
 
+.custom_select{display:inline-block;position:relative;border:1px solid #bfbfbf;border-radius:5px;vertical-align:middle;}
+.custom_select.year{width:84px;height:25px;background:url(../img/btn_calendar.png) 60px 50% no-repeat;margin-right:10px;}
+.custom_select.halfYear{width:62px;height:25px;}
+.custom_select label{position:absolute;left:0;top:0;display:inline-block;width:100%;text-align: center;box-sizing:border-box;text-align:center;line-height:25px;text-align:center;}
+.custom_select.year label{text-align:left;padding-left:10px;}
+.custom_select select{position:relative;left:0;top:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;width:100%;filter: alpha(opacity=0);opacity:0;border:1px solid #bfbfbf;}
+.custom_select select::ms-expand{display:none;}
+.custom_select option{color:#999;}
+
 .overlay{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:400;display:none;}
 .scroll-y{overflow-y:scroll;}
 
@@ -253,6 +262,9 @@ label input{margin-top:-3px;}
 .ui-monthpicker-trigger{cursor:pointer;margin-left:9px;}
 
 .ui-monthpicker select.ui-datepicker-year{width:75px;}
+.ui-datepicker-calendar {
+  display: none;
+  }
 
 .ui-helper-hidden-accessible,
 .ui-widget,
