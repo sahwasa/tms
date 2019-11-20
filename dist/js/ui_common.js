@@ -9,7 +9,8 @@
   })
 
   /* layer_popup */
-  var modal= $( "[dataformat='modal']" );
+  var modal= $( "[dataformat='modal']" ),
+      memo= $( "[dataformat='memo']" );
   modal.draggable({
     handle: ".pop_tit",
     cursor: "move",
@@ -21,11 +22,24 @@
     $(this).parents('.overlay').hide();
     $('html').css('overflow','auto');
   });
+  memo.find("[role='btn_close']").on('click',function(e){
+    e.preventDefault();
+    $(this).parents('.pop_wrap').hide();
+  });
+
+  var roleMemoOpen = $("[openMemo]");
+  roleMemoOpen.on('click',function(e){
+    e.preventDefault();
+    var thisP = $(this).parent('td'),
+        thisMemo = $('#'+$(this).attr('openMemo'));
+    thisP.css('position','relative');
+    thisMemo.show();
+  });
 
   var rolePopOpen =$("[openpop]");
-  rolePopOpen.on('click',function(){
+    rolePopOpen.on('click',function(){
     var popOverlay = $('#'+$(this).attr('openpop')),
-        objHtml = $('html');
+        objHtml = $('html');  
     if(popOverlay.css('display') == 'none'){
       objHtml.css('overflow','hidden');
       popOverlay.show();
@@ -68,21 +82,7 @@
       buttonText: "날짜를 선택해주세요."
   });
 
-  $("[dataformat='monthpic']").monthpicker({
-    changeYear:true,    
-    yearRange: 'c-100:c+10',
-    buttonImageOnly: true,
-    showOn: "both",
-    buttonImage: "../img/btn_calendar.png",
-    regional : ["ko"],
-    stepYears: 1,
-    dateFormat : "yy-mm",
-    buttonText: "연월을 선택해주세요.",
-    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    yearSuffix: '년'
-   });
-   
+  
    var from = $( "[dataformat='from']" ).datepicker({
     buttonText: "시작날짜를 선택해주세요.",
     onClose: function( selectedDate ) {
@@ -98,7 +98,37 @@
     }
   }); 
 
+  $("[dataformat='monthpic']").monthpicker({
+    changeYear:true,    
+    yearRange: 'c-100:c+10',
+    buttonImageOnly: true,
+    showOn: "both",
+    buttonImage: "../img/btn_calendar.png",
+    regional : ["ko"],
+    stepYears: 1,
+    dateFormat : "yy-mm",
+    buttonText: "연월을 선택해주세요.",
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    yearSuffix: '년'
+   });
+
   $('.ui_checkbox input').checkboxradio({ icon: false ,direction: "vertical"});
+
+  // 기간선택
+  var typeP = $('[typePeriod]'),
+      typePBtn = $('[name="dType"]');
+  typePBtn.each(function(){
+  if($(this).prop('checked')) changePeriod($(this).attr('id'));
+  });
+  typePBtn.on('change',function(){
+  var getType = $(this).attr('id');
+  changePeriod(getType);
+  })
+  function changePeriod(getType){
+  typeP.hide();
+  $('[typePeriod="'+ getType +'"]').show();
+  }
 
   //tab
   var tab_cont = $('.tab_conts .tab_cont'),
@@ -114,6 +144,7 @@
     tab_btn.removeClass('on');
     $(this).parent('li').addClass('on');
     $('#'+getId).show();
+    doubleScrollInit();
   });  
 
   // slectlist evt
@@ -192,4 +223,27 @@
       $(this).attr('datavalue','on');
     }
   })
+
+  // doblescroll
+  var wrapper1 =  $('.wrapper1'),
+      wrapper2 =  $('.wrapper2');
+  function doubleScrollInit(){
+    var wrapperW;
+    wrapper2.each(function(){
+      wrapperW = $(this).find('table').outerWidth();
+      $(this).siblings('.wrapper1').find('div').css('width',wrapperW);
+    });
+  }
+  wrapper1.scroll(function(){
+    var scrollL = $(this).scrollLeft(),  
+        connectWrap = $(this).siblings('.wrapper2');
+    connectWrap.scrollLeft(scrollL);
+  });
+  wrapper2.scroll(function(){
+    var scrollL = $(this).scrollLeft(),  
+    connectWrap = $(this).siblings('.wrapper1');
+    connectWrap.scrollLeft(scrollL);
+  });
+  doubleScrollInit();
+ 
 })(jQuery);

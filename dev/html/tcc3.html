@@ -12,17 +12,28 @@
           <button type="button" class="btn btn_greenline">엑셀다운로드</button>
           <button type="button" class="btn btn_grayline" openpop="pop_sortVal">분류값 결정</button>
           <button type="button" class="btn btn_grayline">VOC인입</button>
-          <button type="button" class="btn btn_grayline">주문 권역 변경</button>
+          <button type="button" class="btn btn_grayline" openpop="pop_changeRegion">주문 권역 변경</button>
         </span>
       </div>
+
       <div class="content_body">
         <div class="search">
           <dl class="dl_search">
-            <dt><label for="">기간선택</label></dt>
+            <dt>기간선택</dt>
             <dd>
-              <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
-              <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
-              <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+              <!-- 일별, 기간별 선택에따라 달라짐
+              ui_common.js //기간선택 참조 -->
+              <label for="d" class="checkIpt"><input type="radio" name="dType" id="d" checked />일별</label>
+              <label for="p" class="checkIpt"><input type="radio" name="dType" id="p" />기간별</label>
+              <!-- 일별 활성화 -->
+              <span typePeriod="d">
+                <input type="text" name="day" class="date" dataformat="datepic" readonly />
+              </span>
+              <!-- 기간별 활성화 -->
+              <span typePeriod="p">
+                <input type="text" name="period" class="date from" dataformat="from" readonly /> ~
+                <input type="text" name="period" class="date to" dataformat="to" readonly />
+              </span>              
             </dd>
             <dt><label for="">조건별 검색</label></dt>
             <dd class="search_condition">
@@ -39,11 +50,14 @@
             </dd>
           </dl>
         </div>
+        <!-- 클릭된 줄에는 감싼 tr에 class="on" 을 추가하시면
+        노란색배경이 깔립니다.
+        마우스호버효과가 있는 테이블에 class="tbl_hover"를 추가해주세요 -->
         <div class="tbl_wrap">
-          <table class="tbl_default">
+          <table class="tbl_default tbl_hover">
             <caption>배송내역</caption>
             <thead>
-              <tr>
+              <tr>              
                 <th scope="col"><input type="checkbox" name="" id="" title="전체선택"></th>
                 <th scope="col">No.</th>
                 <th scope="col">상태</th>
@@ -61,7 +75,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="on">
+              <tr>
                 <td><input type="checkbox" name="" id="" title="줄선택"></td>
                 <td>1</td>
                 <td>접수완료</td>
@@ -107,6 +121,7 @@
   </div>  
 </div>
 @@include('../inc/popup/tcc3_sortVal.html')
+@@include('../inc/popup/tcc3_changeRegion.html')
 </body>
 </html>
 @@include('../inc/script.html')

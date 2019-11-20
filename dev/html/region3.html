@@ -1,0 +1,141 @@
+@@include('../inc/top.html')
+<body>
+<div class="wrap">
+  @@include('../inc/header.html')
+  <div class="cont">
+    @@include('../inc/lnb.html')
+    <div class="content order" id="content">
+      <div class="content_tit">
+        <h1>주문</h1>
+      </div>
+      <div class="content_body">
+        <div class="tabList_area">
+          <ul class="tab_list">
+            <li><a href="#tab01">배송불가주소 리스트</a></li>
+            <li><a href="#tab02">배송불가주소 설정</a></li>
+          </ul>
+        </div>
+        <div class="tab_conts">
+          <div id="tab01" class="tab_cont section">
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">주소 검색</label></dt>
+                <dd class="search_condition">
+                  <input type="text" placeholder="검색어" />
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <!-- 마우스오버 효과 주실 테이블에 tbl_hover 클래스 추가해주시면 됩니다 -->
+              <table class="tbl_default tbl_hover">
+                <caption>배송불가주소 리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">도로명주소</th>
+                    <th scope="col">신우편번호</th>
+                    <th scope="col">권역</th>
+                    <th scope="col">상태</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 구현하실 때 선택된 줄은 tr 마크업에 하단과 같이 class="on" 추가해주세요~ -->
+                  <tr class="on">
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn_redline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn_redline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn_redline">삭제</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+          <div id="tab02" class="tab_cont section">
+            <div class="search">
+              <dl class="dl_search">
+                <dt><label for="">주소 검색</label></dt>
+                <dd class="search_condition">
+                  <input type="text" placeholder="검색어" />
+                  <button type="button" title="검색" class="ico_btn ico_search">검색</button>
+                  <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
+                  <button type="button" class="btn btn_grayline">지도검색</button>
+                </dd>
+              </dl>
+            </div>
+            <div class="tbl_wrap">
+              <!-- 마우스오버 효과 주실 테이블에 tbl_hover 클래스 추가해주시면 됩니다 -->
+              <table class="tbl_default tbl_hover">
+                <caption>배송불가주소 리스트</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">도로명주소</th>
+                    <th scope="col">신우편번호</th>
+                    <th scope="col">권역</th>
+                    <th scope="col">상태</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 구현하실 때 선택된 줄은 tr 마크업에 하단과 같이 class="on" 추가해주세요~ -->
+                  <tr class="on">
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn_redline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn_redline">삭제</button></td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn_redline">삭제</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl_areaB">
+              @@include('../inc/paginate.html')
+              <span class="fr">
+                총 9페이지/86개 중 (101~200)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+@@include('../inc/popup/order1_dtlView.html')
+@@include('../inc/popup/order1_orderEntry.html')
+@@include('../inc/popup/order1_printInvoice.html')
+@@include('../inc/popup/order1_cancel.html')
+</body>
+</html>
+@@include('../inc/script.html')
+<script src="../js/file_attach.js"></script>
+<script>
+  fileDropEvt();
+</script>

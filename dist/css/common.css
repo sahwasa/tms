@@ -131,7 +131,7 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 #accessibility a:focus,#accessibility a:active{width:100%;height:auto;padding:5px 0;background:#09f;}
 
 /* btn */
-.btn{border-width:2px;border-style:solid;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:5px;padding:2px 11px 4px;font-family:'notokrR';background-color:#fff;}
+.btn{border-width:2px;border-style:solid;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:5px;padding:2px 11px 4px;font-family:'notokrR';}
 .btn_s{padding:0 4px 1px;border-radius:0;font-size:0.875em;border-width:1px;}
 .btn_white{color:#333;border-color:#999;}
 .btn_red{border-color:#f8574d;background-color:#e45148;}
@@ -174,8 +174,9 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .axi_check::before{content:"\f1ad";color:#f75b31;}
 .axi_circle::before{content:"\f226";}
 .axi_cross::before{content:"\e117";}
-.axi_cirAdd::before{content:"\e78d"}
-.axi_cirDel::before{content:"\e7a2"}
+.axi_cirAdd::before{content:"\e78d";}
+.axi_cirDel::before{content:"\e7a2";}
+.axi_next::before{content:"\f197";}
 
 .btn_toggle{position:relative;width:60px;height:20px;background-color:#2e66aa;border-radius:10px;vertical-align:middle;padding:0 5px;box-sizing:border-box;font-size:0;border:1px solid;}
 .btn_toggle[disabled]{cursor:default;}
@@ -236,6 +237,8 @@ textarea[readonly]{background-color:#eee;}
 .from,
 .datepicker,
 .date{width:138px;}
+.date.from + img{margin-right:5px;}
+.date.to{margin-left:3px;}
 .timeform{width:50px;min-width:auto!important;}
 .radio_wrap label{margin-right:5px;}
 label input{margin-top:-3px;}
@@ -262,9 +265,6 @@ label input{margin-top:-3px;}
 .ui-monthpicker-trigger{cursor:pointer;margin-left:9px;}
 
 .ui-monthpicker select.ui-datepicker-year{width:75px;}
-.ui-datepicker-calendar {
-  display: none;
-  }
 
 .ui-helper-hidden-accessible,
 .ui-widget,

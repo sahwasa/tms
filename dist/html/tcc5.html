@@ -99,15 +99,24 @@
       <div class="content_tit">
         <h1>배송문자조회</h1>
       </div>
-      <div class="content_body">
+      <div class="content_body tcc5">
         <div class="search">
           <dl class="dl_search">
             <dt><label for="">기간선택</label></dt>
             <dd>
-              <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
-              <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
-              <input type="text" name="report_period" class="date from" dataformat="from" readonly /> ~
-              <input type="text" name="report_period" class="date to" dataformat="to" readonly />
+              <!-- 일별, 기간별 선택에따라 달라짐
+              ui_common.js //기간선택 참조 -->
+              <label for="d" class="checkIpt"><input type="radio" name="dType" id="d" checked />일별</label>
+              <label for="p" class="checkIpt"><input type="radio" name="dType" id="p" />기간별</label>
+              <!-- 일별 활성화 -->
+              <span typePeriod="d">
+                <input type="text" name="day" class="date" dataformat="datepic" readonly />
+              </span>
+              <!-- 기간별 활성화 -->
+              <span typePeriod="p">
+                <input type="text" name="period" class="date from" dataformat="from" readonly /> ~
+                <input type="text" name="period" class="date to" dataformat="to" readonly />
+              </span>
             </dd>
             <dt><label for="">조건별 검색</label></dt>
             <dd class="search_condition">
@@ -117,13 +126,20 @@
               <button type="button" title="검색어 초기화" class="ico_btn ico_refresh">검색어 초기화</button>
             </dd>
             <dt><label for="">처리상태</label></dt>
-            <dd class="search_condition">
-              <select name="" id=""><option value="">검색조건</option></select>
+            <dd>
+              <div class="tag_wrap">
+                <span class="tag">불만사항 <button type="button" class="axi_only axi_del">삭제</button></span>
+                <span class="tag">오류접수<button type="button" class="axi_only axi_del">삭제</button></span>
+                <select name="" id="">
+                  <option value="">불만사항</option>
+                  <option value="">오류접수</option>
+                </select>
+              </div>
             </dd>
           </dl>
         </div>
         <div class="tbl_wrap">
-          <table class="tbl_default">
+          <table class="tbl_default tbl_hover">
             <caption>배송문자내역</caption>
             <thead>
               <tr>
@@ -143,21 +159,45 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="on">
+              <tr>
                 <td><input type="checkbox" name="" id="" title="줄선택"></td>
                 <td>1</td>
-                <td>MMs</td>
+                <td>MMS</td>
                 <td>배송완료</td>
                 <td>18</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
                 <td>
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <a href="javascript:();" openMemo="pop_tcc5memo">주문하신 배송상품</a>
+                  <!-- 메모 팝업 -->
+<div id="pop_tcc5memo" class="pop_wrap pop_memo tcc5memo" dataformat="memo">
+  <div class="btn_areaT">    
+    <a href="" class="axi_only axi_cross" role="btn_close">닫기</a>
+  </div>  
+  <div class="pop_tit">
+    <h1>주문하신 상품배송 관련 문자입니다.</h1>
+  </div>
+  <div class="pop_body">
+    <p>
+      안녕하세요, 고객님! 고객님의 소중한 상품을 
+      고객님 현관 문 앞까지 배송 완료하였습니다. 
+      배송의 문제가 있을 경우, 저희 고객센터(0)로 
+      연락주시면 감사하겠습니다. 고객상담 문의시
+      간(0) 감사합니다.
+    </p>
+    <p>
+      TEST 드림
+    </p>    
+  </div>
+</div>
+<!-- 메모 팝업__e -->
+                </td>
+                <td>
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
                 </td>
                 <td>1190917</td>
                 <td>1190917</td>
@@ -172,12 +212,13 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td><a href="javascript:();">주문하신 배송상품</a>
+                </td>
                 <td>
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
-                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
+                  <input type="image" src="../img/btn_img.png" alt="사진" class="ipt_img" openImg="../img/temp/temp_tcc5Img.jpg" />
                 </td>
                 <td>1190917</td>
                 <td>1190917</td>
@@ -210,6 +251,23 @@
     </div>
   </div>  
 </div>
+<!-- 배송사진 팝업 -->
+<div class="overlay" id="pop_tcc5img">
+<div class="pop_wrap openImg" dataformat="modal">
+  <div class="btn_areaT">    
+    <a href="" class="axi_only axi_cross" role="btn_close">닫기</a>
+  </div>  
+  <div class="pop_body">
+    <div class="img_wrap">
+      <img src="" width="100%" height="auto" alt="배송사진 이미지" />
+    </div>
+  </div>
+  <div class="pop_footer">
+    <button type="button" class="btn btn_redline" role="btn_close">닫기</button>
+  </div> 
+</div>
+</div>
+<!-- 배송사진 팝업__e -->
 </body>
 </html>
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
@@ -217,3 +275,18 @@
 <script src="../plugins/jquery-ui-monthpicker/jquery.ui.monthpicker.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script>
+
+<script>
+ $(function(){
+
+  // 배송사진팝업이벤트
+  var openImg = $('[openImg]');
+
+  openImg.on('click',function(){
+    var thisPath = $(this).attr('openImg')
+        openImgPop = $('#pop_tcc5img');
+    openImgPop.find('.img_wrap img').attr('src', thisPath);
+    openImgPop.show();     
+   })
+ })
+</script>

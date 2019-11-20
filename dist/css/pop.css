@@ -10,6 +10,7 @@
   margin:0 5px;}
 .pop_body .use_grid li .axi_only::before{color:#8f8f8f;
   font-size:22px;}
+.pop_body .noPdWrap{margin:0 -15px;}
 
 .box_lightgrayLine{border:1px solid #d3d9e4;padding:10px;}
 .box_grayLine{border:1px solid #999;padding:10px;}
@@ -25,6 +26,9 @@
 .pop_printInvoice .radio_list{border-top:1px solid #d3d9e4;padding:0 15px;}
 .pop_printInvoice .radio_list li{padding:5px 0;}
 .pop_printInvoice .radio_list:first-of-type{border-top:none;margin-top:-5px;}
+
+.pop_changeRegion{width:800px;margin-left:-400px;}
+.pop_changeRegion .tbl_wrap{margin-top:45px;}
 
 .tbl_state th,
 .tbl_state td{border:1px solid #d3d9e4;font-size:0.875em;padding:4px 12px;}
@@ -56,6 +60,23 @@
 .pop_tooltip .pop_body{padding:10px;}
 .pop_tooltip .line_list li{font-size:0.875em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .pop_tooltip .line_list .code{width:55%;}
+
+.pop_memo{display:none;position:absolute;left:0;top:40px;width:220px;height:140px;box-shadow:0 3px 7px rgba(0,0,0,.35);z-index:100;}
+.pop_memo .pop_body{padding:40px 50px;}
+.pop_memo .btn_areaT{position:relative;}
+.openImg .axi_cross,
+.pop_memo .axi_cross{position:absolute;right:20px;top:20px;z-index:100;}
+.openImg .axi_cross::before,
+.pop_memo .axi_cross::before{font-size:18px;color:#606060;}
+.pop_memo dt,
+.pop_memo dd{font-size:1.125em;line-height:37px;color:#606060;}
+.tcc5memo{width:320px;height:300px;}
+.tcc5memo .pop_tit{background-color:#eee;border-bottom:none;padding-top:17px;}
+.tcc5memo .pop_tit h1{font-size:1em;color:#606060;}
+.tcc5memo .pop_body{padding:20px;}
+.tcc5memo .pop_body p{word-break:keep-all;}
+
+.openImg{width:500px;margin-left:-250px;padding-top:50px;}
 
 .pop_sortVal{width:628px;margin-left:-316px;}
 

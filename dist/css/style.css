@@ -31,6 +31,7 @@
 .lnb_list a{width:100%;color:#fff;font-family:'notokrL';}
 .lnb_list > li > a{line-height:60px;padding:0 39px;}
 .lnb_list > li > a::after{float:right;content:"\e114";font-family:'axicon';font-size:9px;}
+.lnb_list > li:hover,
 .lnb_list > .on{background-color:#1b4279;}
 .lnb_list > .on > a::after{content:"\e115";}
 .sub{display:none;}
@@ -52,6 +53,15 @@
 
 /* ui */
 .null_data{color:#606060;font-size:1.125em;}
+input[type="radio"],
+input[type="checkbox"]{-webkit-appearance:none;-moz-appearance:none; -o-appearance: none;appearance:none;outline:none;box-shadow: none;}
+input[type="radio"]:checked,
+input[type='checkbox']:checked{-webkit-appearance:none; -moz-appearance:none;-o-appearance:none;appearance:none; box-shadow:none;border:none;}
+input[type="radio"]{width:20px!important;height:20px!important;border:1px solid #d2d9e4;border-radius:50%;}
+input[type="checkbox"]{width:16px!important;height:16px !important;border:1px solid #606060;}
+input[type='checkbox']:checked{background:url(../img/bg_checked.gif) 0 0 no-repeat;}
+input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-repeat;}
+
 /* tab */
 .tab_list{border-bottom:1px solid #d3d9e4;overflow:hidden;}
 .tab_list li{display:inline-block;}
@@ -63,15 +73,16 @@
 /* search */
 .search{position:relative;border:1px solid #d2d9e4;padding:30px 30px 0;margin-bottom:30px;}
 .search .checkIpt{margin-right:10px;;}
+.search .ico_btn{margin:0 10px;}
+.search .ico_btn.mg_fix{margin-left:20px;}
 .ul_search li{display:inline-block;padding-bottom:30px;margin-right:30px;}
 .ul_search label{display:inline-block;min-width:62px;}
 .ul_search_condition label{width:112px;}
 .ul_search select{min-width:138px;}
-.ul_search .ico_btn{margin-right:20px;}
 
 .search_condition select{min-width:138px;margin-right:34px;}
 .search_condition input[type="text"]{min-width:600px;}
-.search_condition .ico_btn{margin:0 0 0 20px;}
+.search_condition .btn{margin-left:10px;}
 .dl_search dt,
 .dl_search dd{padding-bottom:30px;}
 .dl_search dt{float:left;width:112px;}
@@ -80,15 +91,20 @@
 .search .count b{color:#0d0d0d;font-size:1.5em;margin-left:20px;}
 .search .select_longW{min-width:672px;;}
 
-.tag_wrap{position:relative;display:inline-block;min-width:300px;border:1px solid #d2d9e4;padding:3px;}
-.tag_wrap.bg_arrow{margin-left:30px;}
-.tag_wrap.bg_arrow::before{position:absolute;left:-40px;top:3px;content:"\f197";font-family:'axicon';color:#239e40;font-size:26px;}
+.tag_wrap{position:relative;display:inline-block;min-width:300px;border:1px solid #d2d9e4;padding:3px;vertical-align:middle;}
+.tag_wrap::after{position:absolute;right:10px;top:50%;content:"\e92e";font-family:'axicon';font-size:20px; margin-top:-10px;}
+.tag_wrap select{position:absolute;left:0;top:0;width:100%;opacity:0;}
+/* .tag_wrap{margin-left:30px;} */
+.search .axi_next::before{position:relative;left:0;top:5px;content:"\f197";font-family:'axicon';color:#239e40;font-size:26px;;}
 .tag_wrap span{background-color:#eee;color:#606060;padding:0 8px;}
 .tag_wrap .axi_del{margin-left:5px;}
 .tag_wrap .axi_del::before{color:#888;}
 
 /* table */
-.tbl_default .on td{background-color:#fffec7;}
+.tbl_hover tr:hover td{background-color:#eee;cursor:pointer;}
+.tbl_default tr.on td{background-color:#fffec7;}
+.tbl_default .linked,
+.tbl_default a{color:#0f4fc4;font-family:'notokrM';cursor:pointer;}
 .tbl_wrap .scroll-y{overflow-y:scroll;background:#fcfcfc;}
 .scroll-y .tbl_default,
 .scroll-y tr:first-child th,
@@ -115,6 +131,14 @@ table .btn{border-width:1px;}
 .tbl_dtl .h_fix2 th,
 .tbl_dtl .h_fix2 td{height:51px;}
 .tbl_dtl .h_fix2 td{vertical-align:top;}
+
+.tbl_blackLine thead th{border-bottom: 1px solid #606060;}
+.tbl_blackLine th,
+.tbl_blackLine td{padding:10px 5px;}
+.tbl_blackLine th{color:#0d0d0d;}
+.tbl_blackLine tbody tr{border-top: 1px solid #d3d9e4;}
+.tbl_blackLine td{color:#606060;}
+
 
 .btn_tbl{width:48px;height:22px;font-size:0;line-height:0;color:transparent;overflow:hidden;background-image:url(../img/btn_tbl_ico.png);background-repeat:no-repeat;vertical-align:middle;}
 .tbl_dtl{background-position:0 0;}
@@ -214,23 +238,32 @@ table .btn{border-width:1px;}
 .spcNote dd textarea,
 .spcNote .tbl_barcode,
 .spcNote .listPhoto{width:calc(100% - 130px);}
-.spcNote .scroll-y{height:280px;overflow-y:auto;}
-.spcNote .tbl_barcode{width:100%;}
-.spcNote .tbl_barcode td{height:30px;border:1px solid #d2d9e4;}
+.spcNote .scroll-y{height:297px;overflow-y:auto;}
+.spcNote .tbl_barcode{width:100%;border-top:1px solid #d2d9e4;}
+.spcNote .tbl_barcode td{height:30px;border:1px solid #d2d9e4;text-align:left;}
+.spcNote .tbl_barcode td:first-child{padding-left:20px;}
+.spcNote .tbl_barcode select{width:100%;border-color:transparent;}
 .listPhoto{display:flex;border:1px solid #d2d9e4;border-width:1px 0 0 1px;}
 .listPhoto li{flex:auto;background-color:#eee;border:1px solid #d2d9e4;border-width:0 1px 1px 0;text-align:center;}
 .listPhoto li input{border:none;background:none;}
 
 .spcNote .btn_area{width:100%;margin-top:24px;text-align:right;padding:0 20px;box-sizing:border-box;}
 .ipt_img{background:none;border:none;padding:0;}
+.tcc5 .tag_wrap{min-width:768px;}
 
 /* calc */
 .charge_dtl .tbl_leftArea .tbl_default,
 .pick_dtl .tbl_leftArea .tbl_default,
 .pick_dtl .tbl_rightArea .tbl_default{table-layout:auto;}
 
+/* doublescroll */
+.tbl_cenArea .wrapper1,
+.tbl_cenArea .wrapper2{overflow-x:scroll;overflow-y:hidden;}
+.wrapper1{height:17px;}
+.tbl_cenArea tr:first-child th{padding:3px 5px 4px;}
+
 .charge_dtl .tbl_leftArea{width:380px;}
-.charge_dtl .tbl_cenArea{width:calc(100% - 470px);overflow-x:scroll;}
+.charge_dtl .tbl_cenArea{width:calc(100% - 470px);}
 .charge_dtl .tbl_cenArea th,
 .charge_dtl .tbl_cenArea td{width:68px;}
 .charge_dtl .tbl_cenArea th:first-child,
@@ -242,7 +275,7 @@ table .btn{border-width:1px;}
 .b_gray{background-color:#eee !important;}
 
 .pick_dtl .tbl_leftArea{width:370px;}
-.pick_dtl .tbl_cenArea{width:calc(100% - 832px);overflow-x:scroll;}
+.pick_dtl .tbl_cenArea{width:calc(100% - 832px);}
 .pick_dtl .tbl_cenArea th,
 .pick_dtl .tbl_cenArea td{width:68px;}
 .pick_dtl .tbl_cenArea th:first-child,
