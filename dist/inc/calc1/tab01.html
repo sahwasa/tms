@@ -1,6 +1,6 @@
 <div class="tab_cont" id="tab01">
   <div class="btn_listT">
-    <button type="button" class="btn btn_greenline">금일 엑셀 다운로드</button>
+    <button type="button" class="btn btn_greenline"  openpop="pop_excelDown">금일 엑셀 다운로드</button>
     <button type="button" class="btn btn_yellowline">임시발행</button>
     <button type="button" class="btn btn_blueline">확정발행</button>
   </div>            
@@ -22,10 +22,12 @@
           <th scope="col">회수비용</th>
           <th scope="col">문자발송비용</th>
           <th scope="col">기타비용</th>
+          <th scope="col">합계</th>
         </tr>
         <tr>
           <th scope="row" colspan="3">합계</th>
           <td scope="col">53195</td>
+          <td scope="col">-</td>
           <td scope="col">-</td>
           <td scope="col">-</td>
           <td scope="col">-</td>
@@ -42,6 +44,7 @@
           <td></td>
           <td>와이케이팩토리</td>
           <td>배송완료</td>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -77,3 +80,35 @@
     </span>
   </div>
 </div>
+<!-- 엑셀다운로드 팝업 -->
+<div class="overlay" id="pop_excelDown">
+  <div class="pop_wrap pop_excelDown" dataformat="modal">
+    <div class="pop_tit">
+      <h1>엑셀다운로드</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">
+      <div class="tbl_wrap">
+        <table class="tbl_dtl fullIpt">
+          <tr>
+            <th scope="row" width="150"><label for="">로그인 비밀번호</label></th>
+            <td><input type="password" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">엑셀 비밀번호</label></th>
+            <td><input type="password" placeholder="엑셀파일 비밀번호 설정" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">엑셀 비밀번호 확인</label></th>
+            <td><input type="password" placeholder="엑셀파일 비밀번호 확인" /></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="pop_footer">
+      <button type="button" class="btn btn_redline" role="btn_close">취소</button>
+      <button type="button" class="btn btn_greenline">완료</button>
+    </div>   
+  </div>
+</div>
+<!-- 엑셀다운로드 팝업__e -->

@@ -9,13 +9,12 @@
         <h1>배송리포트</h1>
         <span class="btn_area">
           <button type="button" class="btn btn_greenline">금일다운로드</button>
-          <button type="button" class="btn btn_greenline">엑셀다운로드</button>
+          <button type="button" class="btn btn_greenline" openpop="pop_excelDown">엑셀다운로드</button>
           <button type="button" class="btn btn_grayline" openpop="pop_sortVal">분류값 결정</button>
           <button type="button" class="btn btn_grayline">VOC인입</button>
           <button type="button" class="btn btn_grayline" openpop="pop_changeRegion">주문 권역 변경</button>
         </span>
       </div>
-
       <div class="content_body">
         <div class="search">
           <dl class="dl_search">
@@ -122,6 +121,7 @@
 </div>
 @@include('../inc/popup/tcc3_sortVal.html')
 @@include('../inc/popup/tcc3_changeRegion.html')
+@@include('../inc/popup/excel_down.html')
 </body>
 </html>
 @@include('../inc/script.html')

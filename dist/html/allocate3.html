@@ -174,9 +174,19 @@
               <dl class="dl_search">
                 <dt><label for="">기간선택</label></dt>
                 <dd>
-                  <label for="" class="checkIpt"><input type="radio" name="" id="" />일별</label>
-                  <label for="" class="checkIpt"><input type="radio" name="" id="" />기간별</label>
-                  <input type="text" name="report_period" class="date" dataformat="datepic" readonly />
+                  <!-- 일별, 기간별 선택에따라 달라짐
+                  ui_common.js //기간선택 참조 -->
+                  <label for="d" class="checkIpt"><input type="radio" name="dType" id="d" checked />일별</label>
+                  <label for="p" class="checkIpt"><input type="radio" name="dType" id="p" />기간별</label>
+                  <!-- 일별 활성화 -->
+                  <span typePeriod="d">
+                    <input type="text" name="day" class="date" dataformat="datepic" readonly />
+                  </span>
+                  <!-- 기간별 활성화 -->
+                  <span typePeriod="p">
+                    <input type="text" name="period" class="date from" dataformat="from" readonly /> ~
+                    <input type="text" name="period" class="date to" dataformat="to" readonly />
+                  </span>              
                 </dd>
                 <dt><label for="">조건별 검색</label></dt>
                 <dd class="search_condition">

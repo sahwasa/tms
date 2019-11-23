@@ -98,10 +98,11 @@
     <div class="content" id="content">
       <div class="content_tit">
         <h1>고객사 등록</h1>
-        <span class="btn_area">
+        <!-- 전 탭페이지를 하나로 컨트롤 하시려면 하단 버튼을 써주세요. 탭별로 저장, 목록버튼을 쓰실지 하나로 쓰실지 몰라서 다 넣었습니다. -->
+        <!-- <span class="btn_area">
           <a href="account1.html" class="btn btn_grayline">목록</a>
           <a href="account1.html" class="btn btn_blueline">저장</a>
-        </span>
+        </span> -->
       </div>
       <div class="content_body">
         <div class="tabList_area">
@@ -114,6 +115,10 @@
         </div>
         <div class="tab_conts account account1">
           <div class="tab_cont tab01" id="tab01">
+  <div class="btn_listT">
+    <a href="account1.html" class="btn btn_grayline">목록</a>
+    <button type="button" class="btn btn_blueline">저장</button>
+  </div>
   <div class="div_section section01">
     <div class="fl section">
       <div class="tit">
@@ -257,6 +262,10 @@
   </div>
 </div>
           <div class="tab_cont tab02" id="tab02">
+  <div class="btn_listT">
+    <a href="account1.html" class="btn btn_grayline">목록</a>
+    <button type="button" class="btn btn_blueline">저장</button>
+  </div>
   <div class="section section01">
     <div class="tit">
       <h2>픽업요일</h2>
@@ -339,6 +348,7 @@
 </div>
           <div class="tab_cont tab03" id="tab03">
   <div class="btn_listT">
+    <a href="account1.html" class="btn btn_grayline">목록</a>
     <button type="button" class="btn btn_blueline">저장</button>
   </div>
   <div class="div_section section01">
@@ -491,6 +501,7 @@
 </div>
           <div class="tab_cont tab04" id="tab04">
   <div class="btn_listT">
+    <a href="account1.html" class="btn btn_grayline">목록</a>
     <button type="button" class="btn btn_blueline">저장</button>
   </div>
   <div class="section">
@@ -498,17 +509,21 @@
       <h2>운송서비스 계약 정보</h2>
     </div>
     <div class="body">
-      <dl class="dl_shipInfo">
-        <dt>*1* : 고객센터 전화번호</dt>
-        <dd>예시) 고객센터(*1*)로 연락주세요.</dd>
-        <dt>*2* : 고객센터 운영시간</dt>
-        <dd>예시) 고객상담 문의시간은 *2*입니다.</dd>
-        <dt>*3* : 고객사(브랜드)명</dt>
-        <dd>예시) *3*드림</dd>
-        <dt>*4* : 배송 특이사항 내용</dt>
-        <dd>예시) 부득이한 사유(*4*)로배송할 수 없었습니다. /기타 장소(*4*)에 대응배송 해드렸습니다.</dd>
-      </dl>
-      
+      <ul class="ul_shipInfo">
+        <li>
+          <span class="num">*1* : 고객센터 전화번호</span>
+          예시) 고객센터(*1*)로 연락주세요.
+        </li>
+        <li><span class="num">*2* : 고객센터 운영시간</span>
+          예시) 고객상담 문의시간은 *2*입니다.
+        </li>
+        <li><span class="num">*3* : 고객사(브랜드)명</span>
+          예시) *3*드림        
+        </li>
+        <li><span class="num">*4* : 배송 특이사항 내용</span>
+          예시) 부득이한 사유(*4*)로배송할 수 없었습니다. /기타 장소(*4*)에 대응배송 해드렸습니다.        
+        </li>
+      </ul>      
     </div>
   </div>
   <div class="div_section section02">
@@ -520,12 +535,16 @@
         <table class="tbl_default tbl_default_s">
           <caption>정상배송</caption>
           <tr>
-            <th scope="row" width="58">제목</th>
-            <td class="alignL">-</td>
+            <th scope="row" width="58"><label for="">제목</label></th>
+            <td class="alignL"><input type="text" class="full" value="주문하신 *3* 상품 배송 관련 문자입니다."/></td>
           </tr>
           <tr>
             <th scope="row">내용</th>
-            <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
+            <td>
+              <textarea name="" id="" cols="30" rows="5" class="full">안녕하세요, 고객님
+감사합니다. *3*드림.
+             </textarea>
+            </td>
           </tr>
         </table>  
       </div>
@@ -538,8 +557,8 @@
         <table class="tbl_default tbl_default_s">
           <caption>대응배송</caption>
           <tr>
-            <th scope="row" width="58">제목</th>
-            <td class="alignL">-</td>
+            <th scope="row" width="58"><label for="">제목</label></th>
+            <td class="alignL"><input type="text" class="full"/></td>
           </tr>
           <tr>
             <th scope="row">내용</th>
@@ -558,8 +577,8 @@
         <table class="tbl_default tbl_default_s">
           <caption>미배송</caption>
           <tr>
-            <th scope="row" width="58">제목</th>
-            <td class="alignL">-</td>
+            <th scope="row" width="58"><label for="">제목</label></th>
+            <td class="alignL"><input type="text" class="full"/></td>
           </tr>
           <tr>
             <th scope="row">내용</th>
@@ -576,8 +595,28 @@
         <table class="tbl_default tbl_default_s">
           <caption>지연배송</caption>
           <tr>
-            <th scope="row" width="58">제목</th>
-            <td class="alignL">-</td>
+            <th scope="row" width="58"><label for="">제목</label></th>
+            <td class="alignL"><input type="text" class="full"/></td>
+          </tr>
+          <tr>
+            <th scope="row">내용</th>
+            <td><textarea name="" id="" cols="30" rows="5" class="full"></textarea></td>
+          </tr>
+        </table>  
+      </div>
+    </div>
+  </div>
+  <div class="div_section section04">
+    <div class="fl section">
+      <div class="tit">
+        <h2>회수 문자 발송</h2>
+      </div>
+      <div class="body">
+        <table class="tbl_default tbl_default_s">
+          <caption>미배송</caption>
+          <tr>
+            <th scope="row" width="58"><label for="">제목</label></th>
+            <td class="alignL"><input type="text" class="full"/></td>
           </tr>
           <tr>
             <th scope="row">내용</th>

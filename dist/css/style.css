@@ -75,6 +75,7 @@ input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-re
 .search .checkIpt{margin-right:10px;;}
 .search .ico_btn{margin:0 10px;}
 .search .ico_btn.mg_fix{margin-left:20px;}
+.search .axi_next{margin-right:20px;}
 .ul_search li{display:inline-block;padding-bottom:30px;margin-right:30px;}
 .ul_search label{display:inline-block;min-width:62px;}
 .ul_search_condition label{width:112px;}
@@ -116,6 +117,8 @@ table .btn{border-width:1px;}
 .tbl_default{width:100%;table-layout:fixed;background-color:#fff;;}
 .tbl_default th,
 .tbl_default td{border:1px solid #d2d9e4;}
+.tbl_sum td,
+.tbl_default thead td,
 .tbl_default th{padding:12px 5px;background-color:#e5e8ef;}
 .tbl_default td{padding:6px 5px;}
 
@@ -245,6 +248,7 @@ table .btn{border-width:1px;}
 .spcNote .tbl_barcode select{width:100%;border-color:transparent;}
 .listPhoto{display:flex;border:1px solid #d2d9e4;border-width:1px 0 0 1px;}
 .listPhoto li{flex:auto;background-color:#eee;border:1px solid #d2d9e4;border-width:0 1px 1px 0;text-align:center;}
+.listPhoto li:first-child{border-left-width:1px;}
 .listPhoto li input{border:none;background:none;}
 
 .spcNote .btn_area{width:100%;margin-top:24px;text-align:right;padding:0 20px;box-sizing:border-box;}
@@ -255,6 +259,7 @@ table .btn{border-width:1px;}
 .charge_dtl .tbl_leftArea .tbl_default,
 .pick_dtl .tbl_leftArea .tbl_default,
 .pick_dtl .tbl_rightArea .tbl_default{table-layout:auto;}
+.calc1 .tab_conts{overflow:visible;}
 
 /* doublescroll */
 .tbl_cenArea .wrapper1,
@@ -283,7 +288,8 @@ table .btn{border-width:1px;}
 .pick_dtl .tbl_cenArea th:last-child,
 .pick_dtl .tbl_cenArea td:last-child{border-right-width:0;}
 .pick_dtl .tbl_rightArea{width:462px;}
-.pick_dtl .sub_th th{padding:4px 0;}
+.pick_dtl .sub_th th{padding:4px 0;background-color:#fff;}
+.pick_dtl .sub_th.bg_green th{background-color:#dee9e4;}
 .pick_dtl input.w_fix75{width:75px;}
 .pick_dtl input.w_fix95{width:75px;}
 
@@ -346,14 +352,16 @@ input[role="filePath"]{background:transparent;border:none;}
 .account1 .pickupSvc .pic_charge input{width:calc(100% - 40px);}
 .account1 .tab03 .section03 .fr .box_lightgrayLine{height:153px;padding-top:30px;box-sizing:border-box;}
 
-.account1 .tab04 > .fl{width:48%;}
-.account1 .tab04 > .fr{width:48%;}
-.account1 .tab04 .section02,
-.account1 .tab04 .section03{margin-top:45px;}
-.dl_shipInfo{overflow:hidden;margin-top:-15px;}
-.dl_shipInfo dt{float:left;width:215px;}
-.dl_shipInfo dt,
-.dl_shipInfo dd{padding-top:15px;}
+.account1 .tab04 .div_section > .fl,
+.account1 .tab04 .div_section > .fr{width:49%;padding:0}
+.account1 .tab04 .div_section{margin-top:45px;justify-content:space-between;}
+.account1 .tab04 td input[type="text"],
+.account1 .tab04 td textarea{border-color:transparent;}
+.ul_shipInfo{column-width:auto;column-count:2;column-gap:1em;}
+.ul_shipInfo li{display:table;padding-bottom:20px;overflow:hidden;word-break:keep-all;letter-spacing:-.01em;font-size:0.875em;}
+.ul_shipInfo li:nth-child(3){break-before:column;}
+.ul_shipInfo span{display:table-cell;}
+.ul_shipInfo .num{width:25.5%;min-width:200px;height:100%;}
 
 .account2 .scroll-y{height:619px;}
 .account2 .section{max-width:930px;}

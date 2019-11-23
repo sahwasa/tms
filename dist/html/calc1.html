@@ -99,7 +99,7 @@
       <div class="content_tit">
         <h1>운송료정산</h1>
       </div>
-      <div class="content_body">
+      <div class="content_body calc1">
         <dl class="dl_search">
           <dt><label for="">날짜선택</label></dt>
           <dd>
@@ -116,7 +116,7 @@
         <div class="tab_conts">
           <div class="tab_cont" id="tab01">
   <div class="btn_listT">
-    <button type="button" class="btn btn_greenline">금일 엑셀 다운로드</button>
+    <button type="button" class="btn btn_greenline"  openpop="pop_excelDown">금일 엑셀 다운로드</button>
     <button type="button" class="btn btn_yellowline">임시발행</button>
     <button type="button" class="btn btn_blueline">확정발행</button>
   </div>            
@@ -138,10 +138,12 @@
           <th scope="col">회수비용</th>
           <th scope="col">문자발송비용</th>
           <th scope="col">기타비용</th>
+          <th scope="col">합계</th>
         </tr>
         <tr>
           <th scope="row" colspan="3">합계</th>
           <td scope="col">53195</td>
+          <td scope="col">-</td>
           <td scope="col">-</td>
           <td scope="col">-</td>
           <td scope="col">-</td>
@@ -158,6 +160,7 @@
           <td></td>
           <td>와이케이팩토리</td>
           <td>배송완료</td>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
@@ -193,11 +196,44 @@
     </span>
   </div>
 </div>
+<!-- 엑셀다운로드 팝업 -->
+<div class="overlay" id="pop_excelDown">
+  <div class="pop_wrap pop_excelDown" dataformat="modal">
+    <div class="pop_tit">
+      <h1>엑셀다운로드</h1>
+      <a href="javascript:();" role="btn_close">닫기</a>
+    </div>
+    <div class="pop_body">
+      <div class="tbl_wrap">
+        <table class="tbl_dtl fullIpt">
+          <tr>
+            <th scope="row" width="150"><label for="">로그인 비밀번호</label></th>
+            <td><input type="password" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">엑셀 비밀번호</label></th>
+            <td><input type="password" placeholder="엑셀파일 비밀번호 설정" /></td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="">엑셀 비밀번호 확인</label></th>
+            <td><input type="password" placeholder="엑셀파일 비밀번호 확인" /></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="pop_footer">
+      <button type="button" class="btn btn_redline" role="btn_close">취소</button>
+      <button type="button" class="btn btn_greenline">완료</button>
+    </div>   
+  </div>
+</div>
+<!-- 엑셀다운로드 팝업__e -->
           <div class="tab_cont" id="tab02">
   <div class="btn_listT">
     <button type="button" class="btn btn_redline" openpop="pop_prompt">수정</button>
     <button type="button" class="btn btn_blueline" openpop="pop_prompt">저장</button>
   </div>
+
   <div class="tbl_wrap charge_dtl">
     <div class="fl tbl_leftArea">
       <table class="tbl_default">
@@ -220,14 +256,43 @@
             <td rowspan="5">와이케이팩토리</td>
             <td>총주문건</td>
           </tr>
+            <!-- 미배송 오배송 미출고 툴팁 등은 실제 개발하실 때 템플릿화시켜서 a마크업 다음에 생성해주세요.
+            샘플로 드린건 미배송 아래로만 뜹니다. -->
           <tr>
-            <td openpop="pop_dtlShip">미배송</td>
+            <td>
+              <a href="javascript:();" openMemo="pop_dtlShip">미배송</a>
+              <!-- 상태확인 팝업 -->
+<div id="pop_dtlShip" class="pop_wrap pop_dtlShip pop_tooltip" dataformat="memo">
+  <div class="btn_areaT">
+    <a href="" class="axi_only axi_cross" role="btn_close">닫기</a>
+  </div>
+  <div class="pop_body">
+    <ul class="line_list">
+      <li><span class="code">20190901-00100001</span>헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처</li>
+      <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
+    </ul>
+  </div>
+</div>
+<!-- 상태확인 팝업__e -->
+            </td>
           </tr>
           <tr>
-            <td openpop="pop_dtlShip">오배송</td>
+            <td>
+              <a href="javascript:();" openMemo="pop_dtlShip">오배송</a>
+            </td>
           </tr>
           <tr>
-            <td openpop="pop_dtlShip">미출고</td>
+            <td>
+              <a href="javascript:();" openMemo="pop_dtlShip">미출고</a>
+            </td>
           </tr>
           <tr>
             <td>정상배송</td>
@@ -240,6 +305,8 @@
         <div>&nbsp;</div>
       </div>
       <div class="wrapper2">
+        <!-- 토요일 > class="b_gray"
+        붉은글씨 > class="t_red" -->
         <table class="tbl_default">
           <caption>분류</caption>
           <thead>
@@ -283,18 +350,8 @@
               <td>-</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
+              <td class="b_gray">-</td>
+              <td class="t_red">-</td>
               <td>-</td>
             </tr>
             <tr>
@@ -303,18 +360,8 @@
               <td>-</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
+              <td class="b_gray">-</td>
+              <td class="t_red">-</td>
               <td>-</td>
             </tr>
             <tr>
@@ -323,8 +370,28 @@
               <td>-</td>
               <td>-</td>
               <td>-</td>
+              <td class="b_gray">-</td>
+              <td class="t_red">-</td>
+              <td>-</td>
+            </tr>
+            <tr>
               <td>-</td>
               <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td class="b_gray">-</td>
+              <td class="t_red">-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td class="b_gray">-</td>
+              <td class="t_red">-</td>
               <td>-</td>
             </tr>
           </tbody>
@@ -332,11 +399,14 @@
       </div>
     </div>
     <div class="fl tbl_rightArea">
-      <table class="tbl_default">
+      <table class="tbl_default tbl_sum">
         <caption>합계</caption>
         <thead>
           <tr>
-            <th scope="col" class="h_fix2">합계</th>
+            <th>&nbsp;</th>
+          </tr>
+          <tr>
+            <th scope="col">합계</th>
           </tr>
         </thead>
         <tbody>
@@ -453,7 +523,7 @@
           <tr>
             <th scope="col" colspan="7">분류</th>
           </tr>
-          <tr class="sub_th">
+          <tr class="sub_th bg_green">
             <th scope="col" width="50">1톤</th>
             <th scope="col" width="50">2.5톤</th>
             <th scope="col" width="50">3.5톤</th>
@@ -469,7 +539,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><input type="text" title="총 픽업비" readonly class="w_fix75" /></td>
+            <td><input type="text" title="총 픽업비"  class="w_fix75" /></td>
             <td></td>
             <td><input type="text" title="총 픽업비" readonly class="w_fix95" /></td>
           </tr>
@@ -519,28 +589,22 @@
           <th scope="row">1톤</th>
           <td><input type="text"></td>
           <td><input type="text"></td>
-          <td><label for=""><input type="checkbox" name="" id="">픽업없음</label></td>
-          <td><input type="text" readonly /></td>
+          <td rowspan="4"><label for=""><input type="checkbox" name="" id="">픽업없음</label></td>
+          <td rowspan="4"><input type="text" readonly /></td>
         </tr>
         <tr>
           <th scope="row">2.5톤</th>
           <td><input type="text"></td>
-          <td><input type="text"></td>
-          <td><label for=""><input type="checkbox" name="" id="">픽업없음</label></td>
           <td><input type="text"></td>
         </tr>
         <tr>
           <th scope="row">3.5톤</th>
           <td><input type="text"></td>
           <td><input type="text"></td>
-          <td><label for=""><input type="checkbox" name="" id="">픽업없음</label></td>
-          <td><input type="text"></td>
         </tr>
         <tr>
           <th scope="row">5톤</th>
           <td><input type="text"></td>
-          <td><input type="text"></td>
-          <td><label for=""><input type="checkbox" name="" id="">픽업없음</label></td>
           <td><input type="text"></td>
         </tr>
       </table>    
@@ -548,29 +612,6 @@
     <div class="pop_footer">
       <button type="button" role="btn_close" class="btn btn_grayline">닫기</button>
       <button type="button" class="btn btn_blueline">확인</button>
-    </div>
-  </div>
-</div>
-<!-- 상태확인 팝업__e -->
-<!-- 상태확인 팝업 -->
-<div class="overlay" id="pop_dtlShip">
-  <div class="pop_wrap pop_dtlShip pop_tooltip" dataformat="modal">
-    <div class="btn_areaT">
-      <a href="" class="axi_only axi_cross" role="btn_close">닫기</a>
-    </div>
-    <div class="pop_body">
-      <ul class="line_list">
-        <li><span class="code">20190901-00100001</span>헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처</li>
-        <li><span class="code">20190901-00100001</span>헬로네이처헬로네이처헬로네이처</li>
-      </ul>
     </div>
   </div>
 </div>

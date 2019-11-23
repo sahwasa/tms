@@ -55,8 +55,9 @@
 .pop_prompt .pop_tit{border-bottom-width:0;}
 .pop_prompt p{text-align:center;font-size:1.5em;padding:40px 0 50px;}
 
-.pop_tooltip{border:2px solid #999;height:200px;overflow-y:auto;;}
+.pop_tooltip{display:none;position:absolute;left:0;top:40px;border:2px solid #999;height:200px;overflow-y:auto;z-index:100;}
 .pop_tooltip .btn_areaT{padding:0 10px;text-align:right;}
+.pop_tooltip .axi_cross::before{color:#606060;}
 .pop_tooltip .pop_body{padding:10px;}
 .pop_tooltip .line_list li{font-size:0.875em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .pop_tooltip .line_list .code{width:55%;}
@@ -105,6 +106,14 @@
 .search_ipt .axi_search::before{font-size:18px;color:#888;}
 
 .pop_addRegion{width:520px;margin-left:-260px;}
+
+.pop_excelDown{width:700px;margin-left:-350px;}
+.pop_excelDown input::-webkit-input-placeholder,
+.pop_excelDown input::-moz-input-placeholder,
+.pop_excelDown input::-ms-input-placeholder,
+.pop_excelDown input::placeholder{font-style:italic;color:#bfc7cb;}
+.pop_excelDown input::-webkit-input-placeholder,
+.pop_excelDown input:focus::-webkit-input-placeholder{font-style:italic;color:#bfc7cb;}
 
 /* windowpop */
 .w_pop_wrap{text-align:left;}
